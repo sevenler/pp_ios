@@ -1,0 +1,24 @@
+android/bin/
+android/gen/
+wepaypay/bin/
+wepaypay/gen/
+appcompat_v7_3/bin/
+appcompat_v7_3/gen/
+
+
+# files created by Xcode 3 or older
+*.pbxuser
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcclassmodel/
+# files created by Xcode 4
+xcuserdata/
+# build products
+*.build/
+build/
+DerivedData/
+# Misc
+.svn
+.DS_Store
