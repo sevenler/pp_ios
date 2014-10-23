@@ -30,21 +30,8 @@
         if (!error) {
             for(AVObject *obj in objects)
             {
-                id title = [obj objectForKey:@"title"];
-                id description = [obj objectForKey:@"description"];
-                NSMutableArray *image = [obj objectForKey:@"image"];
-                id avater = [obj objectForKey:@"ownerAvater"];
-                id partners = [obj objectForKey:@"partners"];
-                id mapPositionUnit = [obj objectForKey:@"mapPositionUnit"];
-                NSMutableArray *likers = [obj mutableArrayValueForKey:@"likers"];
-            
-                WProjectModel *paperModel = [[WProjectModel alloc]initWithImage:image[0] title:title description:description leftDays:10 parters:3 avater:avater];
-                paperModel.positionUnit = mapPositionUnit;
-                paperModel.likers = likers.count;
-                
+                WSpaceModel *paperModel = [[WSpaceModel alloc]initWithAVObject:obj];
                 [_projectList addObject:paperModel];
-                
-                NSLog(@"%@  %@ ",partners, image[0]);
             }
             [self.tableView reloadData];
         } else {
@@ -109,8 +96,8 @@
  5、点击单元格时的处理
  */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    WProjectModel *paperModel = _projectList[indexPath.row];
-    NSLog(@"paper year -> %@  %@", paperModel.title, self.navigationController);
+    WSpaceModel *paperModel = _projectList[indexPath.row];
+    NSLog(@"paper year -> %@  %@", [paperModel getTitle], self.navigationController);
     
     WDetailViewController *detail = [[WDetailViewController alloc] init];
     detail.projectModel = paperModel;

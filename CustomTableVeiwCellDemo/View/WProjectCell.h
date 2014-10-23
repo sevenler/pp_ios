@@ -22,6 +22,6 @@
 /**
  设置Cell
  */
--(void)setupCell:(WProjectModel *)model;
+-(void)setupCell:(WSpaceModel *)model;
 
 @end

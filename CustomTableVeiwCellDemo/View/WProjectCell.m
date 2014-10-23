@@ -32,16 +32,18 @@
 /**
  设置Cell
  */
--(void)setupCell:(WProjectModel *)model{
-    self.lblTitle.text  = model.title;
-    self.lblDescription.text  = [NSString stringWithFormat:@"%@ . %d人收藏", model.positionUnit, model.likers];
-    self.imgThumb.imageURL = [NSURL URLWithString:model.image];
-    self.imgAvater.imageURL = [NSURL URLWithString:model.avater];
+-(void)setupCell:(WSpaceModel *)model{
+    NSMutableArray *images = [model getImages];
+    
+    self.lblTitle.text  = [model getTitle];
+    self.lblDescription.text  = [NSString stringWithFormat:@"%@ . %d人收藏", [model getPositionUnit], [model getLikers]];
+    self.imgThumb.imageURL = [NSURL URLWithString:[model getImages][0]];
+    self.imgAvater.imageURL = [NSURL URLWithString:[model getAvater]];
     
     CALayer *l = [self.imgAvater layer];
     [l setMasksToBounds:YES];
     [l setCornerRadius:32.0];
-    NSLog(@"  =============  downloadImage  %@ %@ ============ ", model.image, model.avater);
+    NSLog(@"  =============  downloadImage  %@ %@ ============ ", images[0], [model getAvater]);
 }
 
 @end

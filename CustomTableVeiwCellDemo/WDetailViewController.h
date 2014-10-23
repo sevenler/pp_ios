@@ -13,6 +13,6 @@
 
 @interface WDetailViewController : UIViewController
 
-@property (strong, nonatomic) WProjectModel *projectModel;
+@property (strong, nonatomic) WSpaceModel *projectModel;
 
 @end

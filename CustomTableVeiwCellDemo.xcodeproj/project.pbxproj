@@ -41,6 +41,7 @@
 		F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66261B219CEC8F200C0B9ED /* QuartzCore.framework */; };
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
+		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,8 @@
 		F66261C619CF0EAB00C0B9ED /* WViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WViewController.h; path = Controller/WViewController.h; sourceTree = "<group>"; };
 		F66261C719CF0EAB00C0B9ED /* WViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WViewController.m; path = Controller/WViewController.m; sourceTree = "<group>"; };
 		F66261C819CF0EAB00C0B9ED /* WViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WViewController.xib; path = Controller/WViewController.xib; sourceTree = "<group>"; };
+		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
+		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				F60D711E19F7E4030072F789 /* WSpaceCenter.m */,
 				F60D711F19F7E4030072F789 /* WSpaceModel.h */,
 				F60D712019F7E4030072F789 /* WSpaceModel.m */,
+				F6AEB04519F926E8002AA015 /* WBaseModel.h */,
+				F6AEB04619F926E8002AA015 /* WBaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
+				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
 				F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */,

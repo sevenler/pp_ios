@@ -52,7 +52,7 @@
     
     
     self.image0 = [[EGOImageView alloc] initWithFrame:CGRectMake(0,526, 320, 200)];
-    self.image1 = [[EGOImageView alloc] initWithFrame:CGRectMake(0,726, 320, 200)];
+    self.image1 = [[EGOImageView alloc] initWithFrame:CGRectMake(0,740, 320, 200)];
     [self.scrollview addSubview:self.image0];
     [self.scrollview addSubview:self.image1];
     
@@ -71,20 +71,21 @@
     [super viewDidLoad];
     [self viewInitStyle];
     
-    self.discriptionview.text = [NSString stringWithFormat:@"%@", self.projectModel.description];
-    self.titleview.text = [NSString stringWithFormat:@"%@", self.projectModel.title];
+    self.discriptionview.text = [NSString stringWithFormat:@"%@", [self.projectModel getDescription]];
+    self.titleview.text = [NSString stringWithFormat:@"%@", [self.projectModel getTitle]];
     [self.discriptionMoreView addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.headerview.imageURL = [NSURL URLWithString:self.projectModel.image];
-    self.image0.imageURL = [NSURL URLWithString:self.projectModel.image];
-    self.image1.imageURL = [NSURL URLWithString:self.projectModel.image];
+    NSMutableArray *images = [self.projectModel getImages];
+    self.headerview.imageURL = [NSURL URLWithString:images[0]];
+    self.image0.imageURL = [NSURL URLWithString:images[1]];
+    self.image1.imageURL = [NSURL URLWithString:images[2]];
 }
 
 - (IBAction)buttonPress:(id)sender {
     NSLog(@"button pressed!");
     
     WTextPageViewController *textpage = [[WTextPageViewController alloc] init];
-    textpage.showText = self.projectModel.description;
+    textpage.showText = [self.projectModel getDescription];
     [self.navigationController pushViewController:textpage animated:YES];
 }
 
