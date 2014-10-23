@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FlatPillButton.h"
 
 @interface WConfig : NSObject
 
 + (void)setLabelWithTitleStyle:(UILabel *)lbl;
 
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl;
+
++ (void)setButtonWithDefaultStyle:(FlatPillButton *)button;
 
 @end

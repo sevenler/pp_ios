@@ -7,9 +7,11 @@
 //
 
 #import "WConfig.h"
+#import "FlatPillButton.h"
 
 #define COLOR_BLACK @"#636769"
 #define COLOR_GRAY @"#89939F"
+#define COLOR_GREEN @"#6DC59A"
 
 #define FONT_SIZE_BIG 18
 #define FONT_SIZE_SMALL 12
@@ -57,6 +59,10 @@
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl{
      lbl.textColor = [WConfig hexStringToColor: COLOR_GRAY];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_SMALL]];
+}
+
++ (void)setButtonWithDefaultStyle:(FlatPillButton *)button{
+    [button setTitleColor:[WConfig hexStringToColor: COLOR_GREEN] forState:UIControlStateNormal];
 }
 
 @end

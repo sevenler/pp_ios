@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDetailControllerViewController">
             <connections>
+                <outlet property="discriptionMoreView" destination="UvP-Gs-E8o" id="lO4-jW-U4S"/>
                 <outlet property="discriptionview" destination="cEz-sE-HwE" id="PZx-Ip-ftc"/>
                 <outlet property="headerview" destination="zcb-fJ-vKz" id="Ilg-cE-lBb"/>
                 <outlet property="titleview" destination="nIq-Gp-aKx" id="4J1-7h-C6t"/>
@@ -38,8 +39,8 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-Gs-E8o">
-                            <rect key="frame" x="144" y="459" width="46" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-Gs-E8o" customClass="FlatPillButton">
+                            <rect key="frame" x="97" y="454" width="127" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "WSpaceModel.h"
 #import "EGOImageView.h"
+#import "FlatPillButton.h"
 
 @interface WDetailControllerViewController : UIViewController
 @property (retain, nonatomic) IBOutlet EGOImageView *headerview;
 @property (retain, nonatomic) IBOutlet UILabel *titleview;
 @property (retain, nonatomic) IBOutlet UILabel *discriptionview;
+@property (retain, nonatomic) IBOutlet FlatPillButton *discriptionMoreView;
 
 @property (strong, nonatomic) WProjectModel *projectModel;
 
