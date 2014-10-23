@@ -32,7 +32,6 @@
 		F60D712D19F815890072F789 /* FlatPillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712C19F815890072F789 /* FlatPillButton.m */; };
 		F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712F19F8C27C0072F789 /* WTextPageViewController.m */; };
 		F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */; };
-		F60D713819F8F43B0072F789 /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713719F8F43B0072F789 /* WDetailViewController.m */; };
 		F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A119CEBF0300C0B9ED /* EGOCache.m */; };
 		F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A419CEBF0300C0B9ED /* EGOImageButton.m */; };
 		F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A719CEBF0300C0B9ED /* EGOImageLoadConnection.m */; };
@@ -42,6 +41,8 @@
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
+		F6AEB04B19F9323D002AA015 /* WDetail1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04919F9323D002AA015 /* WDetail1ViewController.m */; };
+		F6AEB04C19F9323D002AA015 /* WDetail1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6AEB04A19F9323D002AA015 /* WDetail1ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,8 +82,6 @@
 		F60D712F19F8C27C0072F789 /* WTextPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTextPageViewController.m; path = Controller/WTextPageViewController.m; sourceTree = "<group>"; };
 		F60D713319F8E9250072F789 /* UILabel+dynamicSized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+dynamicSized.h"; sourceTree = "<group>"; };
 		F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+dynamicSized.m"; sourceTree = "<group>"; };
-		F60D713619F8F43B0072F789 /* WDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDetailViewController.h; sourceTree = "<group>"; };
-		F60D713719F8F43B0072F789 /* WDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDetailViewController.m; sourceTree = "<group>"; };
 		F66261A019CEBF0300C0B9ED /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		F66261A119CEBF0300C0B9ED /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		F66261A319CEBF0300C0B9ED /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
@@ -99,6 +98,9 @@
 		F66261C819CF0EAB00C0B9ED /* WViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WViewController.xib; path = Controller/WViewController.xib; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
 		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
+		F6AEB04819F9323D002AA015 /* WDetail1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDetail1ViewController.h; sourceTree = "<group>"; };
+		F6AEB04919F9323D002AA015 /* WDetail1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDetail1ViewController.m; sourceTree = "<group>"; };
+		F6AEB04A19F9323D002AA015 /* WDetail1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDetail1ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,8 +280,9 @@
 				F66261C819CF0EAB00C0B9ED /* WViewController.xib */,
 				F60D712E19F8C27C0072F789 /* WTextPageViewController.h */,
 				F60D712F19F8C27C0072F789 /* WTextPageViewController.m */,
-				F60D713619F8F43B0072F789 /* WDetailViewController.h */,
-				F60D713719F8F43B0072F789 /* WDetailViewController.m */,
+				F6AEB04819F9323D002AA015 /* WDetail1ViewController.h */,
+				F6AEB04919F9323D002AA015 /* WDetail1ViewController.m */,
+				F6AEB04A19F9323D002AA015 /* WDetail1ViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */,
+				F6AEB04C19F9323D002AA015 /* WDetail1ViewController.xib in Resources */,
 				AA3F38ED17BD03410054A992 /* InfoPlist.strings in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,
@@ -355,6 +359,7 @@
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
+				F6AEB04B19F9323D002AA015 /* WDetail1ViewController.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
 				F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */,
 				F66261B019CEBF0300C0B9ED /* EGOImageLoader.m in Sources */,
@@ -362,7 +367,6 @@
 				F60D712D19F815890072F789 /* FlatPillButton.m in Sources */,
 				F60D712A19F7FD6C0072F789 /* WConfig.m in Sources */,
 				F66261B119CEBF0300C0B9ED /* EGOImageView.m in Sources */,
-				F60D713819F8F43B0072F789 /* WDetailViewController.m in Sources */,
 				F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */,
 				F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */,
 				F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */,

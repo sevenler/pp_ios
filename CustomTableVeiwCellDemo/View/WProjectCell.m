@@ -15,7 +15,7 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    [WConfig setLabelWithTitleStyle: self.lblTitle];
+    [WConfig setLabelWithBigTitleStyle: self.lblTitle];
     [WConfig setLabelWithDescriptionStyle: self.lblDescription];
     self.lblTitle.textAlignment = UITextAlignmentLeft;
     

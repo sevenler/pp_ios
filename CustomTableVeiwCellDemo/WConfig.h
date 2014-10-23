@@ -12,7 +12,9 @@
 @interface WConfig : NSObject
 +(UIColor *) hexStringToColor: (NSString *) stringToConvert;
 
-+ (void)setLabelWithTitleStyle:(UILabel *)lbl;
++ (void)setLabelWithBigTitleStyle:(UILabel *)lbl;
+
++ (void)setLabelWithNormailTitleStyle:(UILabel *)lbl;
 
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl;
 

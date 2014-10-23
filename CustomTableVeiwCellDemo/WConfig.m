@@ -14,6 +14,7 @@
 #define COLOR_GREEN @"#6DC59A"
 
 #define FONT_SIZE_BIG 18
+#define FONT_SIZE_NORMAL 14
 #define FONT_SIZE_SMALL 12
 
 @implementation WConfig
@@ -51,9 +52,16 @@
                            alpha:1.0f];
 }
 
-+ (void)setLabelWithTitleStyle:(UILabel *)lbl{
++ (void)setLabelWithBigTitleStyle:(UILabel *)lbl{
     lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_BIG]];
+    lbl.textAlignment = UITextAlignmentCenter;
+}
+
++ (void)setLabelWithNormailTitleStyle:(UILabel *)lbl;
+{
+    lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
+    [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_NORMAL]];
     lbl.textAlignment = UITextAlignmentCenter;
 }
 
