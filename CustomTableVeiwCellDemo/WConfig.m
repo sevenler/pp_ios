@@ -54,11 +54,13 @@
 + (void)setLabelWithTitleStyle:(UILabel *)lbl{
     lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_BIG]];
+    lbl.textAlignment = UITextAlignmentCenter;
 }
 
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl{
      lbl.textColor = [WConfig hexStringToColor: COLOR_GRAY];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_SMALL]];
+    lbl.textAlignment = UITextAlignmentLeft;
 }
 
 + (void)setButtonWithDefaultStyle:(FlatPillButton *)button{

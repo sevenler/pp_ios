@@ -8,6 +8,7 @@
 
 #import "WTextPageViewController.h"
 #import "WConfig.h"
+#import "UILabel+dynamicSized.h"
 
 @interface WTextPageViewController ()
 
@@ -28,10 +29,16 @@
 {
     [super viewDidLoad];
     
-    [WConfig setLabelWithDescriptionStyle: self.textview];
-    self.textview.numberOfLines = 0;
-    [self.textview sizeToFit];
-    self.textview.text = [NSString stringWithFormat:@"%@", self.showText];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    [WConfig setLabelWithDescriptionStyle: label];
+    label.text = self.showText;
+    [label resizeToFit];
+
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    scrollView.backgroundColor = [WConfig hexStringToColor: @"#FFFFFF"];
+    [scrollView setContentSize: label.frame.size];
+    [scrollView addSubview:label];
+    self.view = scrollView;
 }
 
 - (void)didReceiveMemoryWarning

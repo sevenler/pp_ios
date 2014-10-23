@@ -17,6 +17,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     [WConfig setLabelWithTitleStyle: self.lblTitle];
     [WConfig setLabelWithDescriptionStyle: self.lblDescription];
+    self.lblTitle.textAlignment = UITextAlignmentLeft;
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     

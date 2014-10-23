@@ -31,15 +31,14 @@
 		F60D712A19F7FD6C0072F789 /* WConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712919F7FD6C0072F789 /* WConfig.m */; };
 		F60D712D19F815890072F789 /* FlatPillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712C19F815890072F789 /* FlatPillButton.m */; };
 		F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712F19F8C27C0072F789 /* WTextPageViewController.m */; };
-		F60D713219F8C27C0072F789 /* WTextPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F60D713019F8C27C0072F789 /* WTextPageViewController.xib */; };
+		F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */; };
+		F60D713819F8F43B0072F789 /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713719F8F43B0072F789 /* WDetailViewController.m */; };
 		F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A119CEBF0300C0B9ED /* EGOCache.m */; };
 		F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A419CEBF0300C0B9ED /* EGOImageButton.m */; };
 		F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A719CEBF0300C0B9ED /* EGOImageLoadConnection.m */; };
 		F66261B019CEBF0300C0B9ED /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A919CEBF0300C0B9ED /* EGOImageLoader.m */; };
 		F66261B119CEBF0300C0B9ED /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261AC19CEBF0300C0B9ED /* EGOImageView.m */; };
 		F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66261B219CEC8F200C0B9ED /* QuartzCore.framework */; };
-		F66261C919CF0EAB00C0B9ED /* WDetailControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C419CF0EAB00C0B9ED /* WDetailControllerViewController.m */; };
-		F66261CA19CF0EAB00C0B9ED /* WDetailControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C519CF0EAB00C0B9ED /* WDetailControllerViewController.xib */; };
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
 /* End PBXBuildFile section */
@@ -79,7 +78,10 @@
 		F60D712C19F815890072F789 /* FlatPillButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlatPillButton.m; sourceTree = "<group>"; };
 		F60D712E19F8C27C0072F789 /* WTextPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTextPageViewController.h; path = Controller/WTextPageViewController.h; sourceTree = "<group>"; };
 		F60D712F19F8C27C0072F789 /* WTextPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTextPageViewController.m; path = Controller/WTextPageViewController.m; sourceTree = "<group>"; };
-		F60D713019F8C27C0072F789 /* WTextPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WTextPageViewController.xib; path = Controller/WTextPageViewController.xib; sourceTree = "<group>"; };
+		F60D713319F8E9250072F789 /* UILabel+dynamicSized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+dynamicSized.h"; sourceTree = "<group>"; };
+		F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+dynamicSized.m"; sourceTree = "<group>"; };
+		F60D713619F8F43B0072F789 /* WDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDetailViewController.h; sourceTree = "<group>"; };
+		F60D713719F8F43B0072F789 /* WDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDetailViewController.m; sourceTree = "<group>"; };
 		F66261A019CEBF0300C0B9ED /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		F66261A119CEBF0300C0B9ED /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		F66261A319CEBF0300C0B9ED /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
@@ -91,9 +93,6 @@
 		F66261AB19CEBF0300C0B9ED /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		F66261AC19CEBF0300C0B9ED /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		F66261B219CEC8F200C0B9ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		F66261C319CF0EAB00C0B9ED /* WDetailControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDetailControllerViewController.h; path = Controller/WDetailControllerViewController.h; sourceTree = "<group>"; };
-		F66261C419CF0EAB00C0B9ED /* WDetailControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDetailControllerViewController.m; path = Controller/WDetailControllerViewController.m; sourceTree = "<group>"; };
-		F66261C519CF0EAB00C0B9ED /* WDetailControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WDetailControllerViewController.xib; path = Controller/WDetailControllerViewController.xib; sourceTree = "<group>"; };
 		F66261C619CF0EAB00C0B9ED /* WViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WViewController.h; path = Controller/WViewController.h; sourceTree = "<group>"; };
 		F66261C719CF0EAB00C0B9ED /* WViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WViewController.m; path = Controller/WViewController.m; sourceTree = "<group>"; };
 		F66261C819CF0EAB00C0B9ED /* WViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WViewController.xib; path = Controller/WViewController.xib; sourceTree = "<group>"; };
@@ -207,6 +206,8 @@
 				AA3F390A17BD243A0054A992 /* WProjectCell.h */,
 				AA3F390B17BD243A0054A992 /* WProjectCell.m */,
 				AA3F390D17BD250B0054A992 /* WProjectCell.xib */,
+				F60D713319F8E9250072F789 /* UILabel+dynamicSized.h */,
+				F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,15 +268,13 @@
 		F66261BD19CF062200C0B9ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F66261C319CF0EAB00C0B9ED /* WDetailControllerViewController.h */,
-				F66261C419CF0EAB00C0B9ED /* WDetailControllerViewController.m */,
-				F66261C519CF0EAB00C0B9ED /* WDetailControllerViewController.xib */,
 				F66261C619CF0EAB00C0B9ED /* WViewController.h */,
 				F66261C719CF0EAB00C0B9ED /* WViewController.m */,
 				F66261C819CF0EAB00C0B9ED /* WViewController.xib */,
 				F60D712E19F8C27C0072F789 /* WTextPageViewController.h */,
 				F60D712F19F8C27C0072F789 /* WTextPageViewController.m */,
-				F60D713019F8C27C0072F789 /* WTextPageViewController.xib */,
+				F60D713619F8F43B0072F789 /* WDetailViewController.h */,
+				F60D713719F8F43B0072F789 /* WDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -334,9 +333,7 @@
 			files = (
 				F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */,
 				AA3F38ED17BD03410054A992 /* InfoPlist.strings in Resources */,
-				F66261CA19CF0EAB00C0B9ED /* WDetailControllerViewController.xib in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
-				F60D713219F8C27C0072F789 /* WTextPageViewController.xib in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,
 				AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */,
 				AA3F390E17BD250B0054A992 /* WProjectCell.xib in Resources */,
@@ -359,12 +356,13 @@
 				F60D712D19F815890072F789 /* FlatPillButton.m in Sources */,
 				F60D712A19F7FD6C0072F789 /* WConfig.m in Sources */,
 				F66261B119CEBF0300C0B9ED /* EGOImageView.m in Sources */,
+				F60D713819F8F43B0072F789 /* WDetailViewController.m in Sources */,
 				F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */,
 				F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */,
 				F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */,
-				F66261C919CF0EAB00C0B9ED /* WDetailControllerViewController.m in Sources */,
+				F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

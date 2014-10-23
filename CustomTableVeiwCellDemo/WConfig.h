@@ -10,6 +10,7 @@
 #import "FlatPillButton.h"
 
 @interface WConfig : NSObject
++(UIColor *) hexStringToColor: (NSString *) stringToConvert;
 
 + (void)setLabelWithTitleStyle:(UILabel *)lbl;
 

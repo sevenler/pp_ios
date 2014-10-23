@@ -1,5 +1,5 @@
 //
-//  WTextPageViewController.h
+//  UILabel+dynamicSized.h
 //  CustomTableVeiwCellDemo
 //
 //  Created by johnny on 14-10-23.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WTextPageViewController : UIViewController
+@interface UILabel (dynamicSized)
 
-@property (strong, nonatomic) NSString *showText;
+-(float)resizeToFit;
+-(float)expectedHeight;
 
 @end

@@ -10,7 +10,7 @@
 #import "WSpaceModel.h"
 #import "WProjectCell.h"
 #import "WSpaceCenter.h"
-#import "WDetailControllerViewController.h"
+#import "WDetailViewController.h"
 #import <AVOSCloud/AVObject.h>
 
 @interface WViewController (){
@@ -112,7 +112,7 @@
     WProjectModel *paperModel = _projectList[indexPath.row];
     NSLog(@"paper year -> %@  %@", paperModel.title, self.navigationController);
     
-    WDetailControllerViewController *detail = [[WDetailControllerViewController alloc] initWithNibName:@"WDetailControllerViewController" bundle:nil];
+    WDetailViewController *detail = [[WDetailViewController alloc] init];
     detail.projectModel = paperModel;
     [self.navigationController pushViewController:detail animated:YES];
     [detail release];
