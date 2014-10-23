@@ -16,6 +16,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *titleview;
 @property (retain, nonatomic) IBOutlet UILabel *discriptionview;
 @property (retain, nonatomic) IBOutlet FlatPillButton *discriptionMoreView;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollview;
 
 @property (strong, nonatomic) WProjectModel *projectModel;
 

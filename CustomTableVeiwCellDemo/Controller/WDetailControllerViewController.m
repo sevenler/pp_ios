@@ -30,6 +30,15 @@
     [WConfig setLabelWithDescriptionStyle: self.discriptionview];
     self.discriptionview.numberOfLines = 7;
     [WConfig setButtonWithDefaultStyle: self.discriptionMoreView];
+    
+    EGOImageView *image0 = [[EGOImageView alloc] initWithFrame:CGRectMake(0,526, 320, 200)];
+    image0.imageURL = [NSURL URLWithString:self.projectModel.image];
+    EGOImageView *image1 = [[EGOImageView alloc] initWithFrame:CGRectMake(0,526, 320, 200)];
+    image1.imageURL = [NSURL URLWithString:self.projectModel.image];
+    [self.scrollview addSubview:image0];
+    [self.scrollview addSubview:image1];
+    
+    [self.scrollview setContentSize:(CGSizeMake(320, 568 + 568))];
 }
 
 - (void)viewDidLoad

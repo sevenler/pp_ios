@@ -9,6 +9,7 @@
                 <outlet property="discriptionMoreView" destination="UvP-Gs-E8o" id="lO4-jW-U4S"/>
                 <outlet property="discriptionview" destination="cEz-sE-HwE" id="PZx-Ip-ftc"/>
                 <outlet property="headerview" destination="zcb-fJ-vKz" id="Ilg-cE-lBb"/>
+                <outlet property="scrollview" destination="Qnt-h4-GEF" id="S5Z-fd-kyx"/>
                 <outlet property="titleview" destination="nIq-Gp-aKx" id="4J1-7h-C6t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
