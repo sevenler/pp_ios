@@ -8,6 +8,7 @@
 
 #import "WDetail1ViewController.h"
 #import "WTextPageViewController.h"
+#import "MASExampleAttributeChainingView.h"
 #import "WConfig.h"
 
 @interface WDetail1ViewController ()
@@ -40,13 +41,15 @@
     [WConfig setLabelWithDescriptionStyle: self.discriptionview];
     self.discriptionview.numberOfLines = 7;
     [WConfig setButtonWithDefaultStyle: self.discriptionMoreView];
-    [WConfig setLabelWithNormailTitleStyle: self.eventTitle];
+    [WConfig setLabelWithNormalTitleStyle: self.eventTitle];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self viewInitStyle];
+    
+    [self initEventView: self.scrollview];
     
     self.discriptionview.text = [NSString stringWithFormat:@"%@", [self.projectModel getDescription]];
     self.titleview.text = [NSString stringWithFormat:@"%@", [self.projectModel getTitle]];
@@ -58,6 +61,16 @@
     self.image1.imageURL = [NSURL URLWithString:images[2]];
     
     self.eventTitle.text = @"可预订的活动";
+}
+
+- (void)initEventView:(UIScrollView *)parent
+{
+    MASExampleAttributeChainingView *item = [[MASExampleAttributeChainingView alloc] init];
+    [item setFrame: CGRectMake(0, 1000, 320, 120)];
+    [item setBackgroundColor: [WConfig hexStringToColor:@"e2e2e2"]];
+    [item setData: @"http://ac-6aysjxli.qiniudn.com/QIMXCQGyuYrFjPr6UwUhmvrgu2AcuU8f3gzxi1Ou.png" titleWith:[self.projectModel getTitle] descriptionWith:[self.projectModel getTitle] ];
+    
+    [parent addSubview:item];
 }
 
 - (IBAction)buttonPress:(id)sender {

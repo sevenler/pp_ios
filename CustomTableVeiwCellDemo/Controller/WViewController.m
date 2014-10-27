@@ -10,7 +10,6 @@
 #import "WSpaceModel.h"
 #import "WProjectCell.h"
 #import "WSpaceCenter.h"
-#import "WDetailViewController.h"
 #import "WDetail1ViewController.h"
 #import <AVOSCloud/AVObject.h>
 

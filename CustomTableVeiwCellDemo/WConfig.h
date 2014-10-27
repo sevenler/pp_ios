@@ -14,7 +14,7 @@
 
 + (void)setLabelWithBigTitleStyle:(UILabel *)lbl;
 
-+ (void)setLabelWithNormailTitleStyle:(UILabel *)lbl;
++ (void)setLabelWithNormalTitleStyle:(UILabel *)lbl;
 
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl;
 

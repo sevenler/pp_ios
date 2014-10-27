@@ -58,7 +58,7 @@
     lbl.textAlignment = UITextAlignmentCenter;
 }
 
-+ (void)setLabelWithNormailTitleStyle:(UILabel *)lbl;
++ (void)setLabelWithNormalTitleStyle:(UILabel *)lbl;
 {
     lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_NORMAL]];
