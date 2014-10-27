@@ -16,4 +16,8 @@
     return self;
 }
 
+- (NSString *) getRemoteId{
+    return self.data.objectId;
+}
+
 @end

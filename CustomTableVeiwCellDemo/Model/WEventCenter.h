@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WProjectCenter : NSObject
-+(WProjectCenter *) instance;
-- (void)getAllSpace:(void(^)(NSArray *objects, NSError *error))block;
+@interface WEventCenter : NSObject
++(WEventCenter *) instance;
+- (void)getAllEvent:(NSString *)spaceId
+          blockWith:(void(^)(NSArray *objects, NSError *error))block;
 @end

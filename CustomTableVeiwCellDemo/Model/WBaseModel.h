@@ -14,4 +14,6 @@
 
 -(id)initWithAVObject:(AVObject *)data;
 
+- (NSString *) getRemoteId;
+
 @end

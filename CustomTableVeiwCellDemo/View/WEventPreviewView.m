@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Jonas Budelmann. All rights reserved.
 //
 
-#import "MASExampleAttributeChainingView.h"
+#import "WEventPreviewView.h"
 #import "MASConstraintMaker.h"
 #import "View+MASAdditions.h"
 #import "EGOImageView.h"
 #import "WConfig.h"
 
-@interface MASExampleAttributeChainingView()
+@interface WEventPreviewView()
 
 @property (strong, nonatomic) EGOImageView *imageview;
 @property (strong, nonatomic) UILabel *title;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation MASExampleAttributeChainingView
+@implementation WEventPreviewView
 
 - (id)init {
     self = [super init];
@@ -49,7 +49,7 @@
         make.top.and.left.equalTo(superview).insets(padding);
         make.bottom.equalTo(superview).insets(padding);
         
-        make.width.equalTo(@(100));
+        make.width.equalTo(@(130));
     }];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.right.equalTo(superview).insets(padding);
@@ -63,16 +63,26 @@
         
         make.height.equalTo(@(20));
     }];
+    
+    //添加分割线
+    UIView *line = UIView.new;
+    [self addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.left.right.equalTo(superview);
+        make.height.equalTo(@(1));
+    }];
+    [WConfig setSpinerLineStyle: line];
+    
 
     return self;
 }
 
 -(void) setData:(NSString *)image
       titleWith:(NSString *)title
-descriptionWith:(NSString *)description{
-    //    self.view1.imageURL  = image;
+priceWith:(float)price{
+    self.imageview.imageURL  = [NSURL URLWithString: image];
     self.title.text = title;
-    self.description.text = description;
+    self.description.text = [NSString stringWithFormat:@"%f 人/位", price];
 }
 
 

@@ -20,4 +20,6 @@
 
 + (void)setButtonWithDefaultStyle:(FlatPillButton *)button;
 
++ (void)setSpinerLineStyle:(UIView *)line;
+
 @end

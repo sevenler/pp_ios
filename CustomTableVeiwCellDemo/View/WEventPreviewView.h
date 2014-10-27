@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MASExampleAttributeChainingView : UIView
+@interface WEventPreviewView : UIView
 
 -(void) setData:(NSString *)image
       titleWith:(NSString *)title
-descriptionWith:(NSString *)description;
+priceWith:(float)description;
 
 @end

@@ -8,8 +8,10 @@
 
 #import "WDetail1ViewController.h"
 #import "WTextPageViewController.h"
-#import "MASExampleAttributeChainingView.h"
+#import "WEventPreviewView.h"
 #import "WConfig.h"
+#import "WEventCenter.h"
+#import "WEventModel.h"
 
 @interface WDetail1ViewController ()
 
@@ -49,8 +51,6 @@
     [super viewDidLoad];
     [self viewInitStyle];
     
-    [self initEventView: self.scrollview];
-    
     self.discriptionview.text = [NSString stringWithFormat:@"%@", [self.projectModel getDescription]];
     self.titleview.text = [NSString stringWithFormat:@"%@", [self.projectModel getTitle]];
     [self.discriptionMoreView addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
@@ -61,14 +61,31 @@
     self.image1.imageURL = [NSURL URLWithString:images[2]];
     
     self.eventTitle.text = @"可预订的活动";
+    //添加活动列表
+    [[WEventCenter instance] getAllEvent:[self.projectModel getRemoteId]
+                               blockWith:^(NSArray *objects, NSError *error) {
+                                   if (!error) {
+                                       NSInteger index = 0;
+                                       for(AVObject *obj in objects)
+                                       {
+                                           WEventModel *event = [[WEventModel alloc]initWithAVObject:obj];
+                                           [self initEventView: self.scrollview indexWith:index++ dataWith:event];
+                                       }
+                                   } else {
+                                       NSLog(@"Error: %@ %@", error, [error userInfo]);
+                                   }
+                               }];
 }
 
 - (void)initEventView:(UIScrollView *)parent
+            indexWith:(NSInteger) index
+             dataWith:(WEventModel *)event
 {
-    MASExampleAttributeChainingView *item = [[MASExampleAttributeChainingView alloc] init];
-    [item setFrame: CGRectMake(0, 1000, 320, 120)];
-    [item setBackgroundColor: [WConfig hexStringToColor:@"e2e2e2"]];
-    [item setData: @"http://ac-6aysjxli.qiniudn.com/QIMXCQGyuYrFjPr6UwUhmvrgu2AcuU8f3gzxi1Ou.png" titleWith:[self.projectModel getTitle] descriptionWith:[self.projectModel getTitle] ];
+    NSInteger top = 900;
+    NSInteger height = 120;
+    WEventPreviewView *item = [[WEventPreviewView alloc] init];
+    [item setFrame: CGRectMake(0, top + index * height, 320, height)];
+    [item setData:[event getImages][0] titleWith:[event getTitle] priceWith: (long)[event getPrice]];
     
     [parent addSubview:item];
 }

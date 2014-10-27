@@ -52,7 +52,9 @@
 		F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0A019FA0F55002AA015 /* NSArray+MASAdditions.m */; };
 		F6AEB0AE19FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0A319FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0A519FA0F55002AA015 /* View+MASAdditions.m */; };
-		F6AEB0B219FA0FB9002AA015 /* MASExampleAttributeChainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0B019FA0FB9002AA015 /* MASExampleAttributeChainingView.m */; };
+		F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838CE19FE98D800F7EDC9 /* WEventModel.m */; };
+		F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */; };
+		F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,8 +136,12 @@
 		F6AEB0A419FA0F55002AA015 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = SOURCE_ROOT; };
 		F6AEB0A519FA0F55002AA015 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = SOURCE_ROOT; };
 		F6AEB0A619FA0F55002AA015 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = SOURCE_ROOT; };
-		F6AEB0B019FA0FB9002AA015 /* MASExampleAttributeChainingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASExampleAttributeChainingView.m; sourceTree = "<group>"; };
-		F6AEB0B119FA0FB9002AA015 /* MASExampleAttributeChainingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASExampleAttributeChainingView.h; sourceTree = "<group>"; };
+		F6B838CD19FE98D800F7EDC9 /* WEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventModel.h; sourceTree = "<group>"; };
+		F6B838CE19FE98D800F7EDC9 /* WEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventModel.m; sourceTree = "<group>"; };
+		F6B838D019FE9AAB00F7EDC9 /* WEventCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventCenter.h; sourceTree = "<group>"; };
+		F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventCenter.m; sourceTree = "<group>"; };
+		F6B838D319FEA2CB00F7EDC9 /* WEventPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventPreviewView.h; sourceTree = "<group>"; };
+		F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventPreviewView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,12 +237,16 @@
 		AA3F390517BD10B90054A992 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6B838D019FE9AAB00F7EDC9 /* WEventCenter.h */,
+				F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */,
 				F60D711D19F7E4030072F789 /* WSpaceCenter.h */,
 				F60D711E19F7E4030072F789 /* WSpaceCenter.m */,
 				F60D711F19F7E4030072F789 /* WSpaceModel.h */,
 				F60D712019F7E4030072F789 /* WSpaceModel.m */,
 				F6AEB04519F926E8002AA015 /* WBaseModel.h */,
 				F6AEB04619F926E8002AA015 /* WBaseModel.m */,
+				F6B838CD19FE98D800F7EDC9 /* WEventModel.h */,
+				F6B838CE19FE98D800F7EDC9 /* WEventModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,8 +254,8 @@
 		AA3F390917BD234B0054A992 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F6AEB0B019FA0FB9002AA015 /* MASExampleAttributeChainingView.m */,
-				F6AEB0B119FA0FB9002AA015 /* MASExampleAttributeChainingView.h */,
+				F6B838D319FEA2CB00F7EDC9 /* WEventPreviewView.h */,
+				F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */,
 				F60D712B19F815890072F789 /* FlatPillButton.h */,
 				F60D712C19F815890072F789 /* FlatPillButton.m */,
 				AA3F390A17BD243A0054A992 /* WProjectCell.h */,
@@ -431,9 +441,9 @@
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
 				F6AEB04B19F9323D002AA015 /* WDetail1ViewController.m in Sources */,
-				F6AEB0B219FA0FB9002AA015 /* MASExampleAttributeChainingView.m in Sources */,
 				F6AEB0AC19FA0F55002AA015 /* MASViewConstraint.m in Sources */,
 				F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */,
+				F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */,
 				F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
 				F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */,
@@ -447,9 +457,11 @@
 				F6AEB0AE19FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */,
 				F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */,
+				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
 				F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */,
+				F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */,
 				F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

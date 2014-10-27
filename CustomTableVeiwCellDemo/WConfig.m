@@ -52,6 +52,10 @@
                            alpha:1.0f];
 }
 
++ (void)setSpinerLineStyle:(UIView *)line{
+    line.backgroundColor = [WConfig hexStringToColor: COLOR_GRAY];
+}
+
 + (void)setLabelWithBigTitleStyle:(UILabel *)lbl{
     lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_BIG]];
