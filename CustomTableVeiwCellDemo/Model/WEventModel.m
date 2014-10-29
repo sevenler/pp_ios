@@ -24,5 +24,15 @@
 - (NSInteger) getPrice{
     return 3;
 }
+- (NSDate *) getTargetDate{
+    return [self.data objectForKey:@"targetDate"];
+}
+- (NSInteger) getTargetMax{
+    return [[self.data objectForKey:@"targetMax"] integerValue];
+}
+- (NSInteger) getPartners
+{
+    return [[self.data objectForKey:@"partners"] integerValue];
+}
 
 @end

@@ -1,23 +1,27 @@
 //
-//  WDetail1ViewController.m
+//  WDetailViewController.m
 //  CustomTableVeiwCellDemo
 //
 //  Created by johnny on 14-10-23.
 //  Copyright (c) 2014年 wzrong. All rights reserved.
 //
 
-#import "WDetail1ViewController.h"
+#import "WDetailViewController.h"
 #import "WTextPageViewController.h"
 #import "WEventPreviewView.h"
 #import "WConfig.h"
 #import "WEventCenter.h"
 #import "WEventModel.h"
+#import "WEventViewController.h"
+#import "WEventedTapGestureRecognizer.h"
 
-@interface WDetail1ViewController ()
+#define TAG_DISCRIPTION_MORE 1
+
+@interface WDetailViewController ()
 
 @end
 
-@implementation WDetail1ViewController
+@implementation WDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +57,7 @@
     
     self.discriptionview.text = [NSString stringWithFormat:@"%@", [self.projectModel getDescription]];
     self.titleview.text = [NSString stringWithFormat:@"%@", [self.projectModel getTitle]];
+    self.discriptionMoreView.tag = TAG_DISCRIPTION_MORE;
     [self.discriptionMoreView addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
     
     NSMutableArray *images = [self.projectModel getImages];
@@ -77,6 +82,7 @@
                                }];
 }
 
+//初始化
 - (void)initEventView:(UIScrollView *)parent
             indexWith:(NSInteger) index
              dataWith:(WEventModel *)event
@@ -87,15 +93,38 @@
     [item setFrame: CGRectMake(0, top + index * height, 320, height)];
     [item setData:[event getImages][0] titleWith:[event getTitle] priceWith: (long)[event getPrice]];
     
+    WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
+                                                                                      action:@selector(handleTap:)];
+    singleFingerTap.eventModel = event;
+    [item addGestureRecognizer:singleFingerTap];
+    [singleFingerTap release];
+
     [parent addSubview:item];
 }
 
+//区域点击事件
+- (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
+    WEventViewController *detail = [[WEventViewController alloc] init];
+    detail.eventModel = recognizer.eventModel;
+    [self.navigationController pushViewController:detail animated:YES];
+}
+
+//按钮点击事件
 - (IBAction)buttonPress:(id)sender {
-    NSLog(@"button pressed!");
+    UIView *view = sender;
     
-    WTextPageViewController *textpage = [[WTextPageViewController alloc] init];
-    textpage.showText = [self.projectModel getDescription];
-    [self.navigationController pushViewController:textpage animated:YES];
+    switch (view.tag) {
+        case TAG_DISCRIPTION_MORE:{
+            WTextPageViewController *textpage = [[WTextPageViewController alloc] init];
+            textpage.showText = [self.projectModel getDescription];
+            [self.navigationController pushViewController:textpage animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

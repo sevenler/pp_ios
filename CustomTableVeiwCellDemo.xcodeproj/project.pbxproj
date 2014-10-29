@@ -40,9 +40,13 @@
 		F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66261B219CEC8F200C0B9ED /* QuartzCore.framework */; };
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
+		F698732F1A00BADC003458AC /* WEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698732D1A00BADC003458AC /* WEventViewController.m */; };
+		F69873301A00BADC003458AC /* WEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698732E1A00BADC003458AC /* WEventViewController.xib */; };
+		F69873361A00E5BF003458AC /* WEventedTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */; };
+		F69873391A0120C5003458AC /* WUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873381A0120C5003458AC /* WUtils.m */; };
+		F698733D1A012A59003458AC /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698733B1A012A59003458AC /* WDetailViewController.m */; };
+		F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698733C1A012A59003458AC /* WDetailViewController.xib */; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
-		F6AEB04B19F9323D002AA015 /* WDetail1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04919F9323D002AA015 /* WDetail1ViewController.m */; };
-		F6AEB04C19F9323D002AA015 /* WDetail1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6AEB04A19F9323D002AA015 /* WDetail1ViewController.xib */; };
 		F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09119FA0F55002AA015 /* MASCompositeConstraint.m */; };
 		F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09319FA0F55002AA015 /* MASConstraint.m */; };
 		F6AEB0A919FA0F55002AA015 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09619FA0F55002AA015 /* MASConstraintMaker.m */; };
@@ -108,11 +112,18 @@
 		F66261C619CF0EAB00C0B9ED /* WViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WViewController.h; path = Controller/WViewController.h; sourceTree = "<group>"; };
 		F66261C719CF0EAB00C0B9ED /* WViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WViewController.m; path = Controller/WViewController.m; sourceTree = "<group>"; };
 		F66261C819CF0EAB00C0B9ED /* WViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WViewController.xib; path = Controller/WViewController.xib; sourceTree = "<group>"; };
+		F698732C1A00BADC003458AC /* WEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WEventViewController.h; path = Controller/WEventViewController.h; sourceTree = "<group>"; };
+		F698732D1A00BADC003458AC /* WEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WEventViewController.m; path = Controller/WEventViewController.m; sourceTree = "<group>"; };
+		F698732E1A00BADC003458AC /* WEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WEventViewController.xib; path = Controller/WEventViewController.xib; sourceTree = "<group>"; };
+		F69873341A00E5BF003458AC /* WEventedTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventedTapGestureRecognizer.h; sourceTree = "<group>"; };
+		F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventedTapGestureRecognizer.m; sourceTree = "<group>"; };
+		F69873371A0120C5003458AC /* WUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUtils.h; sourceTree = "<group>"; };
+		F69873381A0120C5003458AC /* WUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUtils.m; sourceTree = "<group>"; };
+		F698733A1A012A59003458AC /* WDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDetailViewController.h; path = Controller/WDetailViewController.h; sourceTree = "<group>"; };
+		F698733B1A012A59003458AC /* WDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDetailViewController.m; path = Controller/WDetailViewController.m; sourceTree = "<group>"; };
+		F698733C1A012A59003458AC /* WDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WDetailViewController.xib; path = Controller/WDetailViewController.xib; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
 		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
-		F6AEB04819F9323D002AA015 /* WDetail1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDetail1ViewController.h; sourceTree = "<group>"; };
-		F6AEB04919F9323D002AA015 /* WDetail1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDetail1ViewController.m; sourceTree = "<group>"; };
-		F6AEB04A19F9323D002AA015 /* WDetail1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDetail1ViewController.xib; sourceTree = "<group>"; };
 		F6AEB09019FA0F55002AA015 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = SOURCE_ROOT; };
 		F6AEB09119FA0F55002AA015 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = SOURCE_ROOT; };
 		F6AEB09219FA0F55002AA015 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = SOURCE_ROOT; };
@@ -216,6 +227,8 @@
 				AA3F38E917BD03410054A992 /* Supporting Files */,
 				F60D712819F7FD6C0072F789 /* WConfig.h */,
 				F60D712919F7FD6C0072F789 /* WConfig.m */,
+				F69873371A0120C5003458AC /* WUtils.h */,
+				F69873381A0120C5003458AC /* WUtils.m */,
 			);
 			path = CustomTableVeiwCellDemo;
 			sourceTree = "<group>";
@@ -263,6 +276,8 @@
 				AA3F390D17BD250B0054A992 /* WProjectCell.xib */,
 				F60D713319F8E9250072F789 /* UILabel+dynamicSized.h */,
 				F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */,
+				F69873341A00E5BF003458AC /* WEventedTapGestureRecognizer.h */,
+				F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,14 +338,17 @@
 		F66261BD19CF062200C0B9ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F698733A1A012A59003458AC /* WDetailViewController.h */,
+				F698733B1A012A59003458AC /* WDetailViewController.m */,
+				F698733C1A012A59003458AC /* WDetailViewController.xib */,
 				F66261C619CF0EAB00C0B9ED /* WViewController.h */,
 				F66261C719CF0EAB00C0B9ED /* WViewController.m */,
 				F66261C819CF0EAB00C0B9ED /* WViewController.xib */,
 				F60D712E19F8C27C0072F789 /* WTextPageViewController.h */,
 				F60D712F19F8C27C0072F789 /* WTextPageViewController.m */,
-				F6AEB04819F9323D002AA015 /* WDetail1ViewController.h */,
-				F6AEB04919F9323D002AA015 /* WDetail1ViewController.m */,
-				F6AEB04A19F9323D002AA015 /* WDetail1ViewController.xib */,
+				F698732C1A00BADC003458AC /* WEventViewController.h */,
+				F698732D1A00BADC003458AC /* WEventViewController.m */,
+				F698732E1A00BADC003458AC /* WEventViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -418,8 +436,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */,
-				F6AEB04C19F9323D002AA015 /* WDetail1ViewController.xib in Resources */,
+				F69873301A00BADC003458AC /* WEventViewController.xib in Resources */,
 				AA3F38ED17BD03410054A992 /* InfoPlist.strings in Resources */,
+				F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,
 				AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */,
@@ -440,11 +459,11 @@
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
-				F6AEB04B19F9323D002AA015 /* WDetail1ViewController.m in Sources */,
 				F6AEB0AC19FA0F55002AA015 /* MASViewConstraint.m in Sources */,
 				F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */,
 				F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */,
 				F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */,
+				F69873391A0120C5003458AC /* WUtils.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
 				F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */,
 				F66261B019CEBF0300C0B9ED /* EGOImageLoader.m in Sources */,
@@ -456,9 +475,12 @@
 				F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */,
 				F6AEB0AE19FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */,
+				F69873361A00E5BF003458AC /* WEventedTapGestureRecognizer.m in Sources */,
 				F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */,
+				F698732F1A00BADC003458AC /* WEventViewController.m in Sources */,
 				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
 				F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */,
+				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */,
 				F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */,

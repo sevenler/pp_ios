@@ -9,10 +9,6 @@
 #import "WConfig.h"
 #import "FlatPillButton.h"
 
-#define COLOR_BLACK @"#636769"
-#define COLOR_GRAY @"#89939F"
-#define COLOR_GREEN @"#6DC59A"
-
 #define FONT_SIZE_BIG 18
 #define FONT_SIZE_NORMAL 14
 #define FONT_SIZE_SMALL 12

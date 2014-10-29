@@ -1,5 +1,5 @@
 //
-//  WDetail1ViewController.h
+//  WDetailViewController.h
 //  CustomTableVeiwCellDemo
 //
 //  Created by johnny on 14-10-23.
@@ -11,7 +11,7 @@
 #import "FlatPillButton.h"
 #import "WSpaceModel.h"
 
-@interface WDetail1ViewController : UIViewController
+@interface WDetailViewController : UIViewController
 
 @property (retain, nonatomic) IBOutlet  EGOImageView *headerview;
 @property (retain, nonatomic) IBOutlet EGOImageView *image0;

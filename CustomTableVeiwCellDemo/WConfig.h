@@ -10,6 +10,11 @@
 #import "FlatPillButton.h"
 
 @interface WConfig : NSObject
+
+#define COLOR_BLACK @"#636769"
+#define COLOR_GRAY @"#89939F"
+#define COLOR_GREEN @"#6DC59A"
+
 +(UIColor *) hexStringToColor: (NSString *) stringToConvert;
 
 + (void)setLabelWithBigTitleStyle:(UILabel *)lbl;

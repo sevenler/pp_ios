@@ -14,5 +14,9 @@
 - (NSString *) getTitle;
 - (NSString *) getDescription;
 - (NSInteger) getPrice;
+- (NSDate *) getTargetDate;
+- (NSInteger) getPrice;
+- (NSInteger) getTargetMax;
+- (NSInteger) getPartners;
 
 @end
