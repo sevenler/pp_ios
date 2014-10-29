@@ -33,8 +33,11 @@
     NSMutableArray *likers = [self.data mutableArrayValueForKey:@"likers"];
     return likers.count;
 }
-- (NSString *) getAvater{
+- (NSString *) getOwnerAvater{
     return [self.data objectForKey:@"ownerAvater"];
+}
+- (NSString *) getOwnerName{
+    return [self.data objectForKey:@"ownerName"];
 }
 - (NSString *) getPosition{
     return [self.data objectForKey:@"mapPositionUnit"];

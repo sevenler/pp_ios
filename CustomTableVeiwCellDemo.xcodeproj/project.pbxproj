@@ -46,6 +46,7 @@
 		F69873391A0120C5003458AC /* WUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873381A0120C5003458AC /* WUtils.m */; };
 		F698733D1A012A59003458AC /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698733B1A012A59003458AC /* WDetailViewController.m */; };
 		F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698733C1A012A59003458AC /* WDetailViewController.xib */; };
+		F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873401A0131A2003458AC /* WUserPreviewView.m */; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
 		F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09119FA0F55002AA015 /* MASCompositeConstraint.m */; };
 		F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09319FA0F55002AA015 /* MASConstraint.m */; };
@@ -122,6 +123,8 @@
 		F698733A1A012A59003458AC /* WDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDetailViewController.h; path = Controller/WDetailViewController.h; sourceTree = "<group>"; };
 		F698733B1A012A59003458AC /* WDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDetailViewController.m; path = Controller/WDetailViewController.m; sourceTree = "<group>"; };
 		F698733C1A012A59003458AC /* WDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WDetailViewController.xib; path = Controller/WDetailViewController.xib; sourceTree = "<group>"; };
+		F698733F1A0131A2003458AC /* WUserPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserPreviewView.h; sourceTree = "<group>"; };
+		F69873401A0131A2003458AC /* WUserPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserPreviewView.m; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
 		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
 		F6AEB09019FA0F55002AA015 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = SOURCE_ROOT; };
@@ -278,6 +281,8 @@
 				F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */,
 				F69873341A00E5BF003458AC /* WEventedTapGestureRecognizer.h */,
 				F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */,
+				F698733F1A0131A2003458AC /* WUserPreviewView.h */,
+				F69873401A0131A2003458AC /* WUserPreviewView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
 				F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */,
 				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,
+				F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */,
 				F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */,

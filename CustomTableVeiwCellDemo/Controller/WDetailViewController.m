@@ -14,8 +14,11 @@
 #import "WEventModel.h"
 #import "WEventViewController.h"
 #import "WEventedTapGestureRecognizer.h"
+#import "WUserPreviewView.h"
 
 #define TAG_DISCRIPTION_MORE 1
+#define TOP_EVENT_START  900
+#define TOP_EVENT_HEIGHT  120
 
 @interface WDetailViewController ()
 
@@ -58,6 +61,7 @@
     self.discriptionview.text = [NSString stringWithFormat:@"%@", [self.projectModel getDescription]];
     self.titleview.text = [NSString stringWithFormat:@"%@", [self.projectModel getTitle]];
     self.discriptionMoreView.tag = TAG_DISCRIPTION_MORE;
+    [self.discriptionMoreView setTitle:@"更多" forState:UIControlStateNormal];
     [self.discriptionMoreView addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
     
     NSMutableArray *images = [self.projectModel getImages];
@@ -76,6 +80,10 @@
                                            WEventModel *event = [[WEventModel alloc]initWithAVObject:obj];
                                            [self initEventView: self.scrollview indexWith:index++ dataWith:event];
                                        }
+                                       
+                                       //计算用户模块的x坐标
+                                       NSInteger top = TOP_EVENT_START + TOP_EVENT_HEIGHT * index;
+                                       [self initUserView:self.scrollview topWith:top];
                                    } else {
                                        NSLog(@"Error: %@ %@", error, [error userInfo]);
                                    }
@@ -87,8 +95,8 @@
             indexWith:(NSInteger) index
              dataWith:(WEventModel *)event
 {
-    NSInteger top = 900;
-    NSInteger height = 120;
+    NSInteger top = TOP_EVENT_START;
+    NSInteger height = TOP_EVENT_HEIGHT;
     WEventPreviewView *item = [[WEventPreviewView alloc] init];
     [item setFrame: CGRectMake(0, top + index * height, 320, height)];
     [item setData:[event getImages][0] titleWith:[event getTitle] priceWith: (long)[event getPrice]];
@@ -100,6 +108,17 @@
     [singleFingerTap release];
 
     [parent addSubview:item];
+}
+
+-(void)initUserView:(UIScrollView *)parent
+            topWith:(NSInteger) top
+{
+    NSInteger height = 250;
+    WUserPreviewView *view = [[WUserPreviewView alloc] init];
+    [view setFrame: CGRectMake(0, top, 320, height)];
+    [view setData:[self.projectModel getOwnerAvater] nameWith:[self.projectModel getOwnerName] descriptionWith:[self.projectModel getOwnerName]];
+//    view.backgroundColor = [UIColor redColor];
+    [parent addSubview:view];
 }
 
 //区域点击事件

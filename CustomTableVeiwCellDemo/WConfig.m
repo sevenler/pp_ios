@@ -13,6 +13,11 @@
 #define FONT_SIZE_NORMAL 14
 #define FONT_SIZE_SMALL 12
 
+NSString *const kCOLOR_BLACK = @"#636769";
+NSString *const kCOLOR_GRAY = @"#89939F";
+NSString *const kCOLOR_GREEN = @"#6DC59A";
+NSString *const kCOLOR_RED = @"#FF0000";
+
 @implementation WConfig
 
 +(UIColor *) hexStringToColor: (NSString *) stringToConvert
@@ -49,30 +54,30 @@
 }
 
 + (void)setSpinerLineStyle:(UIView *)line{
-    line.backgroundColor = [WConfig hexStringToColor: COLOR_GRAY];
+    line.backgroundColor = [WConfig hexStringToColor: kCOLOR_GRAY];
 }
 
 + (void)setLabelWithBigTitleStyle:(UILabel *)lbl{
-    lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
+    lbl.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_BIG]];
     lbl.textAlignment = UITextAlignmentCenter;
 }
 
 + (void)setLabelWithNormalTitleStyle:(UILabel *)lbl;
 {
-    lbl.textColor = [WConfig hexStringToColor: COLOR_BLACK];
+    lbl.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_NORMAL]];
     lbl.textAlignment = UITextAlignmentCenter;
 }
 
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl{
-     lbl.textColor = [WConfig hexStringToColor: COLOR_GRAY];
+     lbl.textColor = [WConfig hexStringToColor: kCOLOR_GRAY];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_SMALL]];
     lbl.textAlignment = UITextAlignmentLeft;
 }
 
 + (void)setButtonWithDefaultStyle:(FlatPillButton *)button{
-    [button setTitleColor:[WConfig hexStringToColor: COLOR_GREEN] forState:UIControlStateNormal];
+    [button setTitleColor:[WConfig hexStringToColor: kCOLOR_GREEN] forState:UIControlStateNormal];
 }
 
 @end

@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "FlatPillButton.h"
 
-@interface WConfig : NSObject
+extern NSString *const kCOLOR_RED;
+extern NSString *const kCOLOR_BLACK;
+extern NSString *const kCOLOR_GRAY;
+extern NSString *const kCOLOR_GREEN;
 
-#define COLOR_BLACK @"#636769"
-#define COLOR_GRAY @"#89939F"
-#define COLOR_GREEN @"#6DC59A"
+@interface WConfig : NSObject
 
 +(UIColor *) hexStringToColor: (NSString *) stringToConvert;
 
