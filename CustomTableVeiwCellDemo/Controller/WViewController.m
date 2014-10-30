@@ -38,6 +38,8 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
+    self.title = @"发现空间";
 }
 
 - (void)didReceiveMemoryWarning

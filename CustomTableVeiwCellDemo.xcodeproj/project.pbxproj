@@ -56,6 +56,9 @@
 		F698735B1A027630003458AC /* icon_verified_identity_card.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873571A027630003458AC /* icon_verified_identity_card.png */; };
 		F698735C1A027630003458AC /* icon_verified_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873581A027630003458AC /* icon_verified_phone.png */; };
 		F698735D1A027630003458AC /* icon_verified_sina_weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873591A027630003458AC /* icon_verified_sina_weibo.png */; };
+		F69873611A028265003458AC /* app_icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = F698735E1A028265003458AC /* app_icon_58.png */; };
+		F69873621A028265003458AC /* app_icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = F698735F1A028265003458AC /* app_icon_80.png */; };
+		F69873631A028265003458AC /* app_icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873601A028265003458AC /* app_icon_120.png */; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
 		F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09119FA0F55002AA015 /* MASCompositeConstraint.m */; };
 		F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09319FA0F55002AA015 /* MASConstraint.m */; };
@@ -147,6 +150,9 @@
 		F69873571A027630003458AC /* icon_verified_identity_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_identity_card.png; path = images/icon_verified_identity_card.png; sourceTree = "<group>"; };
 		F69873581A027630003458AC /* icon_verified_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_phone.png; path = images/icon_verified_phone.png; sourceTree = "<group>"; };
 		F69873591A027630003458AC /* icon_verified_sina_weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_sina_weibo.png; path = images/icon_verified_sina_weibo.png; sourceTree = "<group>"; };
+		F698735E1A028265003458AC /* app_icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_58.png; path = images/app_icon_58.png; sourceTree = "<group>"; };
+		F698735F1A028265003458AC /* app_icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_80.png; path = images/app_icon_80.png; sourceTree = "<group>"; };
+		F69873601A028265003458AC /* app_icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_120.png; path = images/app_icon_120.png; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
 		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
 		F6AEB09019FA0F55002AA015 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = SOURCE_ROOT; };
@@ -261,6 +267,9 @@
 		AA3F38E917BD03410054A992 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F698735E1A028265003458AC /* app_icon_58.png */,
+				F698735F1A028265003458AC /* app_icon_80.png */,
+				F69873601A028265003458AC /* app_icon_120.png */,
 				F69873561A027630003458AC /* icon_verified_email.png */,
 				F69873571A027630003458AC /* icon_verified_identity_card.png */,
 				F69873581A027630003458AC /* icon_verified_phone.png */,
@@ -481,6 +490,7 @@
 				F69873301A00BADC003458AC /* WEventViewController.xib in Resources */,
 				AA3F38ED17BD03410054A992 /* InfoPlist.strings in Resources */,
 				F698735B1A027630003458AC /* icon_verified_identity_card.png in Resources */,
+				F69873621A028265003458AC /* app_icon_80.png in Resources */,
 				F698735C1A027630003458AC /* icon_verified_phone.png in Resources */,
 				F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
@@ -488,6 +498,8 @@
 				F698734F1A02575A003458AC /* WUserViewController.xib in Resources */,
 				AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */,
 				AA3F390E17BD250B0054A992 /* WProjectCell.xib in Resources */,
+				F69873631A028265003458AC /* app_icon_120.png in Resources */,
+				F69873611A028265003458AC /* app_icon_58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

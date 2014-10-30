@@ -31,6 +31,7 @@ static WProjectCenter *instance = nil;
 
 - (void)getAllSpace:(void(^)(NSArray *objects, NSError *error))block {
     AVQuery *query = [AVQuery queryWithClassName:@"Space"];
+    [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:block];
 }
 
