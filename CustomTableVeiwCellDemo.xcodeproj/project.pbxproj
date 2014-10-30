@@ -49,6 +49,13 @@
 		F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873401A0131A2003458AC /* WUserPreviewView.m */; };
 		F69873471A01F645003458AC /* WUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873461A01F645003458AC /* WUserModel.m */; };
 		F698734A1A01F7AC003458AC /* WUserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873491A01F7AC003458AC /* WUserCenter.m */; };
+		F698734E1A02575A003458AC /* WUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698734C1A02575A003458AC /* WUserViewController.m */; };
+		F698734F1A02575A003458AC /* WUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698734D1A02575A003458AC /* WUserViewController.xib */; };
+		F69873551A026D48003458AC /* WVerifiedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873541A026D48003458AC /* WVerifiedView.m */; };
+		F698735A1A027630003458AC /* icon_verified_email.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873561A027630003458AC /* icon_verified_email.png */; };
+		F698735B1A027630003458AC /* icon_verified_identity_card.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873571A027630003458AC /* icon_verified_identity_card.png */; };
+		F698735C1A027630003458AC /* icon_verified_phone.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873581A027630003458AC /* icon_verified_phone.png */; };
+		F698735D1A027630003458AC /* icon_verified_sina_weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69873591A027630003458AC /* icon_verified_sina_weibo.png */; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
 		F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09119FA0F55002AA015 /* MASCompositeConstraint.m */; };
 		F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09319FA0F55002AA015 /* MASConstraint.m */; };
@@ -131,6 +138,15 @@
 		F69873461A01F645003458AC /* WUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserModel.m; sourceTree = "<group>"; };
 		F69873481A01F7AC003458AC /* WUserCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserCenter.h; sourceTree = "<group>"; };
 		F69873491A01F7AC003458AC /* WUserCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserCenter.m; sourceTree = "<group>"; };
+		F698734B1A02575A003458AC /* WUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUserViewController.h; path = Controller/WUserViewController.h; sourceTree = "<group>"; };
+		F698734C1A02575A003458AC /* WUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUserViewController.m; path = Controller/WUserViewController.m; sourceTree = "<group>"; };
+		F698734D1A02575A003458AC /* WUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WUserViewController.xib; path = Controller/WUserViewController.xib; sourceTree = "<group>"; };
+		F69873531A026D48003458AC /* WVerifiedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVerifiedView.h; sourceTree = "<group>"; };
+		F69873541A026D48003458AC /* WVerifiedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVerifiedView.m; sourceTree = "<group>"; };
+		F69873561A027630003458AC /* icon_verified_email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_email.png; path = images/icon_verified_email.png; sourceTree = "<group>"; };
+		F69873571A027630003458AC /* icon_verified_identity_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_identity_card.png; path = images/icon_verified_identity_card.png; sourceTree = "<group>"; };
+		F69873581A027630003458AC /* icon_verified_phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_phone.png; path = images/icon_verified_phone.png; sourceTree = "<group>"; };
+		F69873591A027630003458AC /* icon_verified_sina_weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_verified_sina_weibo.png; path = images/icon_verified_sina_weibo.png; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
 		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
 		F6AEB09019FA0F55002AA015 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = SOURCE_ROOT; };
@@ -245,6 +261,10 @@
 		AA3F38E917BD03410054A992 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F69873561A027630003458AC /* icon_verified_email.png */,
+				F69873571A027630003458AC /* icon_verified_identity_card.png */,
+				F69873581A027630003458AC /* icon_verified_phone.png */,
+				F69873591A027630003458AC /* icon_verified_sina_weibo.png */,
 				AA3F38EA17BD03410054A992 /* CustomTableVeiwCellDemo-Info.plist */,
 				AA3F38EB17BD03410054A992 /* InfoPlist.strings */,
 				AA3F38EE17BD03410054A992 /* main.m */,
@@ -280,6 +300,8 @@
 		AA3F390917BD234B0054A992 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F69873531A026D48003458AC /* WVerifiedView.h */,
+				F69873541A026D48003458AC /* WVerifiedView.m */,
 				F6B838D319FEA2CB00F7EDC9 /* WEventPreviewView.h */,
 				F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */,
 				F60D712B19F815890072F789 /* FlatPillButton.h */,
@@ -364,6 +386,9 @@
 				F698732C1A00BADC003458AC /* WEventViewController.h */,
 				F698732D1A00BADC003458AC /* WEventViewController.m */,
 				F698732E1A00BADC003458AC /* WEventViewController.xib */,
+				F698734B1A02575A003458AC /* WUserViewController.h */,
+				F698734C1A02575A003458AC /* WUserViewController.m */,
+				F698734D1A02575A003458AC /* WUserViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -451,11 +476,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */,
+				F698735D1A027630003458AC /* icon_verified_sina_weibo.png in Resources */,
+				F698735A1A027630003458AC /* icon_verified_email.png in Resources */,
 				F69873301A00BADC003458AC /* WEventViewController.xib in Resources */,
 				AA3F38ED17BD03410054A992 /* InfoPlist.strings in Resources */,
+				F698735B1A027630003458AC /* icon_verified_identity_card.png in Resources */,
+				F698735C1A027630003458AC /* icon_verified_phone.png in Resources */,
 				F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,
+				F698734F1A02575A003458AC /* WUserViewController.xib in Resources */,
 				AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */,
 				AA3F390E17BD250B0054A992 /* WProjectCell.xib in Resources */,
 			);
@@ -473,12 +503,14 @@
 				F6AEB0AB19FA0F55002AA015 /* MASViewAttribute.m in Sources */,
 				F6AEB0A919FA0F55002AA015 /* MASConstraintMaker.m in Sources */,
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
+				F698734E1A02575A003458AC /* WUserViewController.m in Sources */,
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
 				F6AEB0AC19FA0F55002AA015 /* MASViewConstraint.m in Sources */,
 				F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */,
 				F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */,
 				F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */,
+				F69873551A026D48003458AC /* WVerifiedView.m in Sources */,
 				F69873391A0120C5003458AC /* WUtils.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
 				F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */,

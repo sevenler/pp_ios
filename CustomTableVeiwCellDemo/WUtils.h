@@ -13,4 +13,6 @@
 + (NSString *)formatDate:(NSDate *)date
               withFromat:(NSString *)format;
 
++ (void)alignTop:(UILabel *)label;
+
 @end

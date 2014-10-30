@@ -54,7 +54,6 @@
 - (void) setTitleStyle:(UILabel *)label
 {
     [WConfig setLabelWithBigTitleStyle: label];
-//    lbl.textColor = [WConfig hexStringToColor: WConfig.COLOR_BLACK];
     label.textAlignment = UITextAlignmentLeft;
 }
 
@@ -62,21 +61,6 @@
 {
     [WConfig setLabelWithBigTitleStyle: label];
     label.textAlignment = UITextAlignmentRight;
-    
-    [self.lb_title_name setText: @"标题"];
-    [self.lb_price_name setText: @"单价"];
-    [self.lb_date_name setText: @"开始时间"];
-    [self.lb_left_name setText: @"剩余名额"];
-    [self.lb_decription_name setText: @"详情"];
-    
-    [self.lb_title_content setText: [self.eventModel getTitle]];
-    [self.lb_price_content setText: [NSString stringWithFormat:@"%ld/人", (long)[self.eventModel getPrice]]];
-    [self.lb_date_content setText:[WUtils formatDate:[self.eventModel getTargetDate] withFromat:@"yyyy-MM-dd"]];
-    [self.lb_left_content setText: [NSString stringWithFormat:@"%ld位", (long)([self.eventModel getTargetMax] - [self.eventModel getPartners])]];
-    [self.lb_decription_content setText: [self.eventModel getDescription]];
-    [self.lb_decription_content resizeToFit];
-    
-    [self addImages];
 }
 
 -(void) addImages
@@ -98,6 +82,21 @@
 {
     [super viewDidLoad];
     [self viewInitStyle];
+    
+    [self.lb_title_name setText: @"标题"];
+    [self.lb_price_name setText: @"单价"];
+    [self.lb_date_name setText: @"开始时间"];
+    [self.lb_left_name setText: @"剩余名额"];
+    [self.lb_decription_name setText: @"详情"];
+    
+    [self.lb_title_content setText: [self.eventModel getTitle]];
+    [self.lb_price_content setText: [NSString stringWithFormat:@"%ld/人", (long)[self.eventModel getPrice]]];
+    [self.lb_date_content setText:[WUtils formatDate:[self.eventModel getTargetDate] withFromat:@"yyyy-MM-dd"]];
+    [self.lb_left_content setText: [NSString stringWithFormat:@"%ld位", (long)([self.eventModel getTargetMax] - [self.eventModel getPartners])]];
+    [self.lb_decription_content setText: [self.eventModel getDescription]];
+    [self.lb_decription_content resizeToFit];
+    
+    [self addImages];
 }
 
 - (void)didReceiveMemoryWarning

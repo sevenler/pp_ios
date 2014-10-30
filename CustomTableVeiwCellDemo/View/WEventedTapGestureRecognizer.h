@@ -11,6 +11,7 @@
 
 @interface WEventedTapGestureRecognizer : UITapGestureRecognizer
 
-@property (strong, nonatomic) WEventModel *eventModel;
+@property (strong, nonatomic) id data;
+@property (assign, nonatomic) NSInteger redirectTag;
 
 @end

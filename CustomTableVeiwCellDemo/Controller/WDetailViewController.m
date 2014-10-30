@@ -17,6 +17,7 @@
 #import "WUserPreviewView.h"
 #import "WUserCenter.h"
 #import "WUserModel.h"
+#import "WUserViewController.h"
 
 #define TAG_DISCRIPTION_MORE 1
 #define TOP_EVENT_START  900
@@ -119,14 +120,21 @@
     WEventPreviewView *item = [[WEventPreviewView alloc] init];
     [item setFrame: CGRectMake(0, top + index * height, 320, height)];
     [item setData:[event getImages][0] titleWith:[event getTitle] priceWith:[event getPrice]];
-    
-    WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
-                                                                                                  action:@selector(handleTap:)];
-    singleFingerTap.eventModel = event;
-    [item addGestureRecognizer:singleFingerTap];
-    [singleFingerTap release];
+    [self setTapRecognizer:item dataWith:event tagWith:1];
     
     [parent addSubview:item];
+}
+
+//添加 tap事件
+-(void) setTapRecognizer:(UIView *)view
+                dataWith:(id)data
+                 tagWith:(NSInteger)tag{
+    WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
+                                                                                                  action:@selector(handleTap:)];
+    singleFingerTap.redirectTag = tag;
+    singleFingerTap.data = data;
+    [view addGestureRecognizer:singleFingerTap];
+    [singleFingerTap release];
 }
 
 //初始化用户模块
@@ -139,13 +147,28 @@
     [view setFrame: CGRectMake(0, top, 320, height)];
     [view setData:user];
     [parent addSubview:view];
+    
+    [self setTapRecognizer:view dataWith:user tagWith:2];
 }
 
 //区域点击事件
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
-    WEventViewController *detail = [[WEventViewController alloc] init];
-    detail.eventModel = recognizer.eventModel;
-    [self.navigationController pushViewController:detail animated:YES];
+    switch (recognizer.redirectTag) {
+        case 1:{
+            WEventViewController *detail = [[WEventViewController alloc] init];
+            detail.eventModel = recognizer.data;
+            [self.navigationController pushViewController:detail animated:YES];
+        }
+            break;
+        case 2:{
+            WUserViewController *userDetail = [[WUserViewController alloc] init];
+            userDetail.userModel = recognizer.data;
+            [self.navigationController pushViewController:userDetail animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 //按钮点击事件
