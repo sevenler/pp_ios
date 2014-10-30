@@ -47,6 +47,8 @@
 		F698733D1A012A59003458AC /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698733B1A012A59003458AC /* WDetailViewController.m */; };
 		F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698733C1A012A59003458AC /* WDetailViewController.xib */; };
 		F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873401A0131A2003458AC /* WUserPreviewView.m */; };
+		F69873471A01F645003458AC /* WUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873461A01F645003458AC /* WUserModel.m */; };
+		F698734A1A01F7AC003458AC /* WUserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873491A01F7AC003458AC /* WUserCenter.m */; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; };
 		F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09119FA0F55002AA015 /* MASCompositeConstraint.m */; };
 		F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB09319FA0F55002AA015 /* MASConstraint.m */; };
@@ -125,6 +127,10 @@
 		F698733C1A012A59003458AC /* WDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WDetailViewController.xib; path = Controller/WDetailViewController.xib; sourceTree = "<group>"; };
 		F698733F1A0131A2003458AC /* WUserPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserPreviewView.h; sourceTree = "<group>"; };
 		F69873401A0131A2003458AC /* WUserPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserPreviewView.m; sourceTree = "<group>"; };
+		F69873451A01F645003458AC /* WUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserModel.h; sourceTree = "<group>"; };
+		F69873461A01F645003458AC /* WUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserModel.m; sourceTree = "<group>"; };
+		F69873481A01F7AC003458AC /* WUserCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserCenter.h; sourceTree = "<group>"; };
+		F69873491A01F7AC003458AC /* WUserCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserCenter.m; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
 		F6AEB04619F926E8002AA015 /* WBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBaseModel.m; sourceTree = "<group>"; };
 		F6AEB09019FA0F55002AA015 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = SOURCE_ROOT; };
@@ -253,6 +259,8 @@
 		AA3F390517BD10B90054A992 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F69873481A01F7AC003458AC /* WUserCenter.h */,
+				F69873491A01F7AC003458AC /* WUserCenter.m */,
 				F6B838D019FE9AAB00F7EDC9 /* WEventCenter.h */,
 				F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */,
 				F60D711D19F7E4030072F789 /* WSpaceCenter.h */,
@@ -263,6 +271,8 @@
 				F6AEB04619F926E8002AA015 /* WBaseModel.m */,
 				F6B838CD19FE98D800F7EDC9 /* WEventModel.h */,
 				F6B838CE19FE98D800F7EDC9 /* WEventModel.m */,
+				F69873451A01F645003458AC /* WUserModel.h */,
+				F69873461A01F645003458AC /* WUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */,
+				F698734A1A01F7AC003458AC /* WUserCenter.m in Sources */,
 				F6AEB0AB19FA0F55002AA015 /* MASViewAttribute.m in Sources */,
 				F6AEB0A919FA0F55002AA015 /* MASConstraintMaker.m in Sources */,
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
@@ -488,6 +499,7 @@
 				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,
 				F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
+				F69873471A01F645003458AC /* WUserModel.m in Sources */,
 				F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */,
 				F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */,
 				F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */,

@@ -73,7 +73,8 @@ NSString *const kCOLOR_RED = @"#FF0000";
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl{
      lbl.textColor = [WConfig hexStringToColor: kCOLOR_GRAY];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_SMALL]];
-    lbl.textAlignment = UITextAlignmentLeft;
+    lbl.textAlignment = UITextAlignmentLeft ;
+    
 }
 
 + (void)setButtonWithDefaultStyle:(FlatPillButton *)button{

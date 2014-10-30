@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WUserModel.h"
 
 @interface WUserPreviewView : UIView
 
--(void) setData:(NSString *)image
-      nameWith:(NSString *)name
-      descriptionWith:(NSString *)description;
+-(void) setData:(WUserModel *)user;
 
 @end

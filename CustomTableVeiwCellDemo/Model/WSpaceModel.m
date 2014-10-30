@@ -33,6 +33,10 @@
     NSMutableArray *likers = [self.data mutableArrayValueForKey:@"likers"];
     return likers.count;
 }
+- (NSString *) getOwner
+{
+    return [self.data objectForKey:@"owner"];
+}
 - (NSString *) getOwnerAvater{
     return [self.data objectForKey:@"ownerAvater"];
 }

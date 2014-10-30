@@ -15,6 +15,7 @@
 @interface WUserPreviewView()
 @property (strong, nonatomic) EGOImageView *imageview;
 @property (strong, nonatomic) UILabel *title;
+@property (strong, nonatomic) UILabel *subTitle;
 @property (strong, nonatomic) UILabel *description;
 @end
 
@@ -36,23 +37,32 @@
     UIView *view = [[UIView alloc] init];
     self.imageview = [[EGOImageView alloc] init];
     self.title = UILabel.new;
+    self.subTitle = UILabel.new;
     self.description = UILabel.new;
     [self addSubview:view];
     [self addSubview:self.title];
+    [self addSubview:self.subTitle];
     [self addSubview:self.description];
     
     [WConfig setLabelWithDescriptionStyle: self.description];
     [WConfig setLabelWithNormalTitleStyle: self.title];
+    [WConfig setLabelWithNormalTitleStyle: self.subTitle];
     self.description.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
     self.description.numberOfLines = 10;
     
     UIView *superview = self;
     UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
     
-    //使用view来作为父控件，imageview在其中居中
-    NSInteger height = 100;
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(superview).insets(padding);
+        make.height.equalTo(@(30));
+    }];
+    
+    //使用view来作为父控件，imageview在其中居中
+    NSInteger height = 80;
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.title.mas_bottom).insets(padding);
+        make.left.right.equalTo(superview).insets(padding);
         make.height.equalTo(@(height));
     }];
     [view addSubview:self.imageview];
@@ -61,30 +71,44 @@
         make.center.equalTo(view);
         make.height.width.equalTo(@(height));
     }];
+    //头像圆角
+    CALayer *l = [self.imageview layer];
+    [l setMasksToBounds:YES];
+    [l setCornerRadius:height / 2];
     
-    [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.subTitle mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(view.mas_bottom).insets(padding);
         make.left.and.right.equalTo(superview).insets(padding);
         
-        make.height.width.equalTo(@(50));
+        make.height.width.equalTo(@(20));
     }];
     [self.description mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.title.mas_bottom).insets(padding);
+        make.top.equalTo(self.subTitle.mas_bottom).insets(padding);
         make.left.and.right.equalTo(superview).insets(padding);
         
-        make.height.equalTo(@(150));
+        make.height.equalTo(@(100));
     }];
-    
     
     return self;
 }
 
--(void) setData:(NSString *)image
-       nameWith:(NSString *)name
-descriptionWith:(NSString *)description{
-    self.imageview.imageURL  = [NSURL URLWithString: image];
-    self.title.text = name;
-    self.description.text = description;
+- (void)alignTop:(UILabel *)label {
+    CGSize fontSize = [label.text sizeWithFont:label.font];
+    double finalHeight = fontSize.height * label.numberOfLines;
+    double finalWidth = label.frame.size.width;    //expected width of label
+    CGSize theStringSize = [label.text sizeWithFont:label.font constrainedToSize:CGSizeMake(finalWidth, finalHeight) lineBreakMode:label.lineBreakMode];
+    int newLinesToPad = (finalHeight  - theStringSize.height) / fontSize.height;
+    for(int i=0; i<newLinesToPad; i++)
+        label.text = [label.text stringByAppendingString:@"\n "];
+}
+
+-(void) setData:(WUserModel *)user{
+    self.imageview.imageURL  = [NSURL URLWithString: [user getAvater]];
+    self.title.text = [NSString stringWithFormat:@"关于 %@", [user getNick]];
+    
+    self.subTitle.text = [user getPosition];
+    self.description.text = [user getDescription];
+    [self alignTop:self.description];
 }
 
 @end

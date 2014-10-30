@@ -15,6 +15,8 @@
 #import "WEventViewController.h"
 #import "WEventedTapGestureRecognizer.h"
 #import "WUserPreviewView.h"
+#import "WUserCenter.h"
+#import "WUserModel.h"
 
 #define TAG_DISCRIPTION_MORE 1
 #define TOP_EVENT_START  900
@@ -70,7 +72,7 @@
     self.image1.imageURL = [NSURL URLWithString:images[2]];
     
     self.eventTitle.text = @"可预订的活动";
-    //添加活动列表
+    //添加活动列表，并适配
     [[WEventCenter instance] getAllEvent:[self.projectModel getRemoteId]
                                blockWith:^(NSArray *objects, NSError *error) {
                                    if (!error) {
@@ -81,16 +83,33 @@
                                            [self initEventView: self.scrollview indexWith:index++ dataWith:event];
                                        }
                                        
-                                       //计算用户模块的x坐标
-                                       NSInteger top = TOP_EVENT_START + TOP_EVENT_HEIGHT * index;
-                                       [self initUserView:self.scrollview topWith:top];
+                                    
+                                       //请求用户信息，并适配
+                                       //在请求活动信息完成后，在开始请求用户信息。
+                                       //因为用户的view适配需要知道活动的item数量，才能计算view的top位置
+                                       [[WUserCenter instance] getUser:[self.projectModel getOwner]
+                                                             blockWith:^(NSArray *objects, NSError *error) {
+                                                                 if (!error) {
+                                                                     NSInteger count = (objects.count > 1 ? 1 : objects.count);
+                                                                     for (int i = 0; i < count; i++) {
+                                                                         WUserModel *user = [[WUserModel alloc]initWithAVObject:objects[i]];
+                                                                         NSLog(@"get user: %@", [user getNick]);
+                                                                         
+                                                                         //计算用户模块的x坐标
+                                                                         NSInteger top = TOP_EVENT_START + TOP_EVENT_HEIGHT * index;
+                                                                         [self initUserView:self.scrollview topWith:top userWith:user];
+                                                                     }
+                                                                 } else {
+                                                                     NSLog(@"Error: %@ %@", error, [error userInfo]);
+                                                                 }
+                                                             }];
                                    } else {
                                        NSLog(@"Error: %@ %@", error, [error userInfo]);
                                    }
                                }];
 }
 
-//初始化
+//初始化活动项目
 - (void)initEventView:(UIScrollView *)parent
             indexWith:(NSInteger) index
              dataWith:(WEventModel *)event
@@ -99,25 +118,26 @@
     NSInteger height = TOP_EVENT_HEIGHT;
     WEventPreviewView *item = [[WEventPreviewView alloc] init];
     [item setFrame: CGRectMake(0, top + index * height, 320, height)];
-    [item setData:[event getImages][0] titleWith:[event getTitle] priceWith: (long)[event getPrice]];
+    [item setData:[event getImages][0] titleWith:[event getTitle] priceWith:[event getPrice]];
     
     WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
-                                                                                      action:@selector(handleTap:)];
+                                                                                                  action:@selector(handleTap:)];
     singleFingerTap.eventModel = event;
     [item addGestureRecognizer:singleFingerTap];
     [singleFingerTap release];
-
+    
     [parent addSubview:item];
 }
 
+//初始化用户模块
 -(void)initUserView:(UIScrollView *)parent
             topWith:(NSInteger) top
+           userWith:(WUserModel *) user
 {
     NSInteger height = 250;
     WUserPreviewView *view = [[WUserPreviewView alloc] init];
     [view setFrame: CGRectMake(0, top, 320, height)];
-    [view setData:[self.projectModel getOwnerAvater] nameWith:[self.projectModel getOwnerName] descriptionWith:[self.projectModel getOwnerName]];
-//    view.backgroundColor = [UIColor redColor];
+    [view setData:user];
     [parent addSubview:view];
 }
 

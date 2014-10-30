@@ -18,9 +18,10 @@
 - (NSInteger) getLeftDays;
 - (NSInteger) getParters;
 - (NSInteger) getLikers;
-- (NSString *) getOwnerAvater;
 - (NSString *) getPosition;
 - (NSString *) getPositionUnit;
+- (NSString *) getOwner;
+- (NSString *) getOwnerAvater;
 - (NSString *) getOwnerName;
 
 
