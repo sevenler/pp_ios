@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "WUserModel.h"
-#import "EGOImageView.h"
 
 @interface WUserViewController : UIViewController
 
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollview;
-@property (retain, nonatomic) IBOutlet EGOImageView *image_avater;
+@property (retain, nonatomic) IBOutlet UIImageView *image_avater;
 @property (retain, nonatomic) IBOutlet UILabel *lb_nick_content;
 @property (retain, nonatomic) IBOutlet UILabel *lb_position_content;
 @property (retain, nonatomic) IBOutlet UILabel *lb_register_date_content;

@@ -32,11 +32,6 @@
 		F60D712D19F815890072F789 /* FlatPillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712C19F815890072F789 /* FlatPillButton.m */; };
 		F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712F19F8C27C0072F789 /* WTextPageViewController.m */; };
 		F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */; };
-		F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A119CEBF0300C0B9ED /* EGOCache.m */; };
-		F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A419CEBF0300C0B9ED /* EGOImageButton.m */; };
-		F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A719CEBF0300C0B9ED /* EGOImageLoadConnection.m */; };
-		F66261B019CEBF0300C0B9ED /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261A919CEBF0300C0B9ED /* EGOImageLoader.m */; };
-		F66261B119CEBF0300C0B9ED /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261AC19CEBF0300C0B9ED /* EGOImageView.m */; };
 		F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66261B219CEC8F200C0B9ED /* QuartzCore.framework */; };
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
@@ -72,6 +67,20 @@
 		F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838CE19FE98D800F7EDC9 /* WEventModel.m */; };
 		F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */; };
 		F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */; };
+		F6C92A991A067E6D00B08E2C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A7D1A067E6D00B08E2C /* MKAnnotationView+WebCache.m */; };
+		F6C92A9A1A067E6D00B08E2C /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A7F1A067E6D00B08E2C /* SDImageCache.m */; };
+		F6C92A9B1A067E6D00B08E2C /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A831A067E6D00B08E2C /* SDWebImageDecoder.m */; };
+		F6C92A9C1A067E6D00B08E2C /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A851A067E6D00B08E2C /* SDWebImageDownloader.m */; };
+		F6C92A9D1A067E6D00B08E2C /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A881A067E6D00B08E2C /* SDWebImageManager.m */; };
+		F6C92A9E1A067E6D00B08E2C /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A8B1A067E6D00B08E2C /* SDWebImagePrefetcher.m */; };
+		F6C92A9F1A067E6D00B08E2C /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A8D1A067E6D00B08E2C /* UIButton+WebCache.m */; };
+		F6C92AA01A067E6D00B08E2C /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A8F1A067E6D00B08E2C /* UIImageView+WebCache.m */; };
+		F6C92AA11A067E6D00B08E2C /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A921A067E6D00B08E2C /* UIImage+Alpha.m */; };
+		F6C92AA21A067E6D00B08E2C /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A941A067E6D00B08E2C /* UIImage+Resize.m */; };
+		F6C92AA31A067E6D00B08E2C /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A961A067E6D00B08E2C /* UIImage+RoundedCorner.m */; };
+		F6C92AA41A067E6D00B08E2C /* UIImage+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92A981A067E6D00B08E2C /* UIImage+Scaling.m */; };
+		F6C92AA61A067FC900B08E2C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C92AA51A067FC900B08E2C /* ImageIO.framework */; };
+		F6C92AA81A067FFF00B08E2C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C92AA71A067FFF00B08E2C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,16 +120,6 @@
 		F60D712F19F8C27C0072F789 /* WTextPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTextPageViewController.m; path = Controller/WTextPageViewController.m; sourceTree = "<group>"; };
 		F60D713319F8E9250072F789 /* UILabel+dynamicSized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+dynamicSized.h"; sourceTree = "<group>"; };
 		F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+dynamicSized.m"; sourceTree = "<group>"; };
-		F66261A019CEBF0300C0B9ED /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
-		F66261A119CEBF0300C0B9ED /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
-		F66261A319CEBF0300C0B9ED /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
-		F66261A419CEBF0300C0B9ED /* EGOImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageButton.m; sourceTree = "<group>"; };
-		F66261A619CEBF0300C0B9ED /* EGOImageLoadConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoadConnection.h; sourceTree = "<group>"; };
-		F66261A719CEBF0300C0B9ED /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
-		F66261A819CEBF0300C0B9ED /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
-		F66261A919CEBF0300C0B9ED /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
-		F66261AB19CEBF0300C0B9ED /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
-		F66261AC19CEBF0300C0B9ED /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		F66261B219CEC8F200C0B9ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F66261C619CF0EAB00C0B9ED /* WViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WViewController.h; path = Controller/WViewController.h; sourceTree = "<group>"; };
 		F66261C719CF0EAB00C0B9ED /* WViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WViewController.m; path = Controller/WViewController.m; sourceTree = "<group>"; };
@@ -184,6 +183,36 @@
 		F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventCenter.m; sourceTree = "<group>"; };
 		F6B838D319FEA2CB00F7EDC9 /* WEventPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventPreviewView.h; sourceTree = "<group>"; };
 		F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventPreviewView.m; sourceTree = "<group>"; };
+		F6C92A7C1A067E6D00B08E2C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		F6C92A7D1A067E6D00B08E2C /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		F6C92A7E1A067E6D00B08E2C /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		F6C92A7F1A067E6D00B08E2C /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		F6C92A801A067E6D00B08E2C /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCacheDelegate.h; sourceTree = "<group>"; };
+		F6C92A811A067E6D00B08E2C /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		F6C92A821A067E6D00B08E2C /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		F6C92A831A067E6D00B08E2C /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		F6C92A841A067E6D00B08E2C /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		F6C92A851A067E6D00B08E2C /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		F6C92A861A067E6D00B08E2C /* SDWebImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderDelegate.h; sourceTree = "<group>"; };
+		F6C92A871A067E6D00B08E2C /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		F6C92A881A067E6D00B08E2C /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		F6C92A891A067E6D00B08E2C /* SDWebImageManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManagerDelegate.h; sourceTree = "<group>"; };
+		F6C92A8A1A067E6D00B08E2C /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		F6C92A8B1A067E6D00B08E2C /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		F6C92A8C1A067E6D00B08E2C /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		F6C92A8D1A067E6D00B08E2C /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		F6C92A8E1A067E6D00B08E2C /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		F6C92A8F1A067E6D00B08E2C /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		F6C92A911A067E6D00B08E2C /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		F6C92A921A067E6D00B08E2C /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		F6C92A931A067E6D00B08E2C /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		F6C92A941A067E6D00B08E2C /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		F6C92A951A067E6D00B08E2C /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		F6C92A961A067E6D00B08E2C /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		F6C92A971A067E6D00B08E2C /* UIImage+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scaling.h"; sourceTree = "<group>"; };
+		F6C92A981A067E6D00B08E2C /* UIImage+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scaling.m"; sourceTree = "<group>"; };
+		F6C92AA51A067FC900B08E2C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F6C92AA71A067FFF00B08E2C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +220,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C92AA81A067FFF00B08E2C /* MapKit.framework in Frameworks */,
+				F6C92AA61A067FC900B08E2C /* ImageIO.framework in Frameworks */,
 				F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */,
 				B2A2F7CE19CD82BB006C9BB2 /* CFNetwork.framework in Frameworks */,
 				B2A2F7CC19CD8291006C9BB2 /* libicucore.dylib in Frameworks */,
@@ -229,6 +260,8 @@
 		AA3F38E117BD03410054A992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6C92AA71A067FFF00B08E2C /* MapKit.framework */,
+				F6C92AA51A067FC900B08E2C /* ImageIO.framework */,
 				F66261B219CEC8F200C0B9ED /* QuartzCore.framework */,
 				B2A2F7CD19CD82BB006C9BB2 /* CFNetwork.framework */,
 				B2A2F7CB19CD8291006C9BB2 /* libicucore.dylib */,
@@ -248,9 +281,9 @@
 		AA3F38E817BD03410054A992 /* CustomTableVeiwCellDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F6C92A7A1A067E4C00B08E2C /* WebImage */,
 				F6AEB06E19FA0DBB002AA015 /* Masonry */,
 				F66261BD19CF062200C0B9ED /* Controller */,
-				F662619E19CEBED500C0B9ED /* EGOImage */,
 				AA3F390917BD234B0054A992 /* View */,
 				AA3F390517BD10B90054A992 /* Model */,
 				AA3F38F117BD03410054A992 /* WAppDelegate.h */,
@@ -328,59 +361,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F662619E19CEBED500C0B9ED /* EGOImage */ = {
-			isa = PBXGroup;
-			children = (
-				F662619F19CEBF0300C0B9ED /* EGOCache */,
-				F66261A219CEBF0300C0B9ED /* EGOImageButton */,
-				F66261A519CEBF0300C0B9ED /* EGOImageLoader */,
-				F66261AA19CEBF0300C0B9ED /* EGOImageView */,
-			);
-			name = EGOImage;
-			sourceTree = "<group>";
-		};
-		F662619F19CEBF0300C0B9ED /* EGOCache */ = {
-			isa = PBXGroup;
-			children = (
-				F66261A019CEBF0300C0B9ED /* EGOCache.h */,
-				F66261A119CEBF0300C0B9ED /* EGOCache.m */,
-			);
-			name = EGOCache;
-			path = EGOImage/EGOCache;
-			sourceTree = SOURCE_ROOT;
-		};
-		F66261A219CEBF0300C0B9ED /* EGOImageButton */ = {
-			isa = PBXGroup;
-			children = (
-				F66261A319CEBF0300C0B9ED /* EGOImageButton.h */,
-				F66261A419CEBF0300C0B9ED /* EGOImageButton.m */,
-			);
-			name = EGOImageButton;
-			path = EGOImage/EGOImageButton;
-			sourceTree = SOURCE_ROOT;
-		};
-		F66261A519CEBF0300C0B9ED /* EGOImageLoader */ = {
-			isa = PBXGroup;
-			children = (
-				F66261A619CEBF0300C0B9ED /* EGOImageLoadConnection.h */,
-				F66261A719CEBF0300C0B9ED /* EGOImageLoadConnection.m */,
-				F66261A819CEBF0300C0B9ED /* EGOImageLoader.h */,
-				F66261A919CEBF0300C0B9ED /* EGOImageLoader.m */,
-			);
-			name = EGOImageLoader;
-			path = EGOImage/EGOImageLoader;
-			sourceTree = SOURCE_ROOT;
-		};
-		F66261AA19CEBF0300C0B9ED /* EGOImageView */ = {
-			isa = PBXGroup;
-			children = (
-				F66261AB19CEBF0300C0B9ED /* EGOImageView.h */,
-				F66261AC19CEBF0300C0B9ED /* EGOImageView.m */,
-			);
-			name = EGOImageView;
-			path = EGOImage/EGOImageView;
-			sourceTree = SOURCE_ROOT;
-		};
 		F66261BD19CF062200C0B9ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +411,59 @@
 			);
 			name = Masonry;
 			sourceTree = "<group>";
+		};
+		F6C92A7A1A067E4C00B08E2C /* WebImage */ = {
+			isa = PBXGroup;
+			children = (
+				F6C92A7B1A067E6D00B08E2C /* SDWebImage */,
+				F6C92A901A067E6D00B08E2C /* UIImage+Resize */,
+			);
+			name = WebImage;
+			sourceTree = "<group>";
+		};
+		F6C92A7B1A067E6D00B08E2C /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				F6C92A7C1A067E6D00B08E2C /* MKAnnotationView+WebCache.h */,
+				F6C92A7D1A067E6D00B08E2C /* MKAnnotationView+WebCache.m */,
+				F6C92A7E1A067E6D00B08E2C /* SDImageCache.h */,
+				F6C92A7F1A067E6D00B08E2C /* SDImageCache.m */,
+				F6C92A801A067E6D00B08E2C /* SDImageCacheDelegate.h */,
+				F6C92A811A067E6D00B08E2C /* SDWebImageCompat.h */,
+				F6C92A821A067E6D00B08E2C /* SDWebImageDecoder.h */,
+				F6C92A831A067E6D00B08E2C /* SDWebImageDecoder.m */,
+				F6C92A841A067E6D00B08E2C /* SDWebImageDownloader.h */,
+				F6C92A851A067E6D00B08E2C /* SDWebImageDownloader.m */,
+				F6C92A861A067E6D00B08E2C /* SDWebImageDownloaderDelegate.h */,
+				F6C92A871A067E6D00B08E2C /* SDWebImageManager.h */,
+				F6C92A881A067E6D00B08E2C /* SDWebImageManager.m */,
+				F6C92A891A067E6D00B08E2C /* SDWebImageManagerDelegate.h */,
+				F6C92A8A1A067E6D00B08E2C /* SDWebImagePrefetcher.h */,
+				F6C92A8B1A067E6D00B08E2C /* SDWebImagePrefetcher.m */,
+				F6C92A8C1A067E6D00B08E2C /* UIButton+WebCache.h */,
+				F6C92A8D1A067E6D00B08E2C /* UIButton+WebCache.m */,
+				F6C92A8E1A067E6D00B08E2C /* UIImageView+WebCache.h */,
+				F6C92A8F1A067E6D00B08E2C /* UIImageView+WebCache.m */,
+			);
+			name = SDWebImage;
+			path = WebImage/SDWebImage;
+			sourceTree = SOURCE_ROOT;
+		};
+		F6C92A901A067E6D00B08E2C /* UIImage+Resize */ = {
+			isa = PBXGroup;
+			children = (
+				F6C92A911A067E6D00B08E2C /* UIImage+Alpha.h */,
+				F6C92A921A067E6D00B08E2C /* UIImage+Alpha.m */,
+				F6C92A931A067E6D00B08E2C /* UIImage+Resize.h */,
+				F6C92A941A067E6D00B08E2C /* UIImage+Resize.m */,
+				F6C92A951A067E6D00B08E2C /* UIImage+RoundedCorner.h */,
+				F6C92A961A067E6D00B08E2C /* UIImage+RoundedCorner.m */,
+				F6C92A971A067E6D00B08E2C /* UIImage+Scaling.h */,
+				F6C92A981A067E6D00B08E2C /* UIImage+Scaling.m */,
+			);
+			name = "UIImage+Resize";
+			path = "WebImage/UIImage+Resize";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -520,31 +553,38 @@
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
 				F6AEB0AC19FA0F55002AA015 /* MASViewConstraint.m in Sources */,
 				F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */,
+				F6C92A9A1A067E6D00B08E2C /* SDImageCache.m in Sources */,
+				F6C92AA41A067E6D00B08E2C /* UIImage+Scaling.m in Sources */,
 				F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */,
+				F6C92A9B1A067E6D00B08E2C /* SDWebImageDecoder.m in Sources */,
 				F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */,
 				F69873551A026D48003458AC /* WVerifiedView.m in Sources */,
+				F6C92A9D1A067E6D00B08E2C /* SDWebImageManager.m in Sources */,
 				F69873391A0120C5003458AC /* WUtils.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
-				F66261AE19CEBF0300C0B9ED /* EGOImageButton.m in Sources */,
-				F66261B019CEBF0300C0B9ED /* EGOImageLoader.m in Sources */,
+				F6C92A991A067E6D00B08E2C /* MKAnnotationView+WebCache.m in Sources */,
+				F6C92AA21A067E6D00B08E2C /* UIImage+Resize.m in Sources */,
 				F6AEB0AA19FA0F55002AA015 /* MASLayoutConstraint.m in Sources */,
 				AA3F38F317BD03410054A992 /* WAppDelegate.m in Sources */,
 				F60D712D19F815890072F789 /* FlatPillButton.m in Sources */,
 				F60D712A19F7FD6C0072F789 /* WConfig.m in Sources */,
-				F66261B119CEBF0300C0B9ED /* EGOImageView.m in Sources */,
+				F6C92A9F1A067E6D00B08E2C /* UIButton+WebCache.m in Sources */,
 				F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */,
 				F6AEB0AE19FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				F66261AD19CEBF0300C0B9ED /* EGOCache.m in Sources */,
 				F69873361A00E5BF003458AC /* WEventedTapGestureRecognizer.m in Sources */,
 				F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */,
+				F6C92AA01A067E6D00B08E2C /* UIImageView+WebCache.m in Sources */,
 				F698732F1A00BADC003458AC /* WEventViewController.m in Sources */,
 				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
+				F6C92A9E1A067E6D00B08E2C /* SDWebImagePrefetcher.m in Sources */,
 				F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */,
+				F6C92A9C1A067E6D00B08E2C /* SDWebImageDownloader.m in Sources */,
 				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,
+				F6C92AA31A067E6D00B08E2C /* UIImage+RoundedCorner.m in Sources */,
 				F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F69873471A01F645003458AC /* WUserModel.m in Sources */,
-				F66261AF19CEBF0300C0B9ED /* EGOImageLoadConnection.m in Sources */,
+				F6C92AA11A067E6D00B08E2C /* UIImage+Alpha.m in Sources */,
 				F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */,
 				F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */,
 			);

@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EGOImageView.h"
 #import "FlatPillButton.h"
 #import "WSpaceModel.h"
 
 @interface WDetailViewController : UIViewController
 
-@property (retain, nonatomic) IBOutlet  EGOImageView *headerview;
-@property (retain, nonatomic) IBOutlet EGOImageView *image0;
-@property (retain, nonatomic) IBOutlet EGOImageView *image1;
+@property (retain, nonatomic) IBOutlet  UIImageView *headerview;
+@property (retain, nonatomic) IBOutlet UIImageView *image0;
+@property (retain, nonatomic) IBOutlet UIImageView *image1;
 
 @property (retain, nonatomic) IBOutlet UILabel *titleview;
 @property (retain, nonatomic) IBOutlet UILabel *discriptionview;

@@ -9,7 +9,7 @@
 #import "WEventViewController.h"
 #import "WConfig.h"
 #import "WUtils.h"
-#import "EGOImageView.h"
+#import "UIImageView+WebCache.h"
 
 @interface WEventViewController ()
 
@@ -71,9 +71,9 @@
     NSInteger index = 0;
     for(NSString *img in images)
     {
-        EGOImageView *image = [[EGOImageView alloc] init];
+        UIImageView *image = [[UIImageView alloc] init];
         [image setFrame: CGRectMake(0, top + (index++ * height), 320, height)];
-        image.imageURL = [NSURL URLWithString:img];
+        [image setImageWithURL:[NSURL URLWithString:img]];
         [self.scrollview addSubview:image];
     }
 }

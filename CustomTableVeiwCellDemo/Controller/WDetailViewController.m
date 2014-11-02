@@ -18,6 +18,7 @@
 #import "WUserCenter.h"
 #import "WUserModel.h"
 #import "WUserViewController.h"
+#import "UIImageView+WebCache.h"
 
 #define TAG_DISCRIPTION_MORE 1
 #define TOP_EVENT_START  900
@@ -68,9 +69,10 @@
     [self.discriptionMoreView addTarget:self action:@selector(buttonPress:) forControlEvents:UIControlEventTouchUpInside];
     
     NSMutableArray *images = [self.projectModel getImages];
-    self.headerview.imageURL = [NSURL URLWithString:images[0]];
-    self.image0.imageURL = [NSURL URLWithString:images[1]];
-    self.image1.imageURL = [NSURL URLWithString:images[2]];
+    
+    [self.headerview setImageWithURL:[NSURL URLWithString:images[0]]];
+    [self.image0 setImageWithURL:[NSURL URLWithString:images[1]]];
+    [self.image1 setImageWithURL:[NSURL URLWithString:images[2]]];
     
     self.eventTitle.text = @"可预订的活动";
     //添加活动列表，并适配

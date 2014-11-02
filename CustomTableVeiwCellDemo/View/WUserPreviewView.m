@@ -7,14 +7,14 @@
 //
 
 #import "WUserPreviewView.h"
-#import "EGOImageView.h"
 #import "WConfig.h"
 #import "MASConstraintMaker.h"
 #import "View+MASAdditions.h"
 #import "WUtils.h"
+#import "UIImageView+WebCache.h"
 
 @interface WUserPreviewView()
-@property (strong, nonatomic) EGOImageView *imageview;
+@property (strong, nonatomic) UIImageView *imageview;
 @property (strong, nonatomic) UILabel *title;
 @property (strong, nonatomic) UILabel *subTitle;
 @property (strong, nonatomic) UILabel *description;
@@ -36,7 +36,7 @@
     if (!self) return nil;
     
     UIView *view = [[UIView alloc] init];
-    self.imageview = [[EGOImageView alloc] init];
+    self.imageview = [[UIImageView alloc] init];
     self.title = UILabel.new;
     self.subTitle = UILabel.new;
     self.description = UILabel.new;
@@ -96,7 +96,7 @@
 
 
 -(void) setData:(WUserModel *)user{
-    self.imageview.imageURL  = [NSURL URLWithString: [user getAvater]];
+    [self.imageview setImageWithURL:[NSURL URLWithString:[user getAvater]]];
     self.title.text = [NSString stringWithFormat:@"关于 %@", [user getNick]];
     
     self.subTitle.text = [user getPosition];

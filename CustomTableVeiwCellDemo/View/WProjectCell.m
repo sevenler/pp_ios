@@ -9,6 +9,7 @@
 #import "WProjectCell.h"
 #import "WConfig.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIImageView+WebCache.h"
 
 @implementation WProjectCell
 
@@ -37,8 +38,9 @@
     
     self.lblTitle.text  = [model getTitle];
     self.lblDescription.text  = [NSString stringWithFormat:@"%@ . %d人收藏", [model getPositionUnit], [model getLikers]];
-    self.imgThumb.imageURL = [NSURL URLWithString:[model getImages][0]];
-    self.imgAvater.imageURL = [NSURL URLWithString:[model getOwnerAvater]];
+    
+    [self.imgThumb setImageWithURL:[NSURL URLWithString:[model getImages][0]]];
+    [self.imgAvater setImageWithURL:[NSURL URLWithString:[model getOwnerAvater]]];
     
     CALayer *l = [self.imgAvater layer];
     [l setMasksToBounds:YES];

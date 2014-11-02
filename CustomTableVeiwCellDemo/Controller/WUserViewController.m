@@ -11,6 +11,7 @@
 #import "WUtils.h"
 #import "WVerifiedView.h"
 #import "WUserModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface WUserViewController ()
 
@@ -68,7 +69,8 @@
 
 - (void)viewInitData
 {
-    self.image_avater.imageURL = [NSURL URLWithString:[self.userModel getAvater]];
+    [self.image_avater setImageWithURL:[NSURL URLWithString:[self.userModel getAvater]]];
+    
     self.lb_nick_content.text = [self.userModel getNick];
     self.lb_position_content.text = [self.userModel getPosition];
     self.lb_register_date_content.text = [WUtils formatDate:[self.userModel getRegisterDate] withFromat:@"yyyy-MM-dd"];

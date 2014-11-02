@@ -9,12 +9,12 @@
 #import "WEventPreviewView.h"
 #import "MASConstraintMaker.h"
 #import "View+MASAdditions.h"
-#import "EGOImageView.h"
 #import "WConfig.h"
+#import "UIImageView+WebCache.h"
 
 @interface WEventPreviewView()
 
-@property (strong, nonatomic) EGOImageView *imageview;
+@property (strong, nonatomic) UIImageView *imageview;
 @property (strong, nonatomic) UILabel *title;
 @property (strong, nonatomic) UILabel *description;
 
@@ -27,7 +27,7 @@
     self = [super init];
     if (!self) return nil;
 
-    self.imageview = [[EGOImageView alloc] init];
+    self.imageview = [[UIImageView alloc] init];
     self.title = UILabel.new;
     self.description = UILabel.new;
     [self addSubview:self.imageview];
@@ -80,7 +80,7 @@
 -(void) setData:(NSString *)image
       titleWith:(NSString *)title
 priceWith:(float)price{
-    self.imageview.imageURL  = [NSURL URLWithString: image];
+    [self.imageview setImageWithURL:[NSURL URLWithString:image]];
     self.title.text = title;
     self.description.text = [NSString stringWithFormat:@"%f 人/位", price];
 }
