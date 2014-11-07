@@ -11,6 +11,9 @@
 #import "WHomeViewController.h"
 #import "WDetailViewController.h"
 #import "WViewController.h"
+#import "WUserSignView.h"
+#import "WEventedTapGestureRecognizer.h"
+#import "WUserCenter.h"
 
 @interface WMenuViewController ()
 
@@ -38,11 +41,24 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *item1 = [[UIButton alloc] init];
-    [item1 setFrame: CGRectMake(30, 100, 100, 60)];
-    item1.backgroundColor = [UIColor redColor];
+    WUserSignView *item1 = [[WUserSignView alloc] init];
+    [item1 setFrame: CGRectMake(0, 0, 230, 180)];
+    [self setTapRecognizer:item1 dataWith:nil tagWith:0];
     
-    [item1 addTarget:self action:@selector(menuButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [[WUserCenter instance] getUser:@"18511557126"
+                          blockWith:^(NSArray *objects, NSError *error) {
+                              if (!error) {
+                                  NSInteger count = (objects.count > 1 ? 1 : objects.count);
+                                  for (int i = 0; i < count; i++) {
+                                      WUserModel *user = [[WUserModel alloc]initWithAVObject:objects[i]];
+                                      NSLog(@"get user: %@", [user getNick]);
+                                      
+                                      [item1 setData:user];
+                                  }
+                              } else {
+                                  NSLog(@"Error: %@ %@", error, [error userInfo]);
+                              }
+                          }];
     
     [self.view addSubview:item1];
 }
@@ -66,9 +82,7 @@
     UIViewController *viewController = nil;
     switch(index){
         case 0:
-//            viewController = [[WViewController alloc] initWithNibName:@"WViewController" bundle:nil];
-            
-            viewController = [[WHomeViewController alloc] init];
+            viewController = [[WViewController alloc] initWithNibName:@"WViewController" bundle:nil];
             break;
         case 1:
             viewController = [[WHomeViewController alloc] init];
@@ -82,6 +96,34 @@
     [navigationController.view addGestureRecognizer:menu.panGesture];
     
     return navigationController;
+}
+
+//添加 tap事件
+-(void) setTapRecognizer:(UIView *)view
+                dataWith:(id)data
+                 tagWith:(NSInteger)tag{
+    WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
+                                                                                                  action:@selector(handleTap:)];
+    singleFingerTap.redirectTag = tag;
+    singleFingerTap.data = data;
+    [view addGestureRecognizer:singleFingerTap];
+    [singleFingerTap release];
+}
+
+//区域点击事件
+- (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
+    switch (recognizer.redirectTag) {
+        case 0:{
+            NSLog(@"+------------- ");
+        }
+            break;
+        case 2:{
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning

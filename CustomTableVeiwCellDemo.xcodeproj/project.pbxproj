@@ -40,6 +40,7 @@
 		F625AC381A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC321A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m */; };
 		F625AC3D1A0C6C1800CA1AB5 /* WHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */; };
 		F625AC3E1A0C6C1800CA1AB5 /* WMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */; };
+		F625AC411A0C7EAD00CA1AB5 /* WUserSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC401A0C7EAD00CA1AB5 /* WUserSignView.m */; };
 		F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66261B219CEC8F200C0B9ED /* QuartzCore.framework */; };
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
@@ -145,6 +146,8 @@
 		F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WHomeViewController.m; path = Controller/WHomeViewController.m; sourceTree = "<group>"; };
 		F625AC3B1A0C6C1800CA1AB5 /* WMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMenuViewController.h; path = Controller/WMenuViewController.h; sourceTree = "<group>"; };
 		F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMenuViewController.m; path = Controller/WMenuViewController.m; sourceTree = "<group>"; };
+		F625AC3F1A0C7EAD00CA1AB5 /* WUserSignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserSignView.h; sourceTree = "<group>"; };
+		F625AC401A0C7EAD00CA1AB5 /* WUserSignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserSignView.m; sourceTree = "<group>"; };
 		F66261B219CEC8F200C0B9ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F66261C619CF0EAB00C0B9ED /* WViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WViewController.h; path = Controller/WViewController.h; sourceTree = "<group>"; };
 		F66261C719CF0EAB00C0B9ED /* WViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WViewController.m; path = Controller/WViewController.m; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 				F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */,
 				F698733F1A0131A2003458AC /* WUserPreviewView.h */,
 				F69873401A0131A2003458AC /* WUserPreviewView.m */,
+				F625AC3F1A0C7EAD00CA1AB5 /* WUserSignView.h */,
+				F625AC401A0C7EAD00CA1AB5 /* WUserSignView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -598,6 +603,7 @@
 				F6AEB0AB19FA0F55002AA015 /* MASViewAttribute.m in Sources */,
 				F6AEB0A919FA0F55002AA015 /* MASConstraintMaker.m in Sources */,
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
+				F625AC411A0C7EAD00CA1AB5 /* WUserSignView.m in Sources */,
 				F698734E1A02575A003458AC /* WUserViewController.m in Sources */,
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
