@@ -32,6 +32,14 @@
 		F60D712D19F815890072F789 /* FlatPillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712C19F815890072F789 /* FlatPillButton.m */; };
 		F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712F19F8C27C0072F789 /* WTextPageViewController.m */; };
 		F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */; };
+		F625AC331A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC271A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m */; };
+		F625AC341A0C6BA600CA1AB5 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC291A0C6BA600CA1AB5 /* ECSlidingAnimationController.m */; };
+		F625AC351A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC2C1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m */; };
+		F625AC361A0C6BA600CA1AB5 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC2E1A0C6BA600CA1AB5 /* ECSlidingSegue.m */; };
+		F625AC371A0C6BA600CA1AB5 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC301A0C6BA600CA1AB5 /* ECSlidingViewController.m */; };
+		F625AC381A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC321A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m */; };
+		F625AC3D1A0C6C1800CA1AB5 /* WHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */; };
+		F625AC3E1A0C6C1800CA1AB5 /* WMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */; };
 		F66261B319CEC8F200C0B9ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F66261B219CEC8F200C0B9ED /* QuartzCore.framework */; };
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
@@ -120,6 +128,23 @@
 		F60D712F19F8C27C0072F789 /* WTextPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTextPageViewController.m; path = Controller/WTextPageViewController.m; sourceTree = "<group>"; };
 		F60D713319F8E9250072F789 /* UILabel+dynamicSized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+dynamicSized.h"; sourceTree = "<group>"; };
 		F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+dynamicSized.m"; sourceTree = "<group>"; };
+		F625AC261A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECPercentDrivenInteractiveTransition.h; path = ecsliding_menu/ECPercentDrivenInteractiveTransition.h; sourceTree = SOURCE_ROOT; };
+		F625AC271A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECPercentDrivenInteractiveTransition.m; path = ecsliding_menu/ECPercentDrivenInteractiveTransition.m; sourceTree = SOURCE_ROOT; };
+		F625AC281A0C6BA600CA1AB5 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingAnimationController.h; path = ecsliding_menu/ECSlidingAnimationController.h; sourceTree = SOURCE_ROOT; };
+		F625AC291A0C6BA600CA1AB5 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingAnimationController.m; path = ecsliding_menu/ECSlidingAnimationController.m; sourceTree = SOURCE_ROOT; };
+		F625AC2A1A0C6BA600CA1AB5 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingConstants.h; path = ecsliding_menu/ECSlidingConstants.h; sourceTree = SOURCE_ROOT; };
+		F625AC2B1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingInteractiveTransition.h; path = ecsliding_menu/ECSlidingInteractiveTransition.h; sourceTree = SOURCE_ROOT; };
+		F625AC2C1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingInteractiveTransition.m; path = ecsliding_menu/ECSlidingInteractiveTransition.m; sourceTree = SOURCE_ROOT; };
+		F625AC2D1A0C6BA600CA1AB5 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingSegue.h; path = ecsliding_menu/ECSlidingSegue.h; sourceTree = SOURCE_ROOT; };
+		F625AC2E1A0C6BA600CA1AB5 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingSegue.m; path = ecsliding_menu/ECSlidingSegue.m; sourceTree = SOURCE_ROOT; };
+		F625AC2F1A0C6BA600CA1AB5 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = ecsliding_menu/ECSlidingViewController.h; sourceTree = SOURCE_ROOT; };
+		F625AC301A0C6BA600CA1AB5 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = ecsliding_menu/ECSlidingViewController.m; sourceTree = SOURCE_ROOT; };
+		F625AC311A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ECSlidingViewController.h"; path = "ecsliding_menu/UIViewController+ECSlidingViewController.h"; sourceTree = SOURCE_ROOT; };
+		F625AC321A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ECSlidingViewController.m"; path = "ecsliding_menu/UIViewController+ECSlidingViewController.m"; sourceTree = SOURCE_ROOT; };
+		F625AC391A0C6C1800CA1AB5 /* WHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WHomeViewController.h; path = Controller/WHomeViewController.h; sourceTree = "<group>"; };
+		F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WHomeViewController.m; path = Controller/WHomeViewController.m; sourceTree = "<group>"; };
+		F625AC3B1A0C6C1800CA1AB5 /* WMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMenuViewController.h; path = Controller/WMenuViewController.h; sourceTree = "<group>"; };
+		F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMenuViewController.m; path = Controller/WMenuViewController.m; sourceTree = "<group>"; };
 		F66261B219CEC8F200C0B9ED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F66261C619CF0EAB00C0B9ED /* WViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WViewController.h; path = Controller/WViewController.h; sourceTree = "<group>"; };
 		F66261C719CF0EAB00C0B9ED /* WViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WViewController.m; path = Controller/WViewController.m; sourceTree = "<group>"; };
@@ -281,6 +306,7 @@
 		AA3F38E817BD03410054A992 /* CustomTableVeiwCellDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F625AC251A0C6B9400CA1AB5 /* ecsliding_menu */,
 				F6C92A7A1A067E4C00B08E2C /* WebImage */,
 				F6AEB06E19FA0DBB002AA015 /* Masonry */,
 				F66261BD19CF062200C0B9ED /* Controller */,
@@ -361,9 +387,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F625AC251A0C6B9400CA1AB5 /* ecsliding_menu */ = {
+			isa = PBXGroup;
+			children = (
+				F625AC261A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.h */,
+				F625AC271A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m */,
+				F625AC281A0C6BA600CA1AB5 /* ECSlidingAnimationController.h */,
+				F625AC291A0C6BA600CA1AB5 /* ECSlidingAnimationController.m */,
+				F625AC2A1A0C6BA600CA1AB5 /* ECSlidingConstants.h */,
+				F625AC2B1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.h */,
+				F625AC2C1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m */,
+				F625AC2D1A0C6BA600CA1AB5 /* ECSlidingSegue.h */,
+				F625AC2E1A0C6BA600CA1AB5 /* ECSlidingSegue.m */,
+				F625AC2F1A0C6BA600CA1AB5 /* ECSlidingViewController.h */,
+				F625AC301A0C6BA600CA1AB5 /* ECSlidingViewController.m */,
+				F625AC311A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.h */,
+				F625AC321A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m */,
+			);
+			name = ecsliding_menu;
+			sourceTree = "<group>";
+		};
 		F66261BD19CF062200C0B9ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F625AC391A0C6C1800CA1AB5 /* WHomeViewController.h */,
+				F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */,
+				F625AC3B1A0C6C1800CA1AB5 /* WMenuViewController.h */,
+				F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */,
 				F698733A1A012A59003458AC /* WDetailViewController.h */,
 				F698733B1A012A59003458AC /* WDetailViewController.m */,
 				F698733C1A012A59003458AC /* WDetailViewController.xib */,
@@ -551,6 +601,9 @@
 				F698734E1A02575A003458AC /* WUserViewController.m in Sources */,
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
+				F625AC3D1A0C6C1800CA1AB5 /* WHomeViewController.m in Sources */,
+				F625AC351A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m in Sources */,
+				F625AC371A0C6BA600CA1AB5 /* ECSlidingViewController.m in Sources */,
 				F6AEB0AC19FA0F55002AA015 /* MASViewConstraint.m in Sources */,
 				F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */,
 				F6C92A9A1A067E6D00B08E2C /* SDImageCache.m in Sources */,
@@ -559,6 +612,7 @@
 				F6C92A9B1A067E6D00B08E2C /* SDWebImageDecoder.m in Sources */,
 				F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */,
 				F69873551A026D48003458AC /* WVerifiedView.m in Sources */,
+				F625AC3E1A0C6C1800CA1AB5 /* WMenuViewController.m in Sources */,
 				F6C92A9D1A067E6D00B08E2C /* SDWebImageManager.m in Sources */,
 				F69873391A0120C5003458AC /* WUtils.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
@@ -573,6 +627,7 @@
 				F6AEB0AE19FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				F69873361A00E5BF003458AC /* WEventedTapGestureRecognizer.m in Sources */,
 				F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */,
+				F625AC381A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m in Sources */,
 				F6C92AA01A067E6D00B08E2C /* UIImageView+WebCache.m in Sources */,
 				F698732F1A00BADC003458AC /* WEventViewController.m in Sources */,
 				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
@@ -580,7 +635,10 @@
 				F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */,
 				F6C92A9C1A067E6D00B08E2C /* SDWebImageDownloader.m in Sources */,
 				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,
+				F625AC361A0C6BA600CA1AB5 /* ECSlidingSegue.m in Sources */,
+				F625AC341A0C6BA600CA1AB5 /* ECSlidingAnimationController.m in Sources */,
 				F6C92AA31A067E6D00B08E2C /* UIImage+RoundedCorner.m in Sources */,
+				F625AC331A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F69873471A01F645003458AC /* WUserModel.m in Sources */,

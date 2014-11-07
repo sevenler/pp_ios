@@ -10,9 +10,15 @@
 
 #import "WViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "ECSlidingViewController.h"
+#import "WMenuViewController.h"
 
 #define AVOSCloudAppID  @"6aysjxli9vhijkpkd423x0u55u2mgware4fwpeq9gu45fiab"
 #define AVOSCloudAppKey @"flwfdnhcndu2ivi6ysgh6n8xeqshpin0cq4ozmxdxaz5kwdc"
+
+@interface WAppDelegate ()
+@property (nonatomic, strong) ECSlidingViewController *slidingViewController;
+@end
 
 @implementation WAppDelegate
 
@@ -22,9 +28,14 @@
     [AVOSCloud setApplicationId:AVOSCloudAppID clientKey:AVOSCloudAppKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[WViewController alloc] initWithNibName:@"WViewController" bundle:nil];
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
-    [self.window addSubview:navigationController.view];
+    WMenuViewController *menuController = [[WMenuViewController alloc] init];
+    self.slidingViewController = [[ECSlidingViewController alloc] init];
+    //通过菜单VC来获取初始VC
+    self.slidingViewController.topViewController = [menuController getMenuItem:0 withSlidingVC:self.slidingViewController];
+    self.slidingViewController.underLeftViewController = menuController;
+    self.slidingViewController.anchorRightPeekAmount = 100.0;
+    
+    [self.window setRootViewController:self.slidingViewController];
     [self.window makeKeyAndVisible];
     
     return YES;
