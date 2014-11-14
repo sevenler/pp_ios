@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
+#import "WBaseViewController.h"
 
-@interface WMenuViewController : UIViewController
+@interface WMenuViewController : WBaseViewController
 
 -(UINavigationController *)getMenuItem:(NSInteger)index withSlidingVC:(ECSlidingViewController *)menu;
 

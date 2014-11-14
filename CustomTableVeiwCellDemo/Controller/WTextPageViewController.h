@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBaseViewController.h"
 
-@interface WTextPageViewController : UIViewController
+@interface WTextPageViewController : WBaseViewController
 
 @property (strong, nonatomic) NSString *showText;
 

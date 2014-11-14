@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WUserModel.h"
+#import "WBaseViewController.h"
 
-@interface WUserViewController : UIViewController
+@interface WUserViewController : WBaseViewController
 
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollview;
 @property (retain, nonatomic) IBOutlet UIImageView *image_avater;

@@ -101,10 +101,7 @@
     WSpaceModel *paperModel = _projectList[indexPath.row];
     NSLog(@"paper year -> %@  %@", [paperModel getTitle], self.navigationController);
     
-    WDetailViewController *detail = [[WDetailViewController alloc] initWithNibName:@"WDetailViewController" bundle:nil];
-    detail.projectModel = paperModel;
-    [self.navigationController pushViewController:detail animated:YES];
-    [detail release];
+    [self openSpace:paperModel];
 }
 
 @end

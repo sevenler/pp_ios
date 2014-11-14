@@ -8,8 +8,9 @@
 
 #import "WViewController.h"
 #import "WEventModel.h"
+#import "WBaseViewController.h"
 
-@interface WEventViewController : WViewController
+@interface WEventViewController : WBaseViewController
 
 @property (retain, nonatomic) IBOutlet UILabel *lb_title_name;
 @property (retain, nonatomic) IBOutlet UILabel *lb_title_content;//标题

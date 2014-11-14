@@ -73,6 +73,7 @@
 		F6AEB0AD19FA0F55002AA015 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0A019FA0F55002AA015 /* NSArray+MASAdditions.m */; };
 		F6AEB0AE19FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0A319FA0F55002AA015 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB0A519FA0F55002AA015 /* View+MASAdditions.m */; };
+		F6B70BB31A162451005840DB /* WBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B70BB21A162451005840DB /* WBaseViewController.m */; };
 		F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838CE19FE98D800F7EDC9 /* WEventModel.m */; };
 		F6B838D219FE9AAB00F7EDC9 /* WEventCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838D119FE9AAB00F7EDC9 /* WEventCenter.m */; };
 		F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B838D419FEA2CB00F7EDC9 /* WEventPreviewView.m */; };
@@ -205,6 +206,8 @@
 		F6AEB0A419FA0F55002AA015 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = SOURCE_ROOT; };
 		F6AEB0A519FA0F55002AA015 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = SOURCE_ROOT; };
 		F6AEB0A619FA0F55002AA015 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = SOURCE_ROOT; };
+		F6B70BB11A162451005840DB /* WBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WBaseViewController.h; path = Controller/WBaseViewController.h; sourceTree = "<group>"; };
+		F6B70BB21A162451005840DB /* WBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WBaseViewController.m; path = Controller/WBaseViewController.m; sourceTree = "<group>"; };
 		F6B838CD19FE98D800F7EDC9 /* WEventModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventModel.h; sourceTree = "<group>"; };
 		F6B838CE19FE98D800F7EDC9 /* WEventModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventModel.m; sourceTree = "<group>"; };
 		F6B838D019FE9AAB00F7EDC9 /* WEventCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventCenter.h; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 				F698734B1A02575A003458AC /* WUserViewController.h */,
 				F698734C1A02575A003458AC /* WUserViewController.m */,
 				F698734D1A02575A003458AC /* WUserViewController.xib */,
+				F6B70BB11A162451005840DB /* WBaseViewController.h */,
+				F6B70BB21A162451005840DB /* WBaseViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 				F625AC341A0C6BA600CA1AB5 /* ECSlidingAnimationController.m in Sources */,
 				F6C92AA31A067E6D00B08E2C /* UIImage+RoundedCorner.m in Sources */,
 				F625AC331A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				F6B70BB31A162451005840DB /* WBaseViewController.m in Sources */,
 				F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */,
 				AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */,
 				F69873471A01F645003458AC /* WUserModel.m in Sources */,

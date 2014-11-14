@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBaseViewController.h"
 
-@interface WViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface WViewController : WBaseViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

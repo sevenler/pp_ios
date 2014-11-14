@@ -127,18 +127,6 @@
     [parent addSubview:item];
 }
 
-//添加 tap事件
--(void) setTapRecognizer:(UIView *)view
-                dataWith:(id)data
-                 tagWith:(NSInteger)tag{
-    WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
-                                                                                                  action:@selector(handleTap:)];
-    singleFingerTap.redirectTag = tag;
-    singleFingerTap.data = data;
-    [view addGestureRecognizer:singleFingerTap];
-    [singleFingerTap release];
-}
-
 //初始化用户模块
 -(void)initUserView:(UIScrollView *)parent
             topWith:(NSInteger) top
@@ -163,9 +151,7 @@
         }
             break;
         case 2:{
-            WUserViewController *userDetail = [[WUserViewController alloc] init];
-            userDetail.userModel = recognizer.data;
-            [self.navigationController pushViewController:userDetail animated:YES];
+            [self openUser:recognizer.data isSelf:false navigationWith:self.navigationController];
         }
             break;
         default:

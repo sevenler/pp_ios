@@ -16,7 +16,7 @@
 #import "WUserCenter.h"
 
 @interface WMenuViewController ()
-
+@property (nonatomic, strong) UINavigationController *currentNavigationController;
 @end
 
 @implementation WMenuViewController
@@ -43,7 +43,6 @@
     
     WUserSignView *item1 = [[WUserSignView alloc] init];
     [item1 setFrame: CGRectMake(0, 0, 230, 180)];
-    [self setTapRecognizer:item1 dataWith:nil tagWith:0];
     
     [[WUserCenter instance] getUser:@"18511557126"
                           blockWith:^(NSArray *objects, NSError *error) {
@@ -53,6 +52,7 @@
                                       WUserModel *user = [[WUserModel alloc]initWithAVObject:objects[i]];
                                       NSLog(@"get user: %@", [user getNick]);
                                       
+                                      [self setTapRecognizer:item1 dataWith:user tagWith:0];
                                       [item1 setData:user];
                                   }
                               } else {
@@ -91,6 +91,7 @@
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:viewController];
     UIBarButtonItem *menuItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(menuNavigationTapped:)];
     [viewController.navigationItem setLeftBarButtonItem:menuItem];
+    self.currentNavigationController = navigationController;
     
     //添加侧滑手势事件
     [navigationController.view addGestureRecognizer:menu.panGesture];
@@ -98,27 +99,11 @@
     return navigationController;
 }
 
-//添加 tap事件
--(void) setTapRecognizer:(UIView *)view
-                dataWith:(id)data
-                 tagWith:(NSInteger)tag{
-    WEventedTapGestureRecognizer *singleFingerTap = [[WEventedTapGestureRecognizer alloc] initWithTarget:self
-                                                                                                  action:@selector(handleTap:)];
-    singleFingerTap.redirectTag = tag;
-    singleFingerTap.data = data;
-    [view addGestureRecognizer:singleFingerTap];
-    [singleFingerTap release];
-}
-
 //区域点击事件
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
     switch (recognizer.redirectTag) {
         case 0:{
-            NSLog(@"+------------- ");
-        }
-            break;
-        case 2:{
-            
+            [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
         }
             break;
         default:

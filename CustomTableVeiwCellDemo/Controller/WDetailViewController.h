@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "FlatPillButton.h"
 #import "WSpaceModel.h"
+#import "WBaseViewController.h"
 
-@interface WDetailViewController : UIViewController
+@interface WDetailViewController : WBaseViewController
 
 @property (retain, nonatomic) IBOutlet  UIImageView *headerview;
 @property (retain, nonatomic) IBOutlet UIImageView *image0;
