@@ -733,13 +733,14 @@
                 [originalView addGestureRecognizer:gesture];
             }
         }
-        if ([self.customAnchoredGesturesViewMap objectForKey:self.panGesture]) {
-            UIView *view = [self.customAnchoredGesturesViewMap objectForKey:self.panGesture];
-            if ([view isDescendantOfView:self.topViewController.view]) {
-                [view addGestureRecognizer:self.panGesture];
-            }
-        }
-        [self.customAnchoredGesturesViewMap removeAllObjects];
+        //TODOHAND
+//        if ([self.customAnchoredGesturesViewMap objectForKey:self.panGesture]) {
+//            UIView *view = [self.customAnchoredGesturesViewMap objectForKey:self.panGesture];
+//            if ([view isDescendantOfView:self.topViewController.view]) {
+//                [view addGestureRecognizer:self.panGesture];
+//            }
+//        }
+//        [self.customAnchoredGesturesViewMap removeAllObjects];
     }
 }
 
