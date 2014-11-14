@@ -8,12 +8,25 @@
 
 #import <AVOSCloud/AVOSCloud.h>
 
+extern NSString *const kREFRESH_DATA;
+
+@protocol DataDelegate
+-(void) onDataChange:(NSString *)key
+           valueWith:(NSObject *)value
+        oldValueWith:(NSObject *)old;
+@end
+
 @interface WBaseModel : AVObject
 
 @property (strong, nonatomic) AVObject *data;
 
 -(id)initWithAVObject:(AVObject *)data;
-
 - (NSString *) getRemoteId;
+- (NSString *) description;
+
+
+-(void) registerDataChange:(id<DataDelegate> *)delegate;
+-(void) unregisterDataChange:(id<DataDelegate> *)delegate;
+
 
 @end

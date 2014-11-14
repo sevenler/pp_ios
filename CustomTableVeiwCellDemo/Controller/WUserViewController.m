@@ -12,6 +12,7 @@
 #import "WVerifiedView.h"
 #import "WUserModel.h"
 #import "UIImageView+WebCache.h"
+#import "WBaseModel.h"
 
 @interface WUserViewController ()
 
@@ -93,6 +94,16 @@
     }
 }
 
+-(void) onDataChange:(NSString *)key
+           valueWith:(NSObject *)value
+        oldValueWith:(NSObject *)old{
+    NSLog(@" onDataChange  %@ %@ %@", key, value, [self.userModel description]);
+    
+    if([kREFRESH_DATA isEqualToString:key]){
+        [self viewInitData];
+    }
+}
+
 - (void)initVerifiedView:(UIScrollView *)parent
             indexWith:(NSInteger) index
               keyWith:(NSString *)key
@@ -111,6 +122,9 @@
     [super viewDidLoad];
     [self viewInitStyle];
     [self viewInitData];
+    
+    [self.userModel registerDataChange:self];
+    [self.userModel refresh];
 }
 
 - (void)didReceiveMemoryWarning

@@ -63,7 +63,7 @@
 -(void) setData:(NSString *)title
        iconWith:(NSString *)icon{
     self.name.text = title;
-    [self.content setImage: [UIImage imageNamed:icon]];
+    if(icon) [self.content setImage: [UIImage imageNamed:icon]];
 }
 
 @end

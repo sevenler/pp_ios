@@ -14,6 +14,7 @@
 #import "WUserSignView.h"
 #import "WEventedTapGestureRecognizer.h"
 #import "WUserCenter.h"
+#import "WVerifiedView.h"
 
 @interface WMenuViewController ()
 @property (nonatomic, strong) UINavigationController *currentNavigationController;
@@ -52,7 +53,7 @@
                                       WUserModel *user = [[WUserModel alloc]initWithAVObject:objects[i]];
                                       NSLog(@"get user: %@", [user getNick]);
                                       
-                                      [self setTapRecognizer:item1 dataWith:user tagWith:0];
+                                      [self setTapRecognizer:item1 dataWith:user tagWith:-1];
                                       [item1 setData:user];
                                   }
                               } else {
@@ -61,6 +62,23 @@
                           }];
     
     [self.view addSubview:item1];
+    
+    [self initMenuItemView:self.view indexWith:0 keyWith:@"发现空间"];
+    [self initMenuItemView:self.view indexWith:1 keyWith:@"我的预订"];
+}
+
+- (void)initMenuItemView:(UIScrollView *)parent
+               indexWith:(NSInteger) index
+                 keyWith:(NSString *)key
+{
+    NSInteger top = 250;
+    NSInteger height = 50;
+    WVerifiedView *item = [[WVerifiedView alloc] init];
+    [self setTapRecognizer:item dataWith:nil tagWith:index];
+    [item setFrame: CGRectMake(0, top + index * height, 320, height)];
+    [item setData:key iconWith:nil];
+    
+    [parent addSubview:item];
 }
 
 - (IBAction)menuButtonTapped:(id)sender {
@@ -102,13 +120,23 @@
 //区域点击事件
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
     switch (recognizer.redirectTag) {
-        case 0:{
+        case -1:{
             [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
+        }
+            break;
+        case 0:{
+            self.slidingViewController.topViewController = [self getMenuItem:0 withSlidingVC:self.slidingViewController];
+        }
+            break;
+        case 1:{
+            self.slidingViewController.topViewController = [self getMenuItem:1 withSlidingVC:self.slidingViewController];
         }
             break;
         default:
             break;
     }
+    
+    [self.slidingViewController resetTopViewAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning

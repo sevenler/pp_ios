@@ -10,7 +10,7 @@
 #import "WUserModel.h"
 #import "WBaseViewController.h"
 
-@interface WUserViewController : WBaseViewController
+@interface WUserViewController : WBaseViewController<DataDelegate>
 
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollview;
 @property (retain, nonatomic) IBOutlet UIImageView *image_avater;

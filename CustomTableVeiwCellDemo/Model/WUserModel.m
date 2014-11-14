@@ -64,4 +64,8 @@ NSString *const kVERIFIED_KEY_EMAIL = @"emailVerified";
     }
     return @"";
 }
+
+- (NSString *) description{
+    return [NSString stringWithFormat: @"nick=%@ description=%@ work=%@", [self getNick], [self getDescription], [self getWork]];;
+}
 @end
