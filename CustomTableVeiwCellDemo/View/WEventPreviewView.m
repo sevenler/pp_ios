@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) UIImageView *imageview;
 @property (strong, nonatomic) UILabel *title;
-@property (strong, nonatomic) UILabel *description;
+@property (strong, nonatomic) UILabel *descriptionView;
 
 
 @end
@@ -29,18 +29,18 @@
 
     self.imageview = [[UIImageView alloc] init];
     self.title = UILabel.new;
-    self.description = UILabel.new;
+    self.descriptionView = UILabel.new;
     [self addSubview:self.imageview];
     [self addSubview:self.title];
-    [self addSubview:self.description];
+    [self addSubview:self.descriptionView];
 //    self.imageview.backgroundColor = UIColor.greenColor;
 //    self.title.backgroundColor = UIColor.redColor;
 //    self.description.backgroundColor = UIColor.blueColor;
     
-    [WConfig setLabelWithDescriptionStyle: self.description];
+    [WConfig setLabelWithDescriptionStyle: self.descriptionView];
     [WConfig setLabelWithNormalTitleStyle: self.title];
     self.title.textAlignment = UITextAlignmentLeft;
-    self.description.textColor = UIColor.redColor;
+    self.descriptionView.textColor = UIColor.redColor;
 
     UIView *superview = self;
     UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -54,9 +54,9 @@
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.and.right.equalTo(superview).insets(padding);
         make.left.equalTo(self.imageview.mas_right).insets(padding);
-        make.bottom.equalTo(self.description.mas_top).insets(padding);
+        make.bottom.equalTo(self.descriptionView.mas_top).insets(padding);
     }];
-    [self.description mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.descriptionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.title.mas_bottom).insets(padding);
         make.left.equalTo(self.imageview.mas_right).insets(padding);
         make.right.and.bottom.equalTo(superview).insets(padding);
@@ -82,7 +82,7 @@
 priceWith:(float)price{
     [self.imageview setImageWithURL:[NSURL URLWithString:image]];
     self.title.text = title;
-    self.description.text = [NSString stringWithFormat:@"%f 人/位", price];
+    self.descriptionView.text = [NSString stringWithFormat:@"%f 人/位", price];
 }
 
 

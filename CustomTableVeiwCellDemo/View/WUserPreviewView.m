@@ -17,7 +17,7 @@
 @property (strong, nonatomic) UIImageView *imageview;
 @property (strong, nonatomic) UILabel *title;
 @property (strong, nonatomic) UILabel *subTitle;
-@property (strong, nonatomic) UILabel *description;
+@property (strong, nonatomic) UILabel *descriptionView;
 @end
 
 @implementation WUserPreviewView
@@ -39,17 +39,17 @@
     self.imageview = [[UIImageView alloc] init];
     self.title = UILabel.new;
     self.subTitle = UILabel.new;
-    self.description = UILabel.new;
+    self.descriptionView = UILabel.new;
     [self addSubview:view];
     [self addSubview:self.title];
     [self addSubview:self.subTitle];
-    [self addSubview:self.description];
+    [self addSubview:self.descriptionView];
     
-    [WConfig setLabelWithDescriptionStyle: self.description];
+    [WConfig setLabelWithDescriptionStyle: self.descriptionView];
     [WConfig setLabelWithNormalTitleStyle: self.title];
     [WConfig setLabelWithNormalTitleStyle: self.subTitle];
-    self.description.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
-    self.description.numberOfLines = 10;
+    self.descriptionView.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
+    self.descriptionView.numberOfLines = 10;
     
     UIView *superview = self;
     UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -83,7 +83,7 @@
         
         make.height.equalTo(@(20));
     }];
-    [self.description mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.descriptionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.subTitle.mas_bottom).insets(padding);
         make.left.and.right.equalTo(superview).insets(padding);
         
@@ -100,8 +100,8 @@
     self.title.text = [NSString stringWithFormat:@"关于 %@", [user getNick]];
     
     self.subTitle.text = [user getPosition];
-    self.description.text = [user getDescription];
-    [WUtils alignTop:self.description];
+    self.descriptionView.text = [user getDescription];
+    [WUtils alignTop:self.descriptionView];
 }
 
 @end
