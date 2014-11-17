@@ -33,4 +33,9 @@
         label.text = [label.text stringByAppendingString:@"\n "];
 }
 
++(WAppDelegate *)sharedAppdelegate
+{
+    return (WAppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 @end

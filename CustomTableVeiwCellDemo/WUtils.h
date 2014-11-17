@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WAppDelegate.h"
 
 @interface WUtils : NSObject
 
@@ -14,5 +15,7 @@
               withFromat:(NSString *)format;
 
 + (void)alignTop:(UILabel *)label;
+
++(WAppDelegate *)sharedAppdelegate;
 
 @end

@@ -10,6 +10,7 @@
 #import "WUserModel.h"
 #import "WSpaceModel.h"
 #import "WEventedTapGestureRecognizer.h"
+#import "WAppDelegate.h"
 
 @interface WBaseViewController : UIViewController
 

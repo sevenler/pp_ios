@@ -16,6 +16,8 @@
 #import "WUserCenter.h"
 #import "WVerifiedView.h"
 #import "WUserDataViewController.h"
+#import "LoginView.h"
+#import "SignCodeView.h"
 
 @interface WMenuViewController ()
 @property (nonatomic, strong) UINavigationController *currentNavigationController;
@@ -122,7 +124,9 @@
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
     switch (recognizer.redirectTag) {
         case -1:{
-            [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
+//            [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
+            SignCodeView *view = [[SignCodeView alloc] init];
+            [view show];
         }
             break;
         case 0:{

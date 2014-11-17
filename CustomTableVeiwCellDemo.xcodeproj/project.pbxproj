@@ -18,6 +18,9 @@
 		AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3F38F817BD03410054A992 /* Default-568h@2x.png */; };
 		AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F390B17BD243A0054A992 /* WProjectCell.m */; };
 		AA3F390E17BD250B0054A992 /* WProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3F390D17BD250B0054A992 /* WProjectCell.xib */; };
+		B25648681A19F1B10035FD16 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B25648671A19F1B10035FD16 /* LoginView.m */; };
+		B256486B1A1A42AA0035FD16 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = B256486A1A1A42AA0035FD16 /* SignUpView.m */; };
+		B256486E1A1A489C0035FD16 /* SignCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B256486D1A1A489C0035FD16 /* SignCodeView.m */; };
 		B2A2F7C119CD799D006C9BB2 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7BF19CD799D006C9BB2 /* AVOSCloud.framework */; };
 		B2A2F7C219CD799D006C9BB2 /* AVOSCloudSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7C019CD799D006C9BB2 /* AVOSCloudSNS.framework */; };
 		B2A2F7C419CD8233006C9BB2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7C319CD8233006C9BB2 /* CoreTelephony.framework */; };
@@ -111,6 +114,12 @@
 		AA3F390A17BD243A0054A992 /* WProjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WProjectCell.h; sourceTree = "<group>"; };
 		AA3F390B17BD243A0054A992 /* WProjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WProjectCell.m; sourceTree = "<group>"; };
 		AA3F390D17BD250B0054A992 /* WProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WProjectCell.xib; sourceTree = "<group>"; };
+		B25648661A19F1B10035FD16 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Controller/LoginView.h; sourceTree = "<group>"; };
+		B25648671A19F1B10035FD16 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = Controller/LoginView.m; sourceTree = "<group>"; };
+		B25648691A1A42AA0035FD16 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpView.h; path = Controller/SignUpView.h; sourceTree = "<group>"; };
+		B256486A1A1A42AA0035FD16 /* SignUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpView.m; path = Controller/SignUpView.m; sourceTree = "<group>"; };
+		B256486C1A1A489C0035FD16 /* SignCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignCodeView.h; path = Controller/SignCodeView.h; sourceTree = "<group>"; };
+		B256486D1A1A489C0035FD16 /* SignCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignCodeView.m; path = Controller/SignCodeView.m; sourceTree = "<group>"; };
 		B2A2F7BF19CD799D006C9BB2 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = Frameworks/AVOSCloud.framework; sourceTree = "<group>"; };
 		B2A2F7C019CD799D006C9BB2 /* AVOSCloudSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloudSNS.framework; path = Frameworks/AVOSCloudSNS.framework; sourceTree = "<group>"; };
 		B2A2F7C319CD8233006C9BB2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -421,6 +430,12 @@
 		F66261BD19CF062200C0B9ED /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B256486C1A1A489C0035FD16 /* SignCodeView.h */,
+				B256486D1A1A489C0035FD16 /* SignCodeView.m */,
+				B25648691A1A42AA0035FD16 /* SignUpView.h */,
+				B256486A1A1A42AA0035FD16 /* SignUpView.m */,
+				B25648661A19F1B10035FD16 /* LoginView.h */,
+				B25648671A19F1B10035FD16 /* LoginView.m */,
 				F625AC391A0C6C1800CA1AB5 /* WHomeViewController.h */,
 				F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */,
 				F625AC3B1A0C6C1800CA1AB5 /* WMenuViewController.h */,
@@ -610,6 +625,7 @@
 			files = (
 				F6AEB0A819FA0F55002AA015 /* MASConstraint.m in Sources */,
 				F698734A1A01F7AC003458AC /* WUserCenter.m in Sources */,
+				B25648681A19F1B10035FD16 /* LoginView.m in Sources */,
 				F6AEB0AB19FA0F55002AA015 /* MASViewAttribute.m in Sources */,
 				F6AEB0A919FA0F55002AA015 /* MASConstraintMaker.m in Sources */,
 				F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */,
@@ -617,6 +633,7 @@
 				F698734E1A02575A003458AC /* WUserViewController.m in Sources */,
 				F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */,
 				AA3F38EF17BD03410054A992 /* main.m in Sources */,
+				B256486B1A1A42AA0035FD16 /* SignUpView.m in Sources */,
 				F625AC3D1A0C6C1800CA1AB5 /* WHomeViewController.m in Sources */,
 				F625AC351A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m in Sources */,
 				F625AC371A0C6BA600CA1AB5 /* ECSlidingViewController.m in Sources */,
@@ -632,6 +649,7 @@
 				F625AC3E1A0C6C1800CA1AB5 /* WMenuViewController.m in Sources */,
 				F6C92A9D1A067E6D00B08E2C /* SDWebImageManager.m in Sources */,
 				F69873391A0120C5003458AC /* WUtils.m in Sources */,
+				B256486E1A1A489C0035FD16 /* SignCodeView.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,
 				F6C92A991A067E6D00B08E2C /* MKAnnotationView+WebCache.m in Sources */,
 				F6C92AA21A067E6D00B08E2C /* UIImage+Resize.m in Sources */,
