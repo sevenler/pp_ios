@@ -26,6 +26,7 @@
 		B2A2F7CA19CD8277006C9BB2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7C919CD8277006C9BB2 /* MobileCoreServices.framework */; };
 		B2A2F7CC19CD8291006C9BB2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7CB19CD8291006C9BB2 /* libicucore.dylib */; };
 		B2A2F7CE19CD82BB006C9BB2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7CD19CD82BB006C9BB2 /* CFNetwork.framework */; };
+		B2A923511A19C6AA0055E6FF /* WUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A923501A19C6AA0055E6FF /* WUserDataViewController.m */; };
 		F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D711E19F7E4030072F789 /* WSpaceCenter.m */; };
 		F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712019F7E4030072F789 /* WSpaceModel.m */; };
 		F60D712A19F7FD6C0072F789 /* WConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712919F7FD6C0072F789 /* WConfig.m */; };
@@ -118,6 +119,8 @@
 		B2A2F7C919CD8277006C9BB2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B2A2F7CB19CD8291006C9BB2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		B2A2F7CD19CD82BB006C9BB2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B2A9234F1A19C6AA0055E6FF /* WUserDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUserDataViewController.h; path = Controller/WUserDataViewController.h; sourceTree = "<group>"; };
+		B2A923501A19C6AA0055E6FF /* WUserDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUserDataViewController.m; path = Controller/WUserDataViewController.m; sourceTree = "<group>"; };
 		F60D711D19F7E4030072F789 /* WSpaceCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSpaceCenter.h; sourceTree = "<group>"; };
 		F60D711E19F7E4030072F789 /* WSpaceCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSpaceCenter.m; sourceTree = "<group>"; };
 		F60D711F19F7E4030072F789 /* WSpaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSpaceModel.h; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 				F698734D1A02575A003458AC /* WUserViewController.xib */,
 				F6B70BB11A162451005840DB /* WBaseViewController.h */,
 				F6B70BB21A162451005840DB /* WBaseViewController.m */,
+				B2A9234F1A19C6AA0055E6FF /* WUserDataViewController.h */,
+				B2A923501A19C6AA0055E6FF /* WUserDataViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				F6AEB0AF19FA0F55002AA015 /* View+MASAdditions.m in Sources */,
 				F6C92A9A1A067E6D00B08E2C /* SDImageCache.m in Sources */,
 				F6C92AA41A067E6D00B08E2C /* UIImage+Scaling.m in Sources */,
+				B2A923511A19C6AA0055E6FF /* WUserDataViewController.m in Sources */,
 				F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */,
 				F6C92A9B1A067E6D00B08E2C /* SDWebImageDecoder.m in Sources */,
 				F6AEB0A719FA0F55002AA015 /* MASCompositeConstraint.m in Sources */,

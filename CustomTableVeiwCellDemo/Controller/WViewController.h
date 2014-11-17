@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WBaseViewController.h"
 
-@interface WViewController : WBaseViewController<UITableViewDataSource, UITableViewDelegate>
+@interface WViewController : WBaseViewController<UITableViewDataSource, UITableViewDelegate>{
+    NSMutableArray *_projectList; // 项目列表
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
 @end

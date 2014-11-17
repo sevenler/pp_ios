@@ -15,6 +15,7 @@
 #import "WEventedTapGestureRecognizer.h"
 #import "WUserCenter.h"
 #import "WVerifiedView.h"
+#import "WUserDataViewController.h"
 
 @interface WMenuViewController ()
 @property (nonatomic, strong) UINavigationController *currentNavigationController;
@@ -103,7 +104,7 @@
             viewController = [[WViewController alloc] initWithNibName:@"WViewController" bundle:nil];
             break;
         case 1:
-            viewController = [[WHomeViewController alloc] init];
+            viewController = [[WUserDataViewController alloc] initWithNibName:@"WViewController" bundle:nil];
             break;
     }
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:viewController];

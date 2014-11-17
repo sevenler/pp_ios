@@ -11,4 +11,6 @@
 @interface WProjectCenter : NSObject
 +(WProjectCenter *) instance;
 - (void)getAllSpace:(void(^)(NSArray *objects, NSError *error))block;
+- (void)getAllSpace:(NSString *) user
+          blockWith:(void(^)(NSArray *objects, NSError *error))block;
 @end

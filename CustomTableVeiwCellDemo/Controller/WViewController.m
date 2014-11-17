@@ -14,7 +14,7 @@
 #import <AVOSCloud/AVObject.h>
 
 @interface WViewController (){
-    NSMutableArray *_projectList; // 项目列表
+    
 }
 
 @end
@@ -26,6 +26,12 @@
     [super viewDidLoad];
     
     _projectList = [[NSMutableArray alloc]init];
+    [self loadData];
+    
+    self.title = @"发现空间";
+}
+
+-(void)loadData{
     [[WProjectCenter instance] getAllSpace: ^(NSArray *objects, NSError *error) {
         if (!error) {
             for(AVObject *obj in objects)
@@ -38,8 +44,6 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
-    self.title = @"发现空间";
 }
 
 - (void)didReceiveMemoryWarning
