@@ -9,6 +9,7 @@
 #import <AVOSCloud/AVOSCloud.h>
 
 extern NSString *const kREFRESH_DATA;
+extern NSString *const kDATA_CHANGE_SIGN_IN;
 
 @protocol DataDelegate
 -(void) onDataChange:(NSString *)key
@@ -27,6 +28,10 @@ extern NSString *const kREFRESH_DATA;
 
 -(void) registerDataChange:(id<DataDelegate> *)delegate;
 -(void) unregisterDataChange:(id<DataDelegate> *)delegate;
+
+-(void) onDataChange:(NSString *)key
+           valueWith:(NSObject *)value
+        oldValueWith:(NSObject *)old;
 
 
 @end

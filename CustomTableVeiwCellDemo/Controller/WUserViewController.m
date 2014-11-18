@@ -127,6 +127,12 @@
     [self.userModel refresh];
 }
 
+-(void)viewDidUnload {
+    [super viewDidUnload];
+    
+    [self.userModel unregisterDataChange:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

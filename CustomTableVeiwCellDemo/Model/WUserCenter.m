@@ -40,7 +40,14 @@ static WUserCenter *instance = nil;
 - (void)signIn:(NSString *)user
 passwordWith:(NSString *)password
       blockWith:(void(^)(AVUser *user, NSError *error))block {
-    [AVUser logInWithUsernameInBackground:user password:password block:block];
+    [AVUser logInWithUsernameInBackground:user password:password block:^(AVUser *object, NSError *error) {
+        if (!error) {
+            block(object, error);
+            [self onDataChange:kDATA_CHANGE_SIGN_IN valueWith:nil oldValueWith:nil];
+        } else {
+            block(object, error);
+        }
+    }];
 }
 
 @end

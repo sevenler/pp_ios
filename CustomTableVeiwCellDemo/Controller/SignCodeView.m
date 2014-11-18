@@ -90,6 +90,7 @@
         UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
         
         
+        
         [whiteBG addSubview:titleTextField];
         [titleTextField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(superview.mas_top).insets(UIEdgeInsetsMake(50, 10, 10, 10));

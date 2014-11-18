@@ -10,7 +10,7 @@
 #import "ECSlidingViewController.h"
 #import "WBaseViewController.h"
 
-@interface WMenuViewController : WBaseViewController
+@interface WMenuViewController : WBaseViewController<DataDelegate>
 
 -(UINavigationController *)getMenuItem:(NSInteger)index withSlidingVC:(ECSlidingViewController *)menu;
 

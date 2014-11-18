@@ -68,7 +68,26 @@
     
     [self initMenuItemView:self.view indexWith:0 keyWith:@"发现空间"];
     [self initMenuItemView:self.view indexWith:1 keyWith:@"我的预订"];
+    
+    [[WUserCenter instance] registerDataChange:self];
 }
+
+-(void)viewDidUnload {
+    [super viewDidUnload];
+    
+    [[WUserCenter instance] unregisterDataChange:self];
+}
+
+-(void) onDataChange:(NSString *)key
+           valueWith:(NSObject *)value
+        oldValueWith:(NSObject *)old{
+    NSLog(@" onDataChange  %@ %@ %@", key, value, old);
+    
+    if([kDATA_CHANGE_SIGN_IN isEqualToString:key]){
+        
+    }
+}
+
 
 - (void)initMenuItemView:(UIScrollView *)parent
                indexWith:(NSInteger) index

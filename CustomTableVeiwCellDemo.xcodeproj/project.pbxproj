@@ -41,11 +41,11 @@
 		F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712F19F8C27C0072F789 /* WTextPageViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F60D713519F8E9250072F789 /* UILabel+dynamicSized.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D713419F8E9250072F789 /* UILabel+dynamicSized.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F625AC331A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC271A0C6BA600CA1AB5 /* ECPercentDrivenInteractiveTransition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F625AC341A0C6BA600CA1AB5 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC291A0C6BA600CA1AB5 /* ECSlidingAnimationController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F625AC351A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC2C1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F625AC361A0C6BA600CA1AB5 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC2E1A0C6BA600CA1AB5 /* ECSlidingSegue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F625AC371A0C6BA600CA1AB5 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC301A0C6BA600CA1AB5 /* ECSlidingViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F625AC381A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC321A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F625AC341A0C6BA600CA1AB5 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC291A0C6BA600CA1AB5 /* ECSlidingAnimationController.m */; };
+		F625AC351A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC2C1A0C6BA600CA1AB5 /* ECSlidingInteractiveTransition.m */; };
+		F625AC361A0C6BA600CA1AB5 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC2E1A0C6BA600CA1AB5 /* ECSlidingSegue.m */; };
+		F625AC371A0C6BA600CA1AB5 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC301A0C6BA600CA1AB5 /* ECSlidingViewController.m */; };
+		F625AC381A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC321A0C6BA600CA1AB5 /* UIViewController+ECSlidingViewController.m */; };
 		F625AC3D1A0C6C1800CA1AB5 /* WHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC3A1A0C6C1800CA1AB5 /* WHomeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F625AC3E1A0C6C1800CA1AB5 /* WMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F625AC411A0C7EAD00CA1AB5 /* WUserSignView.m in Sources */ = {isa = PBXBuildFile; fileRef = F625AC401A0C7EAD00CA1AB5 /* WUserSignView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };

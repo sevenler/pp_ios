@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <AVOSCloud/AVUser.h>
+#import "WBaseModel.h"
 
-@interface WUserCenter : NSObject
+@interface WUserCenter : WBaseModel
 +(WUserCenter *) instance;
 
 - (void)getUser:(NSString *)userId

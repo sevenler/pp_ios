@@ -128,6 +128,10 @@
             make.top.equalTo(loginButton.mas_bottom).insets(padding);
             make.height.equalTo(@(50)).insets(padding);
         }];
+        
+        
+        self.emailTextField.text = @"18511557126";
+        self.passwordTextField.text = @"12345";
     }
     return self;
 }
@@ -163,6 +167,7 @@
                               if (!error) {
                                   WUserModel *usr = [[WUserModel alloc]initWithAVObject:objects];
                                   NSLog(@"get user: %@", [usr getNick]);
+                                  [self dismiss];
                               } else {
                                   NSLog(@"Error: %@ %@", error, [error userInfo]);
                                   [BBProgressHUD showText:[error localizedDescription]];

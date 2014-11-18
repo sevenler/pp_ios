@@ -8,10 +8,11 @@
 
 #import "WBaseModel.h"
 
-NSString *const kREFRESH_DATA = @"refresh_data";
+NSString *const kREFRESH_DATA = @"refresh_data";//刷新数据，调用refresh刷新数据后，会使用这个值来notify数据
+NSString *const kDATA_CHANGE_SIGN_IN = @"dc_sign_in";//登陆
 
 @interface WBaseModel (){
-    NSMutableArray *delegates;
+    NSMutableArray *observers;
 }
 @end
 
@@ -20,7 +21,7 @@ NSString *const kREFRESH_DATA = @"refresh_data";
 -(id)initWithAVObject:(AVObject *)data{
     self = [super init];
     self.data = data;
-    delegates = [[NSMutableArray alloc]init];
+    observers = [[NSMutableArray alloc]init];
     return self;
 }
 
@@ -45,17 +46,21 @@ NSString *const kREFRESH_DATA = @"refresh_data";
 -(void) onDataChange:(NSString *)key
            valueWith:(NSObject *)value
         oldValueWith:(NSObject *)old{
-    for (id<DataDelegate> delegate in delegates) {
+    
+    NSLog(@"+++++++++++  onDataChange  ++++++++++++");
+    for (id<DataDelegate> delegate in observers) {
+        NSLog(@"+++++++++++  onDataChange ========= ++++++++++++");
+        
         [delegate onDataChange:key valueWith:value oldValueWith:old];
     }
 }
 
 -(void) registerDataChange:(id<DataDelegate> *)delegate{
-    [delegates addObject:delegate];
+    [observers addObject:delegate];
 }
 
 -(void) unregisterDataChange:(id<DataDelegate> *)delegate{
-    [delegates removeObject:delegate];
+    [observers removeObject:delegate];
 }
 
 @end
