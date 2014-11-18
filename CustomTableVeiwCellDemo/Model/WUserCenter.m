@@ -8,6 +8,7 @@
 
 #import "WUserCenter.h"
 #import <AVOSCloud/AVQuery.h>
+#import <AVOSCloud/AVUser.h>
 
 static WUserCenter *instance = nil;
 
@@ -34,6 +35,12 @@ static WUserCenter *instance = nil;
     AVQuery *query = [AVQuery queryWithClassName:@"_User"];
     [query whereKey:@"username" equalTo:userId];
     [query findObjectsInBackgroundWithBlock:block];
+}
+
+- (void)signIn:(NSString *)user
+passwordWith:(NSString *)password
+      blockWith:(void(^)(AVUser *user, NSError *error))block {
+    [AVUser logInWithUsernameInBackground:user password:password block:block];
 }
 
 @end

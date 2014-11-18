@@ -24,6 +24,7 @@
 		B27A98721A1B107800F9B840 /* BBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B27A98711A1B107800F9B840 /* BBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B27A98771A1B115900F9B840 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B27A98741A1B115900F9B840 /* SVProgressHUD.bundle */; };
 		B27A98781A1B115900F9B840 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B27A98761A1B115900F9B840 /* SVProgressHUD.m */; };
+		B27A987B1A1B199000F9B840 /* NSString+App.m in Sources */ = {isa = PBXBuildFile; fileRef = B27A987A1A1B199000F9B840 /* NSString+App.m */; };
 		B2A2F7C119CD799D006C9BB2 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7BF19CD799D006C9BB2 /* AVOSCloud.framework */; };
 		B2A2F7C219CD799D006C9BB2 /* AVOSCloudSNS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7C019CD799D006C9BB2 /* AVOSCloudSNS.framework */; };
 		B2A2F7C419CD8233006C9BB2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2F7C319CD8233006C9BB2 /* CoreTelephony.framework */; };
@@ -128,6 +129,8 @@
 		B27A98741A1B115900F9B840 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = SVProgressHUD/SVProgressHUD.bundle; sourceTree = SOURCE_ROOT; };
 		B27A98751A1B115900F9B840 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = SOURCE_ROOT; };
 		B27A98761A1B115900F9B840 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = SVProgressHUD/SVProgressHUD.m; sourceTree = SOURCE_ROOT; };
+		B27A98791A1B199000F9B840 /* NSString+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+App.h"; sourceTree = "<group>"; };
+		B27A987A1A1B199000F9B840 /* NSString+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+App.m"; sourceTree = "<group>"; };
 		B2A2F7BF19CD799D006C9BB2 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloud.framework; path = Frameworks/AVOSCloud.framework; sourceTree = "<group>"; };
 		B2A2F7C019CD799D006C9BB2 /* AVOSCloudSNS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVOSCloudSNS.framework; path = Frameworks/AVOSCloudSNS.framework; sourceTree = "<group>"; };
 		B2A2F7C319CD8233006C9BB2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -332,6 +335,8 @@
 		AA3F38E817BD03410054A992 /* CustomTableVeiwCellDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B27A98791A1B199000F9B840 /* NSString+App.h */,
+				B27A987A1A1B199000F9B840 /* NSString+App.m */,
 				B27A98731A1B112A00F9B840 /* SVProgressHUD */,
 				B27A98701A1B107800F9B840 /* BBProgressHUD.h */,
 				B27A98711A1B107800F9B840 /* BBProgressHUD.m */,
@@ -671,6 +676,7 @@
 				F69873551A026D48003458AC /* WVerifiedView.m in Sources */,
 				F625AC3E1A0C6C1800CA1AB5 /* WMenuViewController.m in Sources */,
 				F6C92A9D1A067E6D00B08E2C /* SDWebImageManager.m in Sources */,
+				B27A987B1A1B199000F9B840 /* NSString+App.m in Sources */,
 				F69873391A0120C5003458AC /* WUtils.m in Sources */,
 				B256486E1A1A489C0035FD16 /* SignCodeView.m in Sources */,
 				F60D713119F8C27C0072F789 /* WTextPageViewController.m in Sources */,

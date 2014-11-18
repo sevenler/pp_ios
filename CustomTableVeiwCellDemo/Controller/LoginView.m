@@ -14,6 +14,9 @@
 #import "View+MASAdditions.h"
 #import "SignUpView.h"
 #import "BBProgressHUD.h"
+#import "NSString+App.h"
+#import "WUserCenter.h"
+#import "WUserModel.h"
 
 @interface LoginView () <UITextFieldDelegate, UIAlertViewDelegate>
 {
@@ -141,8 +144,8 @@
         return;
     }
     
-    if (![email isValidEmail]) {
-        [BBProgressHUD showText:@"请输入正确格式的邮箱"];
+    if (![email isValidPhone]) {
+        [BBProgressHUD showText:@"请输入正确格式的电话"];
         return;
     }
     
@@ -152,6 +155,19 @@
     }
     
     [BBProgressHUD show];
+    
+    [[WUserCenter instance] signIn:email
+                      passwordWith:password
+                          blockWith:^(AVUser *objects, NSError *error) {
+                              [BBProgressHUD dismiss];
+                              if (!error) {
+                                  WUserModel *usr = [[WUserModel alloc]initWithAVObject:objects];
+                                  NSLog(@"get user: %@", [usr getNick]);
+                              } else {
+                                  NSLog(@"Error: %@ %@", error, [error userInfo]);
+                                  [BBProgressHUD showText:[error localizedDescription]];
+                              }
+                          }];
 }
 
 - (void)tapForgotPasswordButton

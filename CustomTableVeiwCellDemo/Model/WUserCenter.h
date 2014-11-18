@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVOSCloud/AVUser.h>
 
 @interface WUserCenter : NSObject
 +(WUserCenter *) instance;
+
 - (void)getUser:(NSString *)userId
       blockWith:(void(^)(NSArray *objects, NSError *error))block;
+
+- (void)signIn:(NSString *)user
+  passwordWith:(NSString *)password
+     blockWith:(void(^)(AVUser *user, NSError *error))block;
 @end
