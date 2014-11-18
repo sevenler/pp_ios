@@ -13,6 +13,7 @@
 #import "MASConstraintMaker.h"
 #import "View+MASAdditions.h"
 #import "SignUpView.h"
+#import "BBProgressHUD.h"
 
 @interface LoginView () <UITextFieldDelegate, UIAlertViewDelegate>
 {
@@ -132,6 +133,25 @@
 - (void)tapLoginButton
 {
     NSLog(@"========tapLoginButton==========");
+    NSString *email = self.emailTextField.text;
+    NSString *password = self.passwordTextField.text;
+    
+    if (!email || email.length == 0) {
+        [BBProgressHUD showText:@"请输入邮箱"];
+        return;
+    }
+    
+    if (![email isValidEmail]) {
+        [BBProgressHUD showText:@"请输入正确格式的邮箱"];
+        return;
+    }
+    
+    if (!password || password.length == 0) {
+        [BBProgressHUD showText:@"请输入密码"];
+        return;
+    }
+    
+    [BBProgressHUD show];
 }
 
 - (void)tapForgotPasswordButton

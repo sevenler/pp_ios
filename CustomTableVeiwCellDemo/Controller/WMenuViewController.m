@@ -125,7 +125,7 @@
     switch (recognizer.redirectTag) {
         case -1:{
 //            [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
-            SignCodeView *view = [[SignCodeView alloc] init];
+            LoginView *view = [[LoginView alloc] init];
             [view show];
         }
             break;
