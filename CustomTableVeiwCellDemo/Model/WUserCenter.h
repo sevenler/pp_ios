@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <AVOSCloud/AVUser.h>
 #import "WBaseModel.h"
+#import "WUserModel.h"
 
 @interface WUserCenter : WBaseModel
+
+@property (strong, nonatomic) WUserModel *signedUser;
+
 +(WUserCenter *) instance;
 
 - (void)getUser:(NSString *)userId

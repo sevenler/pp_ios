@@ -18,10 +18,15 @@ NSString *const kDATA_CHANGE_SIGN_IN = @"dc_sign_in";//登陆
 
 @implementation WBaseModel
 
--(id)initWithAVObject:(AVObject *)data{
+-(id)init{
     self = [super init];
-    self.data = data;
     observers = [[NSMutableArray alloc]init];
+    return self;
+}
+
+-(id)initWithAVObject:(AVObject *)data{
+    self = [self init];
+    self.data = data;
     return self;
 }
 
@@ -46,11 +51,7 @@ NSString *const kDATA_CHANGE_SIGN_IN = @"dc_sign_in";//登陆
 -(void) onDataChange:(NSString *)key
            valueWith:(NSObject *)value
         oldValueWith:(NSObject *)old{
-    
-    NSLog(@"+++++++++++  onDataChange  ++++++++++++");
     for (id<DataDelegate> delegate in observers) {
-        NSLog(@"+++++++++++  onDataChange ========= ++++++++++++");
-        
         [delegate onDataChange:key valueWith:value oldValueWith:old];
     }
 }

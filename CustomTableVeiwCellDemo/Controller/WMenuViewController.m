@@ -18,9 +18,13 @@
 #import "WUserDataViewController.h"
 #import "LoginView.h"
 #import "SignCodeView.h"
+#import "MASConstraintMaker.h"
+#import "View+MASAdditions.h"
+#import "WConfig.h"
 
 @interface WMenuViewController ()
 @property (nonatomic, strong) UINavigationController *currentNavigationController;
+@property (nonatomic, strong) UIView *currentSignView;
 @end
 
 @implementation WMenuViewController
@@ -44,28 +48,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    WUserSignView *item1 = [[WUserSignView alloc] init];
-    [item1 setFrame: CGRectMake(0, 0, 230, 180)];
-    
-    [[WUserCenter instance] getUser:@"18511557126"
-                          blockWith:^(NSArray *objects, NSError *error) {
-                              if (!error) {
-                                  NSInteger count = (objects.count > 1 ? 1 : objects.count);
-                                  for (int i = 0; i < count; i++) {
-                                      WUserModel *user = [[WUserModel alloc]initWithAVObject:objects[i]];
-                                      NSLog(@"get user: %@", [user getNick]);
-                                      
-                                      [self setTapRecognizer:item1 dataWith:user tagWith:-1];
-                                      [item1 setData:user];
-                                  }
-                              } else {
-                                  NSLog(@"Error: %@ %@", error, [error userInfo]);
-                              }
-                          }];
-    
-    [self.view addSubview:item1];
-    
+    [self signInOrOut:false];
     [self initMenuItemView:self.view indexWith:0 keyWith:@"发现空间"];
     [self initMenuItemView:self.view indexWith:1 keyWith:@"我的预订"];
     
@@ -78,18 +61,63 @@
     [[WUserCenter instance] unregisterDataChange:self];
 }
 
+//登陆后，显示头像  退出后，显示登陆按钮
+-(void)signInOrOut:(BOOL)isSignIn{
+    if(_currentSignView) [_currentSignView removeFromSuperview];
+    
+    if(isSignIn) {
+        WUserSignView *item1 = [[WUserSignView alloc] init];
+        [item1 setFrame: CGRectMake(0, 0, 230, 180)];
+        WUserModel *me = [WUserCenter instance].signedUser;
+        [self setTapRecognizer:item1 dataWith:me tagWith:-1];
+        [item1 setData:me];
+        [self.view addSubview:item1];
+        _currentSignView = item1;
+    }else{
+        UIView *superview = [[UIView alloc] init];
+        [superview setFrame: CGRectMake(0, 0, 230, 180)];
+        UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+        
+        UIButton *registerButton = [[UIButton alloc]init];
+        registerButton.layer.cornerRadius = 2;
+        registerButton.layer.masksToBounds = YES;
+        registerButton.backgroundColor = [WConfig hexStringToColor:@"#457ebd"];
+        [registerButton setTitle:@"登陆" forState:UIControlStateNormal];
+        [registerButton setTitleColor: [WConfig hexStringToColor:@"#ffffff"] forState:UIControlStateNormal];
+        [registerButton addTarget:self action:@selector(tapSignButton) forControlEvents:UIControlEventTouchUpInside];
+        
+        [superview addSubview:registerButton];
+        [registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.equalTo(superview);
+            make.height.equalTo(@(40)).insets(padding);
+            make.width.equalTo(@(120)).insets(padding);
+        }];
+        
+        [self.view addSubview:superview];
+        _currentSignView = superview;
+    }
+}
+
+//登陆按钮click回调
+- (void)tapSignButton
+{
+    LoginView *view = [[LoginView alloc] init];
+    [view show];
+}
+
+//登陆监听回调
 -(void) onDataChange:(NSString *)key
            valueWith:(NSObject *)value
         oldValueWith:(NSObject *)old{
     NSLog(@" onDataChange  %@ %@ %@", key, value, old);
     
     if([kDATA_CHANGE_SIGN_IN isEqualToString:key]){
-        
+        [self signInOrOut:true];
     }
 }
 
-
-- (void)initMenuItemView:(UIScrollView *)parent
+//初始化菜单item
+- (void)initMenuItemView:(UIView *)parent
                indexWith:(NSInteger) index
                  keyWith:(NSString *)key
 {
@@ -118,6 +146,7 @@
     }
 }
 
+//获取菜单项目对应的ViewController
 -(UINavigationController *)getMenuItem:(NSInteger)index withSlidingVC:(ECSlidingViewController *)menu{
     UIViewController *viewController = nil;
     switch(index){
@@ -143,9 +172,7 @@
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer {
     switch (recognizer.redirectTag) {
         case -1:{
-//            [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
-            LoginView *view = [[LoginView alloc] init];
-            [view show];
+            [self openUser:recognizer.data isSelf:false navigationWith:self.currentNavigationController];
         }
             break;
         case 0:{

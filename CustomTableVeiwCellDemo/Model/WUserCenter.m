@@ -9,6 +9,7 @@
 #import "WUserCenter.h"
 #import <AVOSCloud/AVQuery.h>
 #import <AVOSCloud/AVUser.h>
+#import "WUserModel.h"
 
 static WUserCenter *instance = nil;
 
@@ -43,11 +44,17 @@ passwordWith:(NSString *)password
     [AVUser logInWithUsernameInBackground:user password:password block:^(AVUser *object, NSError *error) {
         if (!error) {
             block(object, error);
+            _signedUser = [self parseUser:object];
             [self onDataChange:kDATA_CHANGE_SIGN_IN valueWith:nil oldValueWith:nil];
         } else {
             block(object, error);
         }
     }];
+}
+
+- (WUserModel *)parseUser:(AVUser *)data{
+    WUserModel *user = [[WUserModel alloc]initWithAVObject:data];
+    return user;
 }
 
 @end
