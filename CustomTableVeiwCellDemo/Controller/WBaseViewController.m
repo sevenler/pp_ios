@@ -12,7 +12,7 @@
 #import "WEventedTapGestureRecognizer.h"
 
 @interface WBaseViewController ()
-
+@property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
 @end
 
 @implementation WBaseViewController
@@ -21,6 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        _slidable = false;//默认关闭
     }
     return self;
 }
@@ -28,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //由于侧边栏的手势原因。如果不支持侧边栏滑动，在vc的view中添加手势来拦截滑动
+    if(!_slidable) [self.view addGestureRecognizer:[self panGesture]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,5 +71,17 @@
 
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer{
     
+}
+
+//滑动手势
+- (UIPanGestureRecognizer *)panGesture {
+    if (_panGesture) return _panGesture;
+    _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(detectPanGestureRecognizer:)];
+    return _panGesture;
+}
+
+//滑动手势回调
+- (void)detectPanGestureRecognizer:(UIPanGestureRecognizer *)recognizer {
+    NSLog(@" invoked BaseViewController's detectPanGestureRecognizer ");
 }
 @end

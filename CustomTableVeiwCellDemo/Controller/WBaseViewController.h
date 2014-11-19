@@ -14,6 +14,8 @@
 
 @interface WBaseViewController : UIViewController
 
+@property (nonatomic, assign) BOOL *slidable;//VC是否支持横向滑动打开或关闭侧边栏,默认关闭
+
 -(void)openUser:(WUserModel *)user
          isSelf:(BOOL) value
  navigationWith:(UINavigationController *) navigation;
@@ -25,4 +27,5 @@
                  tagWith:(NSInteger)tag;
 
 - (void)handleTap:(WEventedTapGestureRecognizer *)recognizer;
+
 @end

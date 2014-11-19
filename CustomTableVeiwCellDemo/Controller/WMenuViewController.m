@@ -175,15 +175,17 @@
 
 //获取菜单项目对应的ViewController
 -(UINavigationController *)getMenuItem:(NSInteger)index withSlidingVC:(ECSlidingViewController *)menu{
-    UIViewController *viewController = nil;
+    WBaseViewController *viewController = nil;
     switch(index){
         case 0:
             viewController = [[WViewController alloc] initWithNibName:@"WViewController" bundle:nil];
             viewController.title = @"发现空间";
+            viewController.slidable = true;
             break;
         case 1:
             viewController = [[WUserDataViewController alloc] initWithNibName:@"WViewController" bundle:nil];
             viewController.title = @"我的预订";
+            viewController.slidable = true;
             break;
     }
     
