@@ -40,7 +40,7 @@
     [self setContentStyle: self.lb_left_content];
     
     [self setTitleStyle: self.lb_decription_name];
-    self.lb_decription_name.textAlignment = UITextAlignmentCenter;
+    self.lb_decription_name.textAlignment = NSTextAlignmentCenter;
     [self setContentStyle: self.lb_decription_content];
     self.lb_decription_content.numberOfLines = 30;
 }
@@ -54,13 +54,13 @@
 - (void) setTitleStyle:(UILabel *)label
 {
     [WConfig setLabelWithBigTitleStyle: label];
-    label.textAlignment = UITextAlignmentLeft;
+    label.textAlignment = NSTextAlignmentLeft;
 }
 
 - (void) setContentStyle:(UILabel *)label
 {
     [WConfig setLabelWithBigTitleStyle: label];
-    label.textAlignment = UITextAlignmentRight;
+    label.textAlignment = NSTextAlignmentRight;
 }
 
 -(void) addImages

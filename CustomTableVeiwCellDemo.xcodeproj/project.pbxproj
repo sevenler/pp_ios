@@ -74,6 +74,8 @@
 		B2DC45F01A1C741600C55AA5 /* menu_icon_logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2DC45E71A1C741600C55AA5 /* menu_icon_logout@2x.png */; };
 		B2DC45F51A1C8CB700C55AA5 /* WOrderCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DC45F21A1C8CB700C55AA5 /* WOrderCenter.m */; };
 		B2DC45F61A1C8CB700C55AA5 /* WOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DC45F41A1C8CB700C55AA5 /* WOrderModel.m */; };
+		B2DC45F91A1CC1ED00C55AA5 /* button_icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B2DC45F71A1CC1ED00C55AA5 /* button_icon_menu.png */; };
+		B2DC45FA1A1CC1ED00C55AA5 /* button_icon_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2DC45F81A1CC1ED00C55AA5 /* button_icon_menu@2x.png */; };
 		F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D711E19F7E4030072F789 /* WSpaceCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712019F7E4030072F789 /* WSpaceModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F60D712D19F815890072F789 /* FlatPillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712C19F815890072F789 /* FlatPillButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -226,6 +228,8 @@
 		B2DC45F21A1C8CB700C55AA5 /* WOrderCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOrderCenter.m; sourceTree = "<group>"; };
 		B2DC45F31A1C8CB700C55AA5 /* WOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOrderModel.h; sourceTree = "<group>"; };
 		B2DC45F41A1C8CB700C55AA5 /* WOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOrderModel.m; sourceTree = "<group>"; };
+		B2DC45F71A1CC1ED00C55AA5 /* button_icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_icon_menu.png; sourceTree = "<group>"; };
+		B2DC45F81A1CC1ED00C55AA5 /* button_icon_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_icon_menu@2x.png"; sourceTree = "<group>"; };
 		F60D711D19F7E4030072F789 /* WSpaceCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSpaceCenter.h; sourceTree = "<group>"; };
 		F60D711E19F7E4030072F789 /* WSpaceCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSpaceCenter.m; sourceTree = "<group>"; };
 		F60D711F19F7E4030072F789 /* WSpaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSpaceModel.h; sourceTree = "<group>"; };
@@ -565,6 +569,8 @@
 		B2DC45DE1A1C741600C55AA5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B2DC45F71A1CC1ED00C55AA5 /* button_icon_menu.png */,
+				B2DC45F81A1CC1ED00C55AA5 /* button_icon_menu@2x.png */,
 				B2DC45DF1A1C741600C55AA5 /* app_icon_120.png */,
 				B2DC45E01A1C741600C55AA5 /* app_icon_58.png */,
 				B2DC45E11A1C741600C55AA5 /* app_icon_80.png */,
@@ -668,6 +674,7 @@
 				F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */,
 				B2DC45C31A1C412400C55AA5 /* SVProgressHUD.bundle in Resources */,
 				B2DC45EE1A1C741600C55AA5 /* icon_verified_sina_weibo.png in Resources */,
+				B2DC45F91A1CC1ED00C55AA5 /* button_icon_menu.png in Resources */,
 				B2DC45EC1A1C741600C55AA5 /* icon_verified_identity_card.png in Resources */,
 				B2DC45E81A1C741600C55AA5 /* app_icon_120.png in Resources */,
 				F69873301A00BADC003458AC /* WEventViewController.xib in Resources */,
@@ -679,6 +686,7 @@
 				B2DC45EB1A1C741600C55AA5 /* icon_verified_email.png in Resources */,
 				B2DC45E91A1C741600C55AA5 /* app_icon_58.png in Resources */,
 				F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */,
+				B2DC45FA1A1CC1ED00C55AA5 /* button_icon_menu@2x.png in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,
 				F698734F1A02575A003458AC /* WUserViewController.xib in Resources */,

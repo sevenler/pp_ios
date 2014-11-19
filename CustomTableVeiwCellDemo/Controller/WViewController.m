@@ -27,8 +27,6 @@
     
     _projectList = [[NSMutableArray alloc]init];
     [self loadData];
-    
-    self.title = @"发现空间";
 }
 
 -(void)loadData{

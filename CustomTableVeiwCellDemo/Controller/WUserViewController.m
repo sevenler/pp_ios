@@ -44,7 +44,7 @@
     [WConfig setLabelWithDescriptionStyle: self.lb_description_name];
     [WConfig setLabelWithNormalTitleStyle: self.lb_description_content];
     
-    self.lb_nick_content.textAlignment = UITextAlignmentLeft;
+    self.lb_nick_content.textAlignment = NSTextAlignmentLeft;
     self.lb_description_content.numberOfLines = 5;
     
     [self setTitleStyle: self.lb_work_name];
@@ -59,13 +59,13 @@
 {
     [WConfig setLabelWithBigTitleStyle: label];
     label.textColor = [WConfig hexStringToColor:kCOLOR_GRAY];
-    label.textAlignment = UITextAlignmentLeft;
+    label.textAlignment = NSTextAlignmentLeft;
 }
 
 - (void) setContentStyle:(UILabel *)label
 {
     [WConfig setLabelWithBigTitleStyle: label];
-    label.textAlignment = UITextAlignmentRight;
+    label.textAlignment = NSTextAlignmentRight;
 }
 
 - (void)viewInitData

@@ -54,26 +54,26 @@ NSString *const kCOLOR_RED = @"#FF0000";
 }
 
 + (void)setSpinerLineStyle:(UIView *)line{
-    line.backgroundColor = [WConfig hexStringToColor: kCOLOR_GRAY];
+    line.backgroundColor = [WConfig hexStringToColor: @"#f1f1f1"];
 }
 
 + (void)setLabelWithBigTitleStyle:(UILabel *)lbl{
     lbl.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_BIG]];
-    lbl.textAlignment = UITextAlignmentCenter;
+    lbl.textAlignment = NSTextAlignmentCenter;
 }
 
 + (void)setLabelWithNormalTitleStyle:(UILabel *)lbl;
 {
     lbl.textColor = [WConfig hexStringToColor: kCOLOR_BLACK];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_NORMAL]];
-    lbl.textAlignment = UITextAlignmentCenter;
+    lbl.textAlignment = NSTextAlignmentCenter;
 }
 
 + (void)setLabelWithDescriptionStyle:(UILabel *)lbl{
      lbl.textColor = [WConfig hexStringToColor: kCOLOR_GRAY];
     [lbl setFont:[UIFont systemFontOfSize:FONT_SIZE_SMALL]];
-    lbl.textAlignment = UITextAlignmentLeft ;
+    lbl.textAlignment = NSTextAlignmentLeft ;
     
 }
 

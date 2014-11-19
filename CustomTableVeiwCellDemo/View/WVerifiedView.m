@@ -36,7 +36,7 @@
     [self addSubview:self.content];
     
     [WConfig setLabelWithBigTitleStyle: self.name];
-    self.name.textAlignment = UITextAlignmentLeft;
+    self.name.textAlignment = NSTextAlignmentLeft;
     
     UIView *superview = self;
     [self.name mas_makeConstraints:^(MASConstraintMaker *make) {

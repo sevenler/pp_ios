@@ -39,7 +39,7 @@
     
     [WConfig setLabelWithDescriptionStyle: self.descriptionView];
     [WConfig setLabelWithNormalTitleStyle: self.title];
-    self.title.textAlignment = UITextAlignmentLeft;
+    self.title.textAlignment = NSTextAlignmentLeft;
     self.descriptionView.textColor = UIColor.redColor;
 
     UIView *superview = self;
