@@ -116,8 +116,7 @@
 //登陆按钮click回调
 - (void)tapSignButton
 {
-    LoginView *view = [[LoginView alloc] init];
-    [view show];
+    [[WUserCenter instance] requestSignIn];
 }
 
 - (void)tapLogoutButton
@@ -148,9 +147,9 @@
 }
 
 //初始化菜单item
-- (void)initMenuItemView:(UIView *)parent
+- (void)initMenuItemView:(UIView *) parent
                indexWith:(NSInteger) index
-                 keyWith:(NSString *)key
+                 keyWith:(NSString *) key
 {
     NSInteger top = 250;
     NSInteger height = 50;

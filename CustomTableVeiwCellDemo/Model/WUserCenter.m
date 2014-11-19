@@ -10,6 +10,7 @@
 #import <AVOSCloud/AVQuery.h>
 #import <AVOSCloud/AVUser.h>
 #import "WUserModel.h"
+#import "LoginView.h"
 
 static WUserCenter *instance = nil;
 
@@ -60,6 +61,12 @@ passwordWith:(NSString *)password
 - (WUserModel *)parseUser:(AVUser *)data{
     WUserModel *user = [[WUserModel alloc]initWithAVObject:data];
     return user;
+}
+
+
+- (void)requestSignIn{
+    LoginView *view = [[LoginView alloc] init];
+    [view show];
 }
 
 @end

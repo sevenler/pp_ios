@@ -25,4 +25,6 @@
      blockWith:(void(^)(AVUser *user, NSError *error))block;
 
 - (void)signOut;
+
+- (void)requestSignIn;
 @end
