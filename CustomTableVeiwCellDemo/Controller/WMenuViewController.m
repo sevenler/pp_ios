@@ -116,7 +116,9 @@
 //登陆按钮click回调
 - (void)tapSignButton
 {
-    [[WUserCenter instance] requestSignIn];
+    [[WUserCenter instance] checkSignIn:^(WUserModel *user) {
+        NSLog(@"========== sign in success ===========");
+    }];
 }
 
 - (void)tapLogoutButton
@@ -210,7 +212,9 @@
         }
             break;
         case 1:{
-            self.slidingViewController.topViewController = [self getMenuItem:1 withSlidingVC:self.slidingViewController];
+            [[WUserCenter instance] checkSignIn:^(WUserModel *user) {
+                self.slidingViewController.topViewController = [self getMenuItem:1 withSlidingVC:self.slidingViewController];
+            }];
         }
             break;
         default:

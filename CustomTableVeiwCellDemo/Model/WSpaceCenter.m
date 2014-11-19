@@ -33,10 +33,10 @@ static WProjectCenter *instance = nil;
     [self getAllSpace:nil blockWith:block];
 }
 
-- (void)getAllSpace:(NSString *) user
+- (void)getAllSpace:(NSMutableArray *) spaces
           blockWith:(void(^)(NSArray *objects, NSError *error))block {
     AVQuery *query = [AVQuery queryWithClassName:@"Space"];
-    if(user) [query whereKey:@"owner" equalTo:user];
+    if(spaces) [query whereKey:@"objectId" containedIn:spaces];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:block];
 }

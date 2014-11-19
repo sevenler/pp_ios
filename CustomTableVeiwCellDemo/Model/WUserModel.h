@@ -15,6 +15,7 @@ extern NSString *const kVERIFIED_KEY_EMAIL;
 
 @interface WUserModel : WBaseModel
 
+- (NSString *) getUserName;
 - (NSString *) getAvater;
 - (NSString *) getNick;
 - (NSString *) getDescription;

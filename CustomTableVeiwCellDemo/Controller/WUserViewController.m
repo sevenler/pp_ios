@@ -97,8 +97,6 @@
 -(void) onDataChange:(NSString *)key
            valueWith:(NSObject *)value
         oldValueWith:(NSObject *)old{
-    NSLog(@" onDataChange  %@ %@ %@", key, value, [self.userModel description]);
-    
     if([kREFRESH_DATA isEqualToString:key]){
         [self viewInitData];
     }

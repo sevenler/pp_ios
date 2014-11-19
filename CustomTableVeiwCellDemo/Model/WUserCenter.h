@@ -26,5 +26,5 @@
 
 - (void)signOut;
 
-- (void)requestSignIn;
+- (void)checkSignIn:(void(^)(WUserModel *user))block;
 @end

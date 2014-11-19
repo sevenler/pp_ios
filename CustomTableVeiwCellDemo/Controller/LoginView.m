@@ -130,8 +130,8 @@
         }];
         
         
-        self.emailTextField.text = @"18511557126";
-        self.passwordTextField.text = @"12345";
+        self.emailTextField.text = @"18511557125";
+        self.passwordTextField.text = @"123456";
     }
     return self;
 }

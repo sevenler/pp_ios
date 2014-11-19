@@ -72,6 +72,8 @@
 		B2DC45EE1A1C741600C55AA5 /* icon_verified_sina_weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = B2DC45E51A1C741600C55AA5 /* icon_verified_sina_weibo.png */; };
 		B2DC45EF1A1C741600C55AA5 /* menu_icon_logout.png in Resources */ = {isa = PBXBuildFile; fileRef = B2DC45E61A1C741600C55AA5 /* menu_icon_logout.png */; };
 		B2DC45F01A1C741600C55AA5 /* menu_icon_logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2DC45E71A1C741600C55AA5 /* menu_icon_logout@2x.png */; };
+		B2DC45F51A1C8CB700C55AA5 /* WOrderCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DC45F21A1C8CB700C55AA5 /* WOrderCenter.m */; };
+		B2DC45F61A1C8CB700C55AA5 /* WOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B2DC45F41A1C8CB700C55AA5 /* WOrderModel.m */; };
 		F60D712119F7E4030072F789 /* WSpaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D711E19F7E4030072F789 /* WSpaceCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F60D712219F7E4030072F789 /* WSpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712019F7E4030072F789 /* WSpaceModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F60D712D19F815890072F789 /* FlatPillButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F60D712C19F815890072F789 /* FlatPillButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -220,6 +222,10 @@
 		B2DC45E51A1C741600C55AA5 /* icon_verified_sina_weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_verified_sina_weibo.png; sourceTree = "<group>"; };
 		B2DC45E61A1C741600C55AA5 /* menu_icon_logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_logout.png; sourceTree = "<group>"; };
 		B2DC45E71A1C741600C55AA5 /* menu_icon_logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_icon_logout@2x.png"; sourceTree = "<group>"; };
+		B2DC45F11A1C8CB700C55AA5 /* WOrderCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOrderCenter.h; sourceTree = "<group>"; };
+		B2DC45F21A1C8CB700C55AA5 /* WOrderCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOrderCenter.m; sourceTree = "<group>"; };
+		B2DC45F31A1C8CB700C55AA5 /* WOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOrderModel.h; sourceTree = "<group>"; };
+		B2DC45F41A1C8CB700C55AA5 /* WOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOrderModel.m; sourceTree = "<group>"; };
 		F60D711D19F7E4030072F789 /* WSpaceCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSpaceCenter.h; sourceTree = "<group>"; };
 		F60D711E19F7E4030072F789 /* WSpaceCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSpaceCenter.m; sourceTree = "<group>"; };
 		F60D711F19F7E4030072F789 /* WSpaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSpaceModel.h; sourceTree = "<group>"; };
@@ -369,6 +375,10 @@
 		AA3F390517BD10B90054A992 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2DC45F11A1C8CB700C55AA5 /* WOrderCenter.h */,
+				B2DC45F21A1C8CB700C55AA5 /* WOrderCenter.m */,
+				B2DC45F31A1C8CB700C55AA5 /* WOrderModel.h */,
+				B2DC45F41A1C8CB700C55AA5 /* WOrderModel.m */,
 				F69873481A01F7AC003458AC /* WUserCenter.h */,
 				F69873491A01F7AC003458AC /* WUserCenter.m */,
 				F6B838D019FE9AAB00F7EDC9 /* WEventCenter.h */,
@@ -710,6 +720,7 @@
 				B2DC45CE1A1C412400C55AA5 /* UIImage+Resize.m in Sources */,
 				B2DC45BC1A1C412400C55AA5 /* MASConstraintMaker.m in Sources */,
 				B2A923511A19C6AA0055E6FF /* WUserDataViewController.m in Sources */,
+				B2DC45F61A1C8CB700C55AA5 /* WOrderModel.m in Sources */,
 				F6B838CF19FE98D800F7EDC9 /* WEventModel.m in Sources */,
 				B2DC45B71A1C412400C55AA5 /* ECSlidingSegue.m in Sources */,
 				B2DC45C41A1C412400C55AA5 /* SVProgressHUD.m in Sources */,
@@ -729,6 +740,7 @@
 				B2DC45BA1A1C412400C55AA5 /* MASCompositeConstraint.m in Sources */,
 				F698732F1A00BADC003458AC /* WEventViewController.m in Sources */,
 				B2DC45B61A1C412400C55AA5 /* ECSlidingInteractiveTransition.m in Sources */,
+				B2DC45F51A1C8CB700C55AA5 /* WOrderCenter.m in Sources */,
 				B2DC45DD1A1C415A00C55AA5 /* WUtils.m in Sources */,
 				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
 				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,

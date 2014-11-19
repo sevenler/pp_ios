@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WProjectCenter : NSObject
-+(WProjectCenter *) instance;
-- (void)getAllSpace:(void(^)(NSArray *objects, NSError *error))block;
-- (void)getAllSpace:(NSMutableArray *) user
+@interface WOrderCenter : NSObject
++(WOrderCenter *) instance;
+- (void)getAllOrder:(NSString *)user
           blockWith:(void(^)(NSArray *objects, NSError *error))block;
 @end

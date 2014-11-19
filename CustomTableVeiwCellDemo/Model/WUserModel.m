@@ -15,6 +15,10 @@ NSString *const kVERIFIED_KEY_EMAIL = @"emailVerified";
 
 @implementation WUserModel
 
+- (NSString *) getUserName{
+    return [self.data objectForKey:@"username"];
+}
+
 - (NSString *) getAvater;
 {
     return [self.data objectForKey:@"avater"];
@@ -66,6 +70,6 @@ NSString *const kVERIFIED_KEY_EMAIL = @"emailVerified";
 }
 
 - (NSString *) description{
-    return [NSString stringWithFormat: @"nick=%@ description=%@ work=%@", [self getNick], [self getDescription], [self getWork]];;
+    return [NSString stringWithFormat: @"rid=%@ username=%@ nick=%@ description=%@ work=%@", [self getRemoteId], [self getUserName], [self getNick], [self getDescription], [self getWork]];;
 }
 @end
