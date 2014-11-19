@@ -733,7 +733,6 @@
                 [originalView addGestureRecognizer:gesture];
             }
         }
-        //TODOHAND
         if ([_customAnchoredGesturesViewMap objectForKey:self.panGesture]) {
             UIView *view = [self.customAnchoredGesturesViewMap objectForKey:self.panGesture];
             

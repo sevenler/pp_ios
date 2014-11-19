@@ -15,10 +15,8 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:format];
-//    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
     
     NSString *value = [formatter stringFromDate:date];
-    [formatter release];
     
     return value;
 }
