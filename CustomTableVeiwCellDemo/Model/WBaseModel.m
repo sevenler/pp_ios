@@ -10,6 +10,7 @@
 
 NSString *const kREFRESH_DATA = @"refresh_data";//刷新数据，调用refresh刷新数据后，会使用这个值来notify数据
 NSString *const kDATA_CHANGE_SIGN_IN = @"dc_sign_in";//登陆
+NSString *const kDATA_CHANGE_SIGN_OUT = @"dc_sign_out";//退出登陆
 
 @interface WBaseModel (){
     NSMutableArray *observers;

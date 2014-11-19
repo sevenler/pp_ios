@@ -23,4 +23,6 @@
 - (void)signIn:(NSString *)user
   passwordWith:(NSString *)password
      blockWith:(void(^)(AVUser *user, NSError *error))block;
+
+- (void)signOut;
 @end

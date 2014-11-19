@@ -22,9 +22,11 @@
 #import "View+MASAdditions.h"
 #import "WConfig.h"
 
-@interface WMenuViewController ()
+@interface WMenuViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) UINavigationController *currentNavigationController;
 @property (nonatomic, strong) UIView *currentSignView;
+@property (nonatomic, strong) UIButton *logoutView;
+
 @end
 
 @implementation WMenuViewController
@@ -64,6 +66,7 @@
 //登陆后，显示头像  退出后，显示登陆按钮
 -(void)signInOrOut:(BOOL)isSignIn{
     if(_currentSignView) [_currentSignView removeFromSuperview];
+    if(_logoutView) [_logoutView removeFromSuperview];
     
     if(isSignIn) {
         WUserSignView *item1 = [[WUserSignView alloc] init];
@@ -73,6 +76,18 @@
         [item1 setData:me];
         [self.view addSubview:item1];
         _currentSignView = item1;
+        
+        _logoutView = [[UIButton alloc] initWithFrame:CGRectMake(-1.f, CGRectGetHeight(self.view.frame) - 44.f, CGRectGetWidth(self.view.frame)+2, 45.f)];
+        _logoutView.layer.borderColor = [WConfig hexStringToColor:@"#f1f1f1"].CGColor;
+        _logoutView.layer.borderWidth = 1;
+        [_logoutView setImage:[UIImage imageNamed:@"menu_icon_logout.png"] forState:UIControlStateNormal];
+        [_logoutView setImage:[UIImage  imageNamed:@"menu_icon_logout.png"] forState:UIControlStateHighlighted];
+        [_logoutView setTitleEdgeInsets:UIEdgeInsetsMake(0, -40,0,0)];
+        [_logoutView setImageEdgeInsets:UIEdgeInsetsMake(0, -40,0,0)];
+        [_logoutView setTitle:@"注销" forState:UIControlStateNormal];
+        [_logoutView setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [_logoutView addTarget:self action:@selector(tapLogoutButton) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_logoutView];
     }else{
         UIView *superview = [[UIView alloc] init];
         [superview setFrame: CGRectMake(0, 0, 230, 180)];
@@ -105,6 +120,20 @@
     [view show];
 }
 
+- (void)tapLogoutButton
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"确定退出登录？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1){
+        NSLog(@"You have clicked Cancel");
+        [[WUserCenter instance] signOut];
+    }
+}
+
 //登陆监听回调
 -(void) onDataChange:(NSString *)key
            valueWith:(NSObject *)value
@@ -113,6 +142,8 @@
     
     if([kDATA_CHANGE_SIGN_IN isEqualToString:key]){
         [self signInOrOut:true];
+    }else if([kDATA_CHANGE_SIGN_OUT isEqualToString:key]){
+        [self signInOrOut:false];
     }
 }
 

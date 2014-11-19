@@ -10,6 +10,7 @@
 
 extern NSString *const kREFRESH_DATA;
 extern NSString *const kDATA_CHANGE_SIGN_IN;
+extern NSString *const kDATA_CHANGE_SIGN_OUT;
 
 @protocol DataDelegate
 -(void) onDataChange:(NSString *)key

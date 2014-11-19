@@ -52,6 +52,11 @@ passwordWith:(NSString *)password
     }];
 }
 
+- (void)signOut{
+    [self onDataChange:kDATA_CHANGE_SIGN_OUT valueWith:nil oldValueWith:_signedUser];
+    _signedUser = nil;
+}
+
 - (WUserModel *)parseUser:(AVUser *)data{
     WUserModel *user = [[WUserModel alloc]initWithAVObject:data];
     return user;
