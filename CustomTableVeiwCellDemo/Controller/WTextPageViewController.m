@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 568)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 300, 563)];
     [WConfig setLabelWithDescriptionStyle: label];
     label.text = self.showText;
     [label resizeToFit];

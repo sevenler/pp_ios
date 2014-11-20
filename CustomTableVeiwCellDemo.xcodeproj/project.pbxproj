@@ -91,7 +91,6 @@
 		F69873301A00BADC003458AC /* WEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698732E1A00BADC003458AC /* WEventViewController.xib */; };
 		F69873361A00E5BF003458AC /* WEventedTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F698733D1A012A59003458AC /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698733B1A012A59003458AC /* WDetailViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698733C1A012A59003458AC /* WDetailViewController.xib */; };
 		F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873401A0131A2003458AC /* WUserPreviewView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F69873471A01F645003458AC /* WUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873461A01F645003458AC /* WUserModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F698734A1A01F7AC003458AC /* WUserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873491A01F7AC003458AC /* WUserCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -257,7 +256,6 @@
 		F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventedTapGestureRecognizer.m; sourceTree = "<group>"; };
 		F698733A1A012A59003458AC /* WDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDetailViewController.h; path = Controller/WDetailViewController.h; sourceTree = "<group>"; };
 		F698733B1A012A59003458AC /* WDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WDetailViewController.m; path = Controller/WDetailViewController.m; sourceTree = "<group>"; };
-		F698733C1A012A59003458AC /* WDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WDetailViewController.xib; path = Controller/WDetailViewController.xib; sourceTree = "<group>"; };
 		F698733F1A0131A2003458AC /* WUserPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserPreviewView.h; sourceTree = "<group>"; };
 		F69873401A0131A2003458AC /* WUserPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserPreviewView.m; sourceTree = "<group>"; };
 		F69873451A01F645003458AC /* WUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WUserModel.h; sourceTree = "<group>"; };
@@ -599,7 +597,6 @@
 				F625AC3C1A0C6C1800CA1AB5 /* WMenuViewController.m */,
 				F698733A1A012A59003458AC /* WDetailViewController.h */,
 				F698733B1A012A59003458AC /* WDetailViewController.m */,
-				F698733C1A012A59003458AC /* WDetailViewController.xib */,
 				F66261C619CF0EAB00C0B9ED /* WViewController.h */,
 				F66261C719CF0EAB00C0B9ED /* WViewController.m */,
 				F66261C819CF0EAB00C0B9ED /* WViewController.xib */,
@@ -685,7 +682,6 @@
 				B2DC45ED1A1C741600C55AA5 /* icon_verified_phone.png in Resources */,
 				B2DC45EB1A1C741600C55AA5 /* icon_verified_email.png in Resources */,
 				B2DC45E91A1C741600C55AA5 /* app_icon_58.png in Resources */,
-				F698733E1A012A59003458AC /* WDetailViewController.xib in Resources */,
 				B2DC45FA1A1CC1ED00C55AA5 /* button_icon_menu@2x.png in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,

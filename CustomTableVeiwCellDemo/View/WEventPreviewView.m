@@ -35,7 +35,7 @@
     [self addSubview:self.descriptionView];
 //    self.imageview.backgroundColor = UIColor.greenColor;
 //    self.title.backgroundColor = UIColor.redColor;
-//    self.description.backgroundColor = UIColor.blueColor;
+//    self.descriptionView.backgroundColor = UIColor.blueColor;
     
     [WConfig setLabelWithDescriptionStyle: self.descriptionView];
     [WConfig setLabelWithNormalTitleStyle: self.title];
@@ -46,7 +46,7 @@
     UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
 
     [self.imageview mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.and.left.equalTo(superview).insets(padding);
+        make.top.left.equalTo(superview).insets(padding);
         make.bottom.equalTo(superview).insets(padding);
         
         make.width.equalTo(@(130));

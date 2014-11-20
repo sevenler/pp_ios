@@ -17,6 +17,8 @@ NSString *const kCOLOR_BLACK = @"#636769";
 NSString *const kCOLOR_GRAY = @"#89939F";
 NSString *const kCOLOR_GREEN = @"#6DC59A";
 NSString *const kCOLOR_RED = @"#FF0000";
+NSInteger const kNAVIGATION_BAR_HEIGHT = 64;
+
 
 @implementation WConfig
 
