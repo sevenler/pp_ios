@@ -13,17 +13,6 @@
 
 @interface WDetailViewController : WBaseViewController
 
-@property (retain, nonatomic) IBOutlet  UIImageView *headerview;
-@property (retain, nonatomic) IBOutlet UIImageView *image0;
-@property (retain, nonatomic) IBOutlet UIImageView *image1;
-
-@property (retain, nonatomic) IBOutlet UILabel *titleview;
-@property (retain, nonatomic) IBOutlet UILabel *discriptionview;
-@property (retain, nonatomic) IBOutlet FlatPillButton *discriptionMoreView;
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollview;
-
-@property (retain, nonatomic) IBOutlet UILabel *eventTitle;
-
 @property (strong, nonatomic) WSpaceModel *projectModel;
 
 @end

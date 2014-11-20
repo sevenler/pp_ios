@@ -50,7 +50,7 @@
 
 -(void)openSpace:(WSpaceModel *)model
 {
-    WDetailViewController *detail = [[WDetailViewController alloc] initWithNibName:@"WDetailViewController" bundle:nil];
+    WDetailViewController *detail = [[WDetailViewController alloc] init];
     detail.projectModel = model;
     [self.navigationController pushViewController:detail animated:YES];
     [detail release];
