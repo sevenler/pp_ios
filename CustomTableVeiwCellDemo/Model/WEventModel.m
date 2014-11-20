@@ -19,7 +19,7 @@
 }
 
 - (NSString *) getDescription{
-    return [self.data objectForKey:@"description"];
+    return [self.data objectForKey:@"descript"];
 }
 - (NSInteger) getPrice{
     return 3;

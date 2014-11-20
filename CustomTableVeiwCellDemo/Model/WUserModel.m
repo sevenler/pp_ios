@@ -27,7 +27,7 @@ NSString *const kVERIFIED_KEY_EMAIL = @"emailVerified";
     return [self.data objectForKey:@"nick"];
 }
 - (NSString *) getDescription{
-    return [self.data objectForKey:@"description"];
+    return [self.data objectForKey:@"descript"];
 }
 - (NSString *) getPosition{
     return [self.data objectForKey:@"postion"];
