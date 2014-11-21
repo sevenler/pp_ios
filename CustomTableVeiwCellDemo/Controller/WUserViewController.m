@@ -64,7 +64,7 @@
 //初始化页面样式
 - (void)viewInitStyle
 {
-    //FUCK  我讨厌这样写view，真的不爽
+    //FUCK  我讨厌这样写view，效率低得我想砸mac
     //创建view
     _scrollview = [[UIScrollView alloc] init];
     _scrollview.backgroundColor = [UIColor whiteColor];

@@ -89,7 +89,6 @@
 		F66261CB19CF0EAB00C0B9ED /* WViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66261C719CF0EAB00C0B9ED /* WViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F66261CC19CF0EAB00C0B9ED /* WViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66261C819CF0EAB00C0B9ED /* WViewController.xib */; };
 		F698732F1A00BADC003458AC /* WEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698732D1A00BADC003458AC /* WEventViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F69873301A00BADC003458AC /* WEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698732E1A00BADC003458AC /* WEventViewController.xib */; };
 		F69873361A00E5BF003458AC /* WEventedTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F698733D1A012A59003458AC /* WDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698733B1A012A59003458AC /* WDetailViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F69873411A0131A2003458AC /* WUserPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873401A0131A2003458AC /* WUserPreviewView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -253,7 +252,6 @@
 		F66261C819CF0EAB00C0B9ED /* WViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WViewController.xib; path = Controller/WViewController.xib; sourceTree = "<group>"; };
 		F698732C1A00BADC003458AC /* WEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WEventViewController.h; path = Controller/WEventViewController.h; sourceTree = "<group>"; };
 		F698732D1A00BADC003458AC /* WEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WEventViewController.m; path = Controller/WEventViewController.m; sourceTree = "<group>"; };
-		F698732E1A00BADC003458AC /* WEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WEventViewController.xib; path = Controller/WEventViewController.xib; sourceTree = "<group>"; };
 		F69873341A00E5BF003458AC /* WEventedTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEventedTapGestureRecognizer.h; sourceTree = "<group>"; };
 		F69873351A00E5BF003458AC /* WEventedTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEventedTapGestureRecognizer.m; sourceTree = "<group>"; };
 		F698733A1A012A59003458AC /* WDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WDetailViewController.h; path = Controller/WDetailViewController.h; sourceTree = "<group>"; };
@@ -607,7 +605,6 @@
 				F60D712F19F8C27C0072F789 /* WTextPageViewController.m */,
 				F698732C1A00BADC003458AC /* WEventViewController.h */,
 				F698732D1A00BADC003458AC /* WEventViewController.m */,
-				F698732E1A00BADC003458AC /* WEventViewController.xib */,
 				F698734B1A02575A003458AC /* WUserViewController.h */,
 				F698734C1A02575A003458AC /* WUserViewController.m */,
 				F6B70BB11A162451005840DB /* WBaseViewController.h */,
@@ -676,7 +673,6 @@
 				B2DC45F91A1CC1ED00C55AA5 /* button_icon_menu.png in Resources */,
 				B2DC45EC1A1C741600C55AA5 /* icon_verified_identity_card.png in Resources */,
 				B2DC45E81A1C741600C55AA5 /* app_icon_120.png in Resources */,
-				F69873301A00BADC003458AC /* WEventViewController.xib in Resources */,
 				B2DC45F01A1C741600C55AA5 /* menu_icon_logout@2x.png in Resources */,
 				B2DC45EF1A1C741600C55AA5 /* menu_icon_logout.png in Resources */,
 				B2DC45EA1A1C741600C55AA5 /* app_icon_80.png in Resources */,
