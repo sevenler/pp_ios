@@ -22,14 +22,20 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self initSubView];
     }
     return self;
 }
 
 - (id)init {
     self = [super init];
-    if (!self) return nil;
-    
+    if (self) {
+        [self initSubView];
+    }
+    return self;
+}
+
+-(void)initSubView{
     self.name = UILabel.new;
     self.content = UIImageView.new;
     [self addSubview:self.name];
@@ -56,8 +62,6 @@
         make.height.equalTo(@(1));
     }];
     [WConfig setSpinerLineStyle: line];
-    
-    return self;
 }
 
 -(void) setData:(NSString *)title

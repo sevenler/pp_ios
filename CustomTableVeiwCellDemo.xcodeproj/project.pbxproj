@@ -95,7 +95,6 @@
 		F69873471A01F645003458AC /* WUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873461A01F645003458AC /* WUserModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F698734A1A01F7AC003458AC /* WUserCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873491A01F7AC003458AC /* WUserCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F698734E1A02575A003458AC /* WUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F698734C1A02575A003458AC /* WUserViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F698734F1A02575A003458AC /* WUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F698734D1A02575A003458AC /* WUserViewController.xib */; };
 		F69873551A026D48003458AC /* WVerifiedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F69873541A026D48003458AC /* WVerifiedView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6AEB04719F926E8002AA015 /* WBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AEB04619F926E8002AA015 /* WBaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F6B70BB31A162451005840DB /* WBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B70BB21A162451005840DB /* WBaseViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -264,7 +263,6 @@
 		F69873491A01F7AC003458AC /* WUserCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WUserCenter.m; sourceTree = "<group>"; };
 		F698734B1A02575A003458AC /* WUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WUserViewController.h; path = Controller/WUserViewController.h; sourceTree = "<group>"; };
 		F698734C1A02575A003458AC /* WUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WUserViewController.m; path = Controller/WUserViewController.m; sourceTree = "<group>"; };
-		F698734D1A02575A003458AC /* WUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WUserViewController.xib; path = Controller/WUserViewController.xib; sourceTree = "<group>"; };
 		F69873531A026D48003458AC /* WVerifiedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVerifiedView.h; sourceTree = "<group>"; };
 		F69873541A026D48003458AC /* WVerifiedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVerifiedView.m; sourceTree = "<group>"; };
 		F6AEB04519F926E8002AA015 /* WBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBaseModel.h; sourceTree = "<group>"; };
@@ -607,7 +605,6 @@
 				F698732E1A00BADC003458AC /* WEventViewController.xib */,
 				F698734B1A02575A003458AC /* WUserViewController.h */,
 				F698734C1A02575A003458AC /* WUserViewController.m */,
-				F698734D1A02575A003458AC /* WUserViewController.xib */,
 				F6B70BB11A162451005840DB /* WBaseViewController.h */,
 				F6B70BB21A162451005840DB /* WBaseViewController.m */,
 				B2A9234F1A19C6AA0055E6FF /* WUserDataViewController.h */,
@@ -685,7 +682,6 @@
 				B2DC45FA1A1CC1ED00C55AA5 /* button_icon_menu@2x.png in Resources */,
 				AA3F38F517BD03410054A992 /* Default.png in Resources */,
 				AA3F38F717BD03410054A992 /* Default@2x.png in Resources */,
-				F698734F1A02575A003458AC /* WUserViewController.xib in Resources */,
 				AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */,
 				AA3F390E17BD250B0054A992 /* WProjectCell.xib in Resources */,
 			);

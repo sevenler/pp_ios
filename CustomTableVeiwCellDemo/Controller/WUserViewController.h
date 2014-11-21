@@ -12,21 +12,6 @@
 
 @interface WUserViewController : WBaseViewController<DataDelegate>
 
-@property (retain, nonatomic) IBOutlet UIScrollView *scrollview;
-@property (retain, nonatomic) IBOutlet UIImageView *image_avater;
-@property (retain, nonatomic) IBOutlet UILabel *lb_nick_content;
-@property (retain, nonatomic) IBOutlet UILabel *lb_position_content;
-@property (retain, nonatomic) IBOutlet UILabel *lb_register_date_content;
-@property (retain, nonatomic) IBOutlet UILabel *lb_description_name;
-@property (retain, nonatomic) IBOutlet UILabel *lb_description_content;
-
-@property (retain, nonatomic) IBOutlet UILabel *lb_work_name;
-@property (retain, nonatomic) IBOutlet UILabel *lb_work_content;
-@property (retain, nonatomic) IBOutlet UILabel *lb_school_name;
-@property (retain, nonatomic) IBOutlet UILabel *lb_school_content;
-
-@property (retain, nonatomic) IBOutlet UILabel *lb_verified_name;
-
 @property (strong, nonatomic) WUserModel *userModel;
 
 @end
