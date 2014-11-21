@@ -14,6 +14,7 @@ extern NSString *const kCOLOR_BLACK;
 extern NSString *const kCOLOR_GRAY;
 extern NSString *const kCOLOR_GREEN;
 extern NSInteger const kNAVIGATION_BAR_HEIGHT;
+extern NSInteger const kSCREEN_WIDTH;
 
 @interface WConfig : NSObject
 

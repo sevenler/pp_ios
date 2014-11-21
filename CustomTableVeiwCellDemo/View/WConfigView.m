@@ -6,17 +6,17 @@
 //  Copyright (c) 2014年 wzrong. All rights reserved.
 //
 
-#import "WVerifiedView.h"
+#import "WConfigView.h"
 #import "MASConstraintMaker.h"
 #import "View+MASAdditions.h"
 #import "WConfig.h"
 
-@interface WVerifiedView()
+@interface WConfigView()
 @property (strong, nonatomic) UILabel *name;
-@property (strong, nonatomic) UIImageView *content;
+@property (strong, nonatomic) UILabel *content;
 @end
 
-@implementation WVerifiedView
+@implementation WConfigView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -37,22 +37,19 @@
 
 -(void)initSubView{
     self.name = UILabel.new;
-    self.content = UIImageView.new;
+    self.content = UILabel.new;
     [self addSubview:self.name];
     [self addSubview:self.content];
     
-    [WConfig setLabelWithBigTitleStyle: self.name];
-    self.name.textAlignment = NSTextAlignmentLeft;
-    
     UIView *superview = self;
+    NSInteger titleWidth = 80;
     [self.name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.equalTo(superview);
-        make.width.equalTo(@(80));
+        make.width.equalTo(@(titleWidth));
     }];
-    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
     [self.content mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.right.equalTo(superview).insets(padding);
-        make.width.equalTo(@(35));
+        make.top.bottom.right.equalTo(superview);
+        make.width.equalTo(@(kSCREEN_WIDTH - titleWidth));
     }];
     
     //添加分割线
@@ -62,13 +59,19 @@
         make.bottom.left.right.equalTo(superview);
         make.height.equalTo(@(1));
     }];
+    
+    [WConfig setLabelWithBigTitleStyle: self.name];
+    self.name.textAlignment = NSTextAlignmentLeft;
+    self.name.textColor = [WConfig hexStringToColor:kCOLOR_GRAY];
+    [WConfig setLabelWithBigTitleStyle:self.content];
+    self.content.textAlignment = NSTextAlignmentRight;
     [WConfig setSpinerLineStyle: line];
 }
 
 -(void) setData:(NSString *)title
-       iconWith:(NSString *)icon{
+      valueWith:(NSString *)value{
     self.name.text = title;
-    if(icon) [self.content setImage: [UIImage imageNamed:icon]];
+    if(value) [self.content setText:value];
 }
 
 @end

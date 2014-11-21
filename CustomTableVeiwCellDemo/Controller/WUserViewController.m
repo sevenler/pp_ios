@@ -15,6 +15,7 @@
 #import "WBaseModel.h"
 #import "MASConstraintMaker.h"
 #import "View+MASAdditions.h"
+#import "WConfigView.h"
 
 #define VERIFIED_VIEW_HEIGHT  650
 
@@ -28,10 +29,8 @@
 @property (retain, nonatomic)  UILabel *lb_description_name;
 @property (retain, nonatomic)  UILabel *lb_description_content;
 
-@property (retain, nonatomic)  UILabel *lb_work_name;
-@property (retain, nonatomic)  UILabel *lb_work_content;
-@property (retain, nonatomic)  UILabel *lb_school_name;
-@property (retain, nonatomic)  UILabel *lb_school_content;
+@property (retain, nonatomic) WConfigView *config_work;
+@property (retain, nonatomic) WConfigView *config_school;
 
 @property (retain, nonatomic)  UILabel *lb_verified_name;
 
@@ -65,6 +64,7 @@
 //初始化页面样式
 - (void)viewInitStyle
 {
+    //FUCK  我讨厌这样写view，真的不爽
     //创建view
     _scrollview = [[UIScrollView alloc] init];
     _scrollview.backgroundColor = [UIColor whiteColor];
@@ -77,15 +77,9 @@
     _lb_description_content = [[UILabel alloc] init];
     
     UIView *line0 = [[UIView alloc] init];
-    UIView *line1 = [[UIView alloc] init];
-    UIView *line2 = [[UIView alloc] init];
-    _lb_work_name = [[UILabel alloc] init];
-    _lb_work_content = [[UILabel alloc] init];
-    _lb_school_name = [[UILabel alloc] init];
-    _lb_school_content = [[UILabel alloc] init];
     
     _lb_verified_name = [[UILabel alloc] init];
-    UIView *line3 = [[UIView alloc] init];
+    UIView *line1 = [[UIView alloc] init];
     
     [self.view addSubview:_scrollview];
     [_scrollview addSubview:_image_avater];
@@ -96,17 +90,10 @@
     [_scrollview addSubview:_lb_description_content];
     
     [_scrollview addSubview:line0];
-    [_scrollview addSubview:line1];
-    [_scrollview addSubview:line2];
-    [_scrollview addSubview:_lb_work_name];
-    [_scrollview addSubview:_lb_work_content];
-    [_scrollview addSubview:_lb_school_name];
-    [_scrollview addSubview:_lb_school_content];
     
     [_scrollview addSubview:_lb_verified_name];
-    [_scrollview addSubview:line3];
+    [_scrollview addSubview:line1];
 
-    
     UIView *superview = _scrollview;
     NSInteger paddingValue = 10;
     UIEdgeInsets padding = UIEdgeInsetsMake(0, paddingValue, 0, paddingValue);
@@ -154,54 +141,26 @@
         make.height.equalTo(@(80));
     }];
     
-    NSInteger nameWidth = 80;
-    NSInteger contentHeight = 50;
+    //工作和学校
+    NSInteger height = 50;
     NSInteger top = 480;
+    
+    //分割线
     [line0 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(superview).insets(padding);
-        make.top.equalTo(@(top + contentHeight * 0));
+        make.top.equalTo(@(top));
         make.width.equalTo(@(screenWidth - paddingValue * 2));
         make.height.equalTo(@(1));
-    }];
-    [line1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(superview).insets(padding);
-        make.top.equalTo(@(top + contentHeight * 1));
-        make.width.equalTo(@(screenWidth - paddingValue * 2));
-        make.height.equalTo(@(1));
-    }];
-    [line2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(superview).insets(padding);
-        make.top.equalTo(@(top + contentHeight * 2));
-        make.width.equalTo(@(screenWidth - paddingValue * 2));
-        make.height.equalTo(@(1));
-    }];
-    [_lb_work_name mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(line0.mas_bottom);
-        make.left.equalTo(superview).insets(padding);
-        make.width.equalTo(@(nameWidth));
-        make.height.equalTo(@(contentHeight));
-    }];
-    [_lb_work_content mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(line0.mas_bottom);
-        make.left.equalTo(_lb_work_name.mas_right).insets(padding);
-        
-        make.width.equalTo(@(screenWidth - nameWidth - paddingValue * 3));
-        make.height.equalTo(@(contentHeight));
-    }];
-    [_lb_school_name mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(line1.mas_bottom);
-        make.left.equalTo(superview).insets(padding);
-        make.width.equalTo(@(nameWidth));
-        make.height.equalTo(@(contentHeight));
-    }];
-    [_lb_school_content mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(line1.mas_bottom);
-        make.left.equalTo(_lb_school_name.mas_right).insets(padding);
-        
-        make.width.equalTo(@(screenWidth - nameWidth - paddingValue * 3));
-        make.height.equalTo(@(contentHeight));
     }];
     
+    _config_work = [[WConfigView alloc] init];
+    [_config_work setFrame: CGRectMake(10, top + 0 * height, 300, height)];
+    _config_school = [[WConfigView alloc] init];
+    [_config_school setFrame: CGRectMake(10, top + 1 * height, 300, height)];
+    [_scrollview addSubview:_config_work];
+    [_scrollview addSubview:_config_school];
+    
+    //验证项title
     [_lb_verified_name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@(VERIFIED_VIEW_HEIGHT - 41));
         make.left.equalTo(superview).insets(padding);
@@ -209,7 +168,7 @@
         make.width.equalTo(@(screenWidth - paddingValue * 2));
         make.height.equalTo(@(40));
     }];
-    [line3 mas_makeConstraints:^(MASConstraintMaker *make) {
+    [line1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(superview).insets(padding);
         make.top.equalTo(_lb_verified_name.mas_bottom);
         make.width.equalTo(@(screenWidth - paddingValue * 2));
@@ -224,16 +183,9 @@
     [WConfig setLabelWithNormalTitleStyle: self.lb_description_content];
     [WConfig setSpinerLineStyle:line0];
     [WConfig setSpinerLineStyle:line1];
-    [WConfig setSpinerLineStyle:line2];
-    [WConfig setSpinerLineStyle:line3];
     
     self.lb_nick_content.textAlignment = NSTextAlignmentLeft;
     self.lb_description_content.numberOfLines = 5;
-    
-    [self setTitleStyle: self.lb_work_name];
-    [self setContentStyle: self.lb_work_content];
-    [self setTitleStyle: self.lb_school_name];
-    [self setContentStyle: self.lb_school_content];
     
     [WConfig setLabelWithBigTitleStyle: self.lb_verified_name];
 }
@@ -266,11 +218,9 @@
     self.lb_description_name.text = [NSString stringWithFormat:@"关于 %@", [self.userModel getNick]];
     self.lb_description_content.text = [self.userModel getDescription];
     [WUtils alignTop:self.lb_description_content];
-    
-    self.lb_work_name.text = @"工作";
-    self.lb_work_content.text = [self.userModel getWork];
-    self.lb_school_name.text = @"学校";
-    self.lb_school_content.text = [self.userModel getSchool];
+
+    [_config_work setData:@"工作" valueWith:[self.userModel getWork]];
+    [_config_school setData:@"学校" valueWith:[self.userModel getSchool]];
     
     //显示验证项
     self.lb_verified_name.text = @"已验证项";

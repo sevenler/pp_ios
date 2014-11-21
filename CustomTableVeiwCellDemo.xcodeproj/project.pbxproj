@@ -18,6 +18,7 @@
 		AA3F38F917BD03410054A992 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3F38F817BD03410054A992 /* Default-568h@2x.png */; };
 		AA3F390C17BD243A0054A992 /* WProjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3F390B17BD243A0054A992 /* WProjectCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA3F390E17BD250B0054A992 /* WProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3F390D17BD250B0054A992 /* WProjectCell.xib */; };
+		B24445D91A1F308800CA1CD7 /* WConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = B24445D81A1F308800CA1CD7 /* WConfigView.m */; };
 		B25648681A19F1B10035FD16 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B25648671A19F1B10035FD16 /* LoginView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B256486B1A1A42AA0035FD16 /* SignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = B256486A1A1A42AA0035FD16 /* SignUpView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B256486E1A1A489C0035FD16 /* SignCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B256486D1A1A489C0035FD16 /* SignCodeView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -122,6 +123,8 @@
 		AA3F390A17BD243A0054A992 /* WProjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WProjectCell.h; sourceTree = "<group>"; };
 		AA3F390B17BD243A0054A992 /* WProjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WProjectCell.m; sourceTree = "<group>"; };
 		AA3F390D17BD250B0054A992 /* WProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WProjectCell.xib; sourceTree = "<group>"; };
+		B24445D71A1F308800CA1CD7 /* WConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WConfigView.h; sourceTree = "<group>"; };
+		B24445D81A1F308800CA1CD7 /* WConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WConfigView.m; sourceTree = "<group>"; };
 		B25648661A19F1B10035FD16 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginView.h; path = Controller/LoginView.h; sourceTree = "<group>"; };
 		B25648671A19F1B10035FD16 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginView.m; path = Controller/LoginView.m; sourceTree = "<group>"; };
 		B25648691A1A42AA0035FD16 /* SignUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpView.h; path = Controller/SignUpView.h; sourceTree = "<group>"; };
@@ -400,6 +403,8 @@
 		AA3F390917BD234B0054A992 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B24445D71A1F308800CA1CD7 /* WConfigView.h */,
+				B24445D81A1F308800CA1CD7 /* WConfigView.m */,
 				F69873531A026D48003458AC /* WVerifiedView.h */,
 				F69873541A026D48003458AC /* WVerifiedView.m */,
 				F6B838D319FEA2CB00F7EDC9 /* WEventPreviewView.h */,
@@ -742,6 +747,7 @@
 				B2DC45B61A1C412400C55AA5 /* ECSlidingInteractiveTransition.m in Sources */,
 				B2DC45F51A1C8CB700C55AA5 /* WOrderCenter.m in Sources */,
 				B2DC45DD1A1C415A00C55AA5 /* WUtils.m in Sources */,
+				B24445D91A1F308800CA1CD7 /* WConfigView.m in Sources */,
 				F6B838D519FEA2CB00F7EDC9 /* WEventPreviewView.m in Sources */,
 				F698733D1A012A59003458AC /* WDetailViewController.m in Sources */,
 				B2DC45C81A1C412400C55AA5 /* SDWebImageDownloader.m in Sources */,
